@@ -14,6 +14,7 @@ import FAQPage from "../pages/FAQPage";
 import ReviewsPage from "../pages/ReviewsPage";
 import RestaurantsPage from "../pages/RestaurantsPage";
 import PrivacyPolicy from "../pages/PrivacyPolicy";
+import TermsOfUse from "../pages/TermsOfUse";
 // import Login from "../pages/Login";
 
 export default function AppRoutes() {
@@ -34,7 +35,7 @@ export default function AppRoutes() {
                     <Route path="/news" element={<NewsPage/>} />
                     <Route path="/FAQs" element={<FAQPage/>} />
                     <Route path="/privacyPolicy" element={<PrivacyPolicy/>} />
-                    {/* <Route path="/termsOfUse" element={<TermsOfUse/>} /> */}
+                    <Route path="/termsOfUse" element={<TermsOfUse/>} />
                 </Routes>
             <Footer/>
         </>

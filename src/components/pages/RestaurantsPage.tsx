@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Search, Star, Clock, MapPin, Phone, Filter, ChevronDown } from 'lucide-react';
+import { Search, Star, Clock, MapPin, Phone, Filter, ChevronDown, Calendar } from 'lucide-react';
 
 const RestaurantsPage = () => {
   const [searchTerm, setSearchTerm] = useState('');
@@ -101,6 +101,90 @@ const RestaurantsPage = () => {
       />
     ));
   };
+
+  // booking
+  const [bookingData, setBookingData] = useState({
+    date: '',
+    time: '',
+    guests: '2',
+    restaurantId: null,
+    restaurantName: ''
+  });
+  const [showBooking, setShowBooking] = useState(false);
+
+  const availableTimes = ["17:00", "17:30", "18:00", "18:30", "19:00", "19:30", "20:00", "20:30", "21:00"];
+
+  const handleBooking = (e) => {
+    e.preventDefault();
+    // Here you would typically send the booking data to your backend
+    console.log('Booking submitted:', bookingData);
+    setShowBooking(false);
+    alert('Booking confirmed! You will receive a confirmation email shortly.');
+  };
+
+  const BookingModal = () => (
+    <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50">
+      <div className="bg-white p-6 rounded-lg w-full max-w-md">
+        <h3 className="text-xl font-bold">Book a Table</h3>
+        <p className="text-gray-600 mb-4">at {bookingData.restaurantName}</p>
+        <form onSubmit={handleBooking} className="space-y-4">
+          <div>
+            <label className="block text-sm font-medium mb-1">Date</label>
+            <input
+              type="date"
+              min={new Date().toISOString().split('T')[0]}
+              className="w-full p-2 border rounded"
+              value={bookingData.date}
+              onChange={(e) => setBookingData({...bookingData, date: e.target.value})}
+              required
+            />
+          </div>
+          <div>
+            <label className="block text-sm font-medium mb-1">Time</label>
+            <select
+              className="w-full p-2 border rounded"
+              value={bookingData.time}
+              onChange={(e) => setBookingData({...bookingData, time: e.target.value})}
+              required
+            >
+              <option value="">Select time</option>
+              {availableTimes.map(time => (
+                <option key={time} value={time}>{time}</option>
+              ))}
+            </select>
+          </div>
+          <div>
+            <label className="block text-sm font-medium mb-1">Number of Guests</label>
+            <select
+              className="w-full p-2 border rounded"
+              value={bookingData.guests}
+              onChange={(e) => setBookingData({...bookingData, guests: e.target.value})}
+              required
+            >
+              {[1,2,3,4,5,6,7,8].map(num => (
+                <option key={num} value={num}>{num} {num === 1 ? 'guest' : 'guests'}</option>
+              ))}
+            </select>
+          </div>
+          <div className="flex gap-2 mt-6">
+            <button
+              type="button"
+              onClick={() => setShowBooking(false)}
+              className="flex-1 px-4 py-2 border rounded"
+            >
+              Cancel
+            </button>
+            <button
+              type="submit"
+              className="flex-1 px-4 py-2 bg-red-600 text-white rounded hover:bg-red-700"
+            >
+              Confirm Booking
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
+  );
 
   const filteredRestaurants = restaurants.filter(restaurant => {
     const matchesSearch = restaurant.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
@@ -212,10 +296,24 @@ const RestaurantsPage = () => {
                   ))}
                 </ul>
               </div>
+
+              {/* New Booking Button */}
+              <button
+                onClick={() => {
+                  setBookingData({...bookingData, restaurantId: restaurant.id,restaurantName: restaurant.name});
+                  setShowBooking(true);
+                }}
+                className="w-full mt-4 px-4 py-2 bg-red-600 text-white rounded hover:bg-red-700 flex items-center justify-center gap-2"
+              >
+                <Calendar className="w-4 h-4" />
+                Book a Table
+              </button>
             </div>
           </div>
         ))}
       </div>
+      {/* Booking Modal */}
+      {showBooking && <BookingModal />}
     </div>
   );
 };

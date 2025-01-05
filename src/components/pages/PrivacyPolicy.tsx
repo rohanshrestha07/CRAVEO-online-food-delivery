@@ -1,11 +1,10 @@
 import { Card, CardContent } from '@mui/material';
-import React from 'react';
 // import { Card, CardContent } from '@/components/ui/card';
 
 const PrivacyPolicy = () => {
   return (
     <div className="min-h-screen bg-gray-50 py-8 px-4">
-      <div className="max-w-4xl mx-auto">
+      <div className="max-w-6xl mx-auto">
         <Card className="bg-white shadow-lg">
           <CardContent className="p-8">
             <h1 className="text-3xl font-bold mb-8 text-gray-900">Privacy Policy</h1>

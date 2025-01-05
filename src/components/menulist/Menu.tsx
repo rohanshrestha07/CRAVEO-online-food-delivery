@@ -145,7 +145,7 @@ export default function Menu() {
     };
 
     return (
-        <div className="h-auto w-screen container mx-auto text-center mb-5">
+        <div className="h-auto w-screen container mx-auto text-center mb-8">
             <h2 className="text-[50px] font-extrabold">Our Popular Tasty <span className="text-[#ff0000]">Foods</span></h2>
             <p className="mb-8">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Distinctio, accusamus?</p>
             <div className="flex justify-center flex-wrap gap-5">
@@ -196,7 +196,7 @@ export default function Menu() {
                 {filteredMenuData.slice(0, visibleItems).map((menu, index) => (
                     <Link to={`/foodDetails/${menu.title}`} key={index}>
                         <div
-                            className="border border-[#a2a2a2] rounded-2xl px-5 cursor-pointer hover:bg-red-100 hover:-translate-y-2 transition-transform"
+                            className="border border-[#a2a2a2] rounded-2xl px-5 cursor-pointer hover:bg-gray-100 hover:-translate-y-1 transition-transform"
                             style={{ boxShadow: 'none' }}
                             onMouseEnter={(e) => {
                                 e.currentTarget.style.boxShadow = "0px 4px 8px rgba(0, 0, 0, 0.4)";

@@ -1,4 +1,4 @@
-export default function MenuList() {
+export default function FeaturedMenu() {
     return (
         <>
             <div className="bg-gray-400 container mx-auto w-full px-5 py-3">

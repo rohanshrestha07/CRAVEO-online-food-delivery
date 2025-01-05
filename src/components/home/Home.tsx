@@ -1,12 +1,13 @@
 // import Chilli2 from "../chilli/Chilli2";
 // import Cucumber from "../chilli/Cucumber";
+import { Link } from "react-router-dom";
 import About from "../about/About";
 import Delivery from "../delivery/Delivery";
 import FeedBack from "../feedback/FeedBack";
 import FoodNews from "../foodnews/FoodNews";
 import FoodGallery from "../gallery/FoodGallery";
 import Menu from "../menulist/Menu";
-import MenuList from "../menulist/MenuList";
+import TodayMenu from "../menulist/TodayMenu";
 
 
 export default function Home() {
@@ -18,28 +19,32 @@ export default function Home() {
                         <h1 className="text-[70px] font-extrabold mb-4 leading-tight">Welcome To <br /> Our Tasty <span className="text-[#ff0000]">Foods</span></h1>
                         <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eius ea numquam hic enim assumenda esse nobis corrupti perferendis ducimus nesciunt in possimus, autem laboriosam? Unde!</p>
                         <div className="my-6">
-                            <button className="px-4 py-2 rounded-3xl bg-[#FFBF00] mr-4 font-medium"
-                            style={{
-                                boxShadow: '0px 4px 8px rgba(0, 0, 0, 0.1)'
-                            }}
-                            onMouseEnter={(e) => {
-                                e.currentTarget.style.boxShadow = "0 0px 15px rgba(244, 179, 21, 0.7)";
-                            }}
-                            onMouseLeave={(e) => {
-                                e.currentTarget.style.boxShadow = "none";
-                            }}
-                            >Order Now</button>
-                            <button className="px-3 py-2 border border-black rounded-3xl font-medium"
-                            style={{
-                                boxShadow: '0px 4px 8px rgba(0, 0, 0, 0.1)'
-                            }}
-                            onMouseEnter={(e) => {
-                                e.currentTarget.style.boxShadow = "0 0px 15px rgba(0, 0, 0, 0.7)";
-                            }}
-                            onMouseLeave={(e) => {
-                                e.currentTarget.style.boxShadow = "none";
-                            }}
-                            >Book a Table</button>
+                            <Link to={"/orderFood"}>
+                                <button className="px-4 py-2 rounded-3xl text-white bg-[#ff0000] mr-4 font-medium"
+                                style={{
+                                    boxShadow: '0px 4px 8px rgba(0, 0, 0, 0.1)'
+                                }}
+                                onMouseEnter={(e) => {
+                                    e.currentTarget.style.boxShadow = "0 0px 15px rgba(255, 0, 0, 0.5)";
+                                }}
+                                onMouseLeave={(e) => {
+                                    e.currentTarget.style.boxShadow = "none";
+                                }}
+                                >Order Now</button>
+                            </Link>
+                            <Link to={"/restaurants"}>
+                                <button className="px-3 py-2 border border-black rounded-3xl font-medium"
+                                style={{
+                                    boxShadow: '0px 4px 8px rgba(0, 0, 0, 0.1)'
+                                }}
+                                onMouseEnter={(e) => {
+                                    e.currentTarget.style.boxShadow = "0 0px 15px rgba(0, 0, 0, 0.5)";
+                                }}
+                                onMouseLeave={(e) => {
+                                    e.currentTarget.style.boxShadow = "none";
+                                }}
+                                >Book a Table</button>
+                            </Link>
                         </div>
                     </div>
                     <div className=" object-cover">
@@ -52,11 +57,14 @@ export default function Home() {
             </div>
             {/* <img className="absolute -left-16 top-24 h-44 w-44" src="src/assets/onion1.png" alt="" />
             <Chilli2/> */}
-            <MenuList/>
-            <About/>
+            <TodayMenu/>
             <Delivery/>
+
             <Menu/>
+
+            <About/>
             <FeedBack/>
+            
             <FoodNews/>
             <FoodGallery/>
         </>

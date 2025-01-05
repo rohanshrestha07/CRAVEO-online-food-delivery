@@ -20,7 +20,7 @@ export default function NavBar() {
 
     return (
         <>
-            <div className='sticky top-0 bg-white z-10 shadow-xl'>
+            <div className='sticky top-0 bg-white z-10 shadow-lg'>
                 <TopBanner />
                 <div className="container mx-auto h-auto w-full flex justify-between py-2 items-center px-4 sm:px-8 md:px-8 lg:px-0">
                     <div className='mr-32'>
