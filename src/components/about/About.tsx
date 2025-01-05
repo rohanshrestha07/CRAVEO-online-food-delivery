@@ -3,7 +3,7 @@ import CheckCircleIcon from '@mui/icons-material/CheckCircle';
 export default function About() {
     return (
         <>
-            <div className="h-auto w-full container mx-auto mb-8">
+            <div className="h-auto w-full container mx-auto mb-12 flex flex-col gap-8">
                 <div className="grid md:grid-cols-1 lg:grid-cols-3 text-white">
                     <div className="bg-[#ff0000] flex items-center cursor-pointer overflow-hidden md:justify-between sm:justify-between py-2 hover:scale-105 hover:shadow-2xl transition-transform duration-300 ">
                         <div className="detail ml-5">
@@ -69,6 +69,7 @@ export default function About() {
                         </div>
                     </div>
                 </div>
+
             </div>
         </>
     )

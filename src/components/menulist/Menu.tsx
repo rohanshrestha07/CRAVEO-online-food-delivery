@@ -145,7 +145,7 @@ export default function Menu() {
     };
 
     return (
-        <div className="h-auto w-screen container mx-auto text-center mb-8">
+        <div className="h-auto w-screen container mx-auto text-center mb-12">
             <h2 className="text-[50px] font-extrabold">Our Popular Tasty <span className="text-[#ff0000]">Foods</span></h2>
             <p className="mb-8">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Distinctio, accusamus?</p>
             <div className="flex justify-center flex-wrap gap-5">

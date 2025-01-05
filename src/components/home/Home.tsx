@@ -8,6 +8,8 @@ import FoodNews from "../foodnews/FoodNews";
 import FoodGallery from "../gallery/FoodGallery";
 import Menu from "../menulist/Menu";
 import TodayMenu from "../menulist/TodayMenu";
+import Ads2 from "../ads/Ads2";
+import Ads3 from "../ads/Ads3";
 
 
 export default function Home() {
@@ -61,10 +63,10 @@ export default function Home() {
             <Delivery/>
 
             <Menu/>
-
+            <Ads2/>
             <About/>
+            <Ads3/>
             <FeedBack/>
-            
             <FoodNews/>
             <FoodGallery/>
         </>

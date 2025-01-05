@@ -78,7 +78,7 @@ export default function TodayMenu() {
     };
 
     return (
-    <div className="bg-[#ff0000] bg-opacity-90 relative flex justify-center gap-2 py-8 pl-20 mb-8">
+    <div className="bg-[#ff0000] bg-opacity-90 relative flex justify-center gap-2 py-8 pl-20 mb-12">
         <div className="flex flex-col justify-center text-center min-w-60">
             <p className="text-[#c8c8c8]">Our menu</p>
             <h2 className="text-2xl font-semibold mb-10 text-white">Today Menu</h2>

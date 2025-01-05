@@ -85,7 +85,7 @@ export default function NavBar() {
             {/* Pages dropdown */}
             <div
                 className={`fixed bg-white shadow-lg rounded-b-lg z-0 w-40 top-[100px] left-[60%] transform transition-all duration-500 ease-in-out -translate-x-1/2 ${
-                    isPagesOpen ? "translate-y-0 opacity-100" : "-translate-y-5 opacity-0"
+                    isPagesOpen ? "block" : "hidden"
                 }`}
             >
                 <ul className="flex flex-col items-center gap-5 py-4 font-medium">
