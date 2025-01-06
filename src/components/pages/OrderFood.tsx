@@ -348,7 +348,7 @@ export default function OrderFood() {
                 {filteredMenuData.slice(0, visibleItems).map((menu, index) => (
                     <Link to={`/foodDetails/${menu.title}`} key={index}>
                         <div
-                            className="border border-[#a2a2a2] rounded-2xl p-4 cursor-pointer hover:bg-red-100 hover:-translate-y-2 transition-transform"
+                            className="border border-[#a2a2a2] rounded-2xl p-4 cursor-pointer hover:bg-gray-100 hover:-translate-y-2 transition-transform"
                             style={{ boxShadow: 'none' }}
                             onMouseEnter={(e) => {
                                 e.currentTarget.style.boxShadow = "0px 4px 8px rgba(0, 0, 0, 0.4)";

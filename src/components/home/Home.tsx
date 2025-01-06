@@ -10,6 +10,7 @@ import Menu from "../menulist/Menu";
 import TodayMenu from "../menulist/TodayMenu";
 import Ads2 from "../ads/Ads2";
 import Ads3 from "../ads/Ads3";
+import Ads1 from "../ads/Ads1";
 
 
 export default function Home() {
@@ -61,7 +62,7 @@ export default function Home() {
             <Chilli2/> */}
             <TodayMenu/>
             <Delivery/>
-
+            <Ads1/>
             <Menu/>
             <Ads2/>
             <About/>

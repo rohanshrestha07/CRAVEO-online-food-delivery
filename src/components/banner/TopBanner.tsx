@@ -22,11 +22,11 @@ export default function TopBanner() {
                             <p>Mon-Fri:8am - 11pm,Sat-Sun:8am - 12pm</p>
                         </div>
                         <div className="font-medium">
-                            <Link to={"/about"}>
-                                <a className="px-2 border-r border-black " href="#">About Us</a>
+                            <Link to={"/about"} className='px-2 border-r border-black'>
+                                About Us
                             </Link>
-                            <Link to={"/contact"}>
-                                <a className="px-2 border-r border-black " href="#">Contact Us</a>
+                            <Link to={"/contact"} className='px-2 border-r border-black'>
+                                Contact Us
                             </Link>
                             <span className="px-2 cursor-pointer" onClick={toggleLogin}>
                                 Login/Register

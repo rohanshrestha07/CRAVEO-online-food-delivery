@@ -82,21 +82,20 @@ export default function NavBar() {
                         </ul>
                     </div>
                 )}
-            {/* Pages dropdown */}
-            <div
-                className={`fixed bg-white shadow-lg rounded-b-lg z-0 w-40 top-[100px] left-[60%] transform transition-all duration-500 ease-in-out -translate-x-1/2 ${
-                    isPagesOpen ? "block" : "hidden"
-                }`}
-            >
-                <ul className="flex flex-col items-center gap-5 py-4 font-medium">
-                    <li className='cursor-pointer hover:text-[#ff0000]'><NavLink to="/blogs" className={({ isActive }) => { return isActive ? "text-red-600 border-b-2 border-b-[#ff0000]" : ""; }}>Blogs</NavLink></li>
-                    <li className='cursor-pointer hover:text-[#ff0000]'><NavLink to="/reviews" className={({ isActive }) => { return isActive ? "text-red-600 border-b-2 border-b-[#ff0000]" : ""; }}>Reviews</NavLink></li>
-                    <li className='cursor-pointer hover:text-[#ff0000]'><NavLink to="/news" className={({ isActive }) => { return isActive ? "text-red-600 border-b-2 border-b-[#ff0000]" : ""; }}>News</NavLink></li>
-                    <li className='cursor-pointer hover:text-[#ff0000]'><NavLink to="/FAQs" className={({ isActive }) => { return isActive ? "text-red-600 border-b-2 border-b-[#ff0000]" : ""; }}>FAQs</NavLink></li>
-                </ul>
+                {/* Pages dropdown */}
+                <div
+                    className={`fixed bg-white shadow-lg rounded-b-lg z-0 w-40 top-[100px] left-[60%] transform transition-all duration-500 ease-in-out -translate-x-1/2 ${
+                        isPagesOpen ? "block" : "hidden"
+                    }`}
+                >
+                    <ul className="flex flex-col items-center gap-5 py-4 font-medium">
+                        <li className='cursor-pointer hover:text-[#ff0000]'><NavLink to="/blogs" className={({ isActive }) => { return isActive ? "text-red-600 border-b-2 border-b-[#ff0000]" : ""; }}>Blogs</NavLink></li>
+                        <li className='cursor-pointer hover:text-[#ff0000]'><NavLink to="/reviews" className={({ isActive }) => { return isActive ? "text-red-600 border-b-2 border-b-[#ff0000]" : ""; }}>Reviews</NavLink></li>
+                        <li className='cursor-pointer hover:text-[#ff0000]'><NavLink to="/news" className={({ isActive }) => { return isActive ? "text-red-600 border-b-2 border-b-[#ff0000]" : ""; }}>News</NavLink></li>
+                        <li className='cursor-pointer hover:text-[#ff0000]'><NavLink to="/FAQs" className={({ isActive }) => { return isActive ? "text-red-600 border-b-2 border-b-[#ff0000]" : ""; }}>FAQs</NavLink></li>
+                    </ul>
+                </div>
             </div>
-            </div>
-
         </>
     )
 }
