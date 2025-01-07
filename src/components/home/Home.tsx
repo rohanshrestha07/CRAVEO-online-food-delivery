@@ -10,7 +10,7 @@ import Menu from "../menulist/Menu";
 import TodayMenu from "../menulist/TodayMenu";
 import Ads2 from "../ads/Ads2";
 import Ads3 from "../ads/Ads3";
-import Ads1 from "../ads/Ads1";
+import Banner6 from "../banner/Banner6";
 
 
 export default function Home() {
@@ -62,9 +62,27 @@ export default function Home() {
             <Chilli2/> */}
             <TodayMenu/>
             <Delivery/>
-            <Ads1/>
+            <div className="container mx-auto flex gap-4 h-[500px] rounded-2xl mb-16">
+                <div className="flex flex-col gap-4 w-[800px]">
+                    <div className="flex flex-col pl-10 pt-20 bg-[url('/Foods/Food6.jpg')] bg-cover bg-center h-full w-full text-white rounded-2xl cursor-pointer" >
+                        
+                        
+                    </div>
+                    <div className="flex flex-col justify-center items-center pt-28 bg-[url('/Foods/Food18.jpg')] bg-cover bg-center h-full w-full text-white rounded-2xl cursor-pointer">
+                        
+                        
+                    </div>
+                </div>
+                <div className="flex flex-col justify-center items-center pt-28 bg-[url('/Foods/Food12.jpg')] bg-cover bg-center h-full w-full text-white rounded-2xl cursor-pointer">
+                    
+                </div>
+                <div className="flex flex-col justify-center border-gray-200 border items-center pt-28 bg-[url('/Foods/HomeMade.jpg')] bg-cover bg-center h-full w-[800px] text-white rounded-2xl cursor-pointer">
+                    
+                </div>
+            </div>
             <Menu/>
-            <Ads2/>
+            {/* <Ads2/> */}
+            <Banner6/>
             <About/>
             <Ads3/>
             <FeedBack/>

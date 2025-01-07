@@ -2,6 +2,10 @@ import { useState } from "react";
 import { ChevronRight, ChevronLeft, ShoppingBag } from 'lucide-react';
 import { Link } from "react-router-dom";
 import CtaMenu1 from "../CTA/CtaMenu1";
+import Banner6 from "../banner/Banner6";
+import Banner8 from "../banner/Banner8";
+import Banner10 from "../banner/Banner10";
+import Banner1 from "../banner/Banner1";
 // import burger1 from '/src/assets/burger1.png';
 // import frenchfries from '/src/assets/french-fries1.png';
 // import pasta from '/src/assets/pasta1.png';
@@ -458,58 +462,69 @@ const OurMenu = () => {
   };
 
   return (
-    <div className="py-10 max-w-7xl mx-auto px-4">
-      <h2 className="text-5xl font-extrabold mb-10 text-center">Our <span className="text-[#ff0000]">Menu</span></h2>
-      
-      <MenuSection 
-        title="Popular Foods"
-        items={menuData.popularFoods}
-        onFoodClick={handleFoodClick}
-        onAddToCart={handleAddToCart}
-      />
-      <MenuSection 
-        title="Burgers"
-        items={menuData.burgers}
-        onFoodClick={handleFoodClick}
-        onAddToCart={handleAddToCart}
-      />
-      {/* CTA section */}
-        <CtaMenu1/> 
-      <MenuSection 
-        title="Pizza"
-        items={menuData.pizza}
-        onFoodClick={handleFoodClick}
-        onAddToCart={handleAddToCart}
-      />
-      <MenuSection 
-        title="Pasta"
-        items={menuData.pasta}
-        onFoodClick={handleFoodClick}
-        onAddToCart={handleAddToCart}
-      />
-      {/* CTA section */}
-        <CtaMenu1/>
-      <MenuSection 
-        title="Sandwiches"
-        items={menuData.sandwich}
-        onFoodClick={handleFoodClick}
-        onAddToCart={handleAddToCart}
-      />
-      <MenuSection 
-        title="Cold Drinks"
-        items={menuData.coldDrinks}
-        onFoodClick={handleFoodClick}
-        onAddToCart={handleAddToCart}
-      />
-      <MenuSection 
-        title="Combo Packs"
-        items={menuData.comboPacks}
-        onFoodClick={handleFoodClick}
-        onAddToCart={handleAddToCart}
-      />
-      {/* CTA section */}
-        <CtaMenu1/>
-    </div>
+    <>
+      <div className="pb-10 pt-4 max-w-7xl mx-auto px-4">
+        <div className="bg-[url('/public/Banners/4.jpg')] bg-cover bg-center h-[200px] w-full flex justify-center items-center rounded-xl mb-8">
+          <h1 className="text-8xl font-extrabold text-black">Our <span className="text-[#ff0000]">Menu</span></h1>
+        </div>
+        
+        <MenuSection 
+          title="Popular Foods"
+          items={menuData.popularFoods}
+          onFoodClick={handleFoodClick}
+          onAddToCart={handleAddToCart}
+        />
+        <MenuSection 
+          title="Burgers"
+          items={menuData.burgers}
+          onFoodClick={handleFoodClick}
+          onAddToCart={handleAddToCart}
+          />
+        {/* CTA section */}
+          {/* <CtaMenu1/>  */}
+          <Banner6/>
+        <MenuSection 
+          title="Pizza"
+          items={menuData.pizza}
+          onFoodClick={handleFoodClick}
+          onAddToCart={handleAddToCart}
+        />
+        {/* Banner */}
+          <Banner8/>
+        <MenuSection 
+          title="Pasta"
+          items={menuData.pasta}
+          onFoodClick={handleFoodClick}
+          onAddToCart={handleAddToCart}
+          />
+        {/* CTA section */}
+          <CtaMenu1/>
+        <MenuSection 
+          title="Sandwiches"
+          items={menuData.sandwich}
+          onFoodClick={handleFoodClick}
+          onAddToCart={handleAddToCart}
+          />
+        {/* Banner */}
+          <Banner1/>
+        <MenuSection 
+          title="Cold Drinks"
+          items={menuData.coldDrinks}
+          onFoodClick={handleFoodClick}
+          onAddToCart={handleAddToCart}
+        />
+          {/* Banner */}
+          <Banner10/>
+        <MenuSection 
+          title="Combo Packs"
+          items={menuData.comboPacks}
+          onFoodClick={handleFoodClick}
+          onAddToCart={handleAddToCart}
+        />
+        {/* CTA section */}
+          <CtaMenu1/>
+      </div>
+    </>
   );
 };
 

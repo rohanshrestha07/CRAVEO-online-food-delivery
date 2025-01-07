@@ -1,10 +1,9 @@
 
 import { NavLink } from 'react-router-dom'
 
-export default function CtaMenu1() {
+export default function Cta1() {
     return (
-        <div className="bg-[url('/public/Food_bg2.jpeg')] bg-cover bg-center rounded-lg">
-            <div className="bg-red-600 py-16 my-8 rounded-lg bg-opacity-50">
+            <div className="bg-red-600 py-16 my-8 rounded-lg ">
                 <div className="max-w-7xl mx-auto px-4 text-center">
                     <h2 className="text-3xl font-bold text-white mb-6">Ready to Order?</h2>
                     <p className="text-white/90 mb-8 text-lg">
@@ -17,6 +16,5 @@ export default function CtaMenu1() {
                     </NavLink>
                 </div>
             </div>
-        </div>
     )
 }
