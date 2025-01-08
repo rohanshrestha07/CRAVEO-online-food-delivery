@@ -118,30 +118,34 @@ const blogs = [
 
   return (
     <>
-    <div className="max-w-7xl mx-auto px-4 py-12">
-      <h1 className="text-4xl font-bold mb-8">Our <span className="text-[#ff0000]">Blogs</span></h1>
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-        {blogs.map(blog => (
-          <div key={blog.id} className="border rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-shadow">
-            <img 
-              src={blog.image} 
-              alt={blog.title}
-              className="w-full h-48 object-cover"
-            />
-            <div className="p-6">
-              <span className="text-sm text-red-600 font-semibold">{blog.category}</span>
-              <h2 className="text-xl font-bold mt-2 mb-3">{blog.title}</h2>
-              <p className="text-gray-600 mb-4">{blog.excerpt}</p>
-              <div className="flex justify-between items-center text-sm text-gray-500">
-                <span>{blog.author}</span>
-                <span>{new Date(blog.date).toLocaleDateString()}</span>
+    <div className="bg-[url('/public/wrapper_bg.jpg')] bg-fixed">
+      <div className="bg-gray-100 bg-opacity-90 py-4">
+        <div className="max-w-7xl mx-auto px-4 py-12 bg-white rounded-lg">
+          <h1 className="text-4xl font-bold mb-8">Our <span className="text-[#ff0000]">Blogs</span></h1>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {blogs.map(blog => (
+              <div key={blog.id} className="bg-white border rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-shadow">
+                <img 
+                  src={blog.image} 
+                  alt={blog.title}
+                  className="w-full h-48 object-cover"
+                />
+                <div className="p-6">
+                  <span className="text-sm text-red-600 font-semibold">{blog.category}</span>
+                  <h2 className="text-xl font-bold mt-2 mb-3">{blog.title}</h2>
+                  <p className="text-gray-600 mb-4">{blog.excerpt}</p>
+                  <div className="flex justify-between items-center text-sm text-gray-500">
+                    <span>{blog.author}</span>
+                    <span>{new Date(blog.date).toLocaleDateString()}</span>
+                  </div>
+                </div>
               </div>
-            </div>
+            ))}
           </div>
-        ))}
+          {/* CTA section */}
+          <CtaMenu1/>
+        </div>
       </div>
-      {/* CTA section */}
-      <CtaMenu1/>
     </div>
     </>
 

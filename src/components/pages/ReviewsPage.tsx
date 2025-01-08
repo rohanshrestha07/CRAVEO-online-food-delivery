@@ -86,78 +86,84 @@ const ReviewsPage = () => {
     : reviews;
 
   return (
-    <div className="max-w-6xl mx-auto px-4 py-12">
-      <h1 className="text-4xl font-bold mb-8">Customer <span className='text-[#ff0000]'>Reviews</span></h1>
-      
-      {/* Stats Section */}
-      <div className="bg-gray-50 p-6 rounded-lg mb-8">
-        <div className="flex items-center gap-8">
-          <div>
-            <div className="text-5xl font-bold text-gray-900">{stats.average}</div>
-            <div className="flex items-center gap-2 my-2">
-              {renderStars(Math.round(stats.average))}
-            </div>
-            <div className="text-gray-600">{stats.total} reviews</div>
-          </div>
-          
-          <div className="flex-1">
-            {Object.entries(stats.breakdown)
-              .reverse()
-              .map(([rating, count]) => (
-                <button
-                  key={rating}
-                  onClick={() => setSelectedRating(selectedRating === Number(rating) ? null : Number(rating))}
-                  className="flex items-center gap-2 w-full mb-2"
-                >
-                  <span className="w-12 text-sm">{rating} stars</span>
-                  <div className="flex-1 h-4 bg-gray-200 rounded-full overflow-hidden">
-                    <div
-                      className="h-full bg-yellow-400"
-                      style={{
-                        width: `${(count / stats.total) * 100}%`
-                      }}
-                    />
+    <>
+      <div className="bg-[url('/public/wrapper_bg.jpg')] bg-fixed">
+        <div className="bg-gray-100 bg-opacity-90 py-4">
+          <div className="max-w-7xl mx-auto px-4 py-12 bg-white rounded-lg">
+            <h1 className="text-4xl font-bold mb-8">Customer <span className='text-[#ff0000]'>Reviews</span></h1>
+            
+            {/* Stats Section */}
+            <div className="bg-gray-50 p-6 rounded-lg mb-8">
+              <div className="flex items-center gap-8">
+                <div>
+                  <div className="text-5xl font-bold text-gray-900">{stats.average}</div>
+                  <div className="flex items-center gap-2 my-2">
+                    {renderStars(Math.round(stats.average))}
                   </div>
-                  <span className="w-12 text-sm text-right">{count}</span>
-                </button>
-            ))}
+                  <div className="text-gray-600">{stats.total} reviews</div>
+                </div>
+                
+                <div className="flex-1">
+                  {Object.entries(stats.breakdown)
+                    .reverse()
+                    .map(([rating, count]) => (
+                      <button
+                        key={rating}
+                        onClick={() => setSelectedRating(selectedRating === Number(rating) ? null : Number(rating))}
+                        className="flex items-center gap-2 w-full mb-2"
+                      >
+                        <span className="w-12 text-sm">{rating} stars</span>
+                        <div className="flex-1 h-4 bg-gray-200 rounded-full overflow-hidden">
+                          <div
+                            className="h-full bg-yellow-400"
+                            style={{
+                              width: `${(count / stats.total) * 100}%`
+                            }}
+                          />
+                        </div>
+                        <span className="w-12 text-sm text-right">{count}</span>
+                      </button>
+                  ))}
+                </div>
+              </div>
+            </div>
+
+            {/* Reviews List */}
+            <div className="space-y-6">
+              {filteredReviews.map(review => (
+                <div key={review.id} className="border rounded-lg p-6">
+                  <div className="flex justify-between items-start mb-4">
+                    <div>
+                      <div className="flex items-center gap-2 mb-2">
+                        {renderStars(review.rating)}
+                      </div>
+                      <h3 className="font-semibold">{review.userName}</h3>
+                      {review.verified && (
+                        <span className="text-sm text-green-600">Verified Purchase</span>
+                      )}
+                    </div>
+                    <div className="text-sm text-gray-500">
+                      {new Date(review.date).toLocaleDateString()}
+                    </div>
+                  </div>
+                  <p className="text-gray-700 mb-4">{review.content}</p>
+                  <div className="flex items-center justify-between text-sm text-gray-500">
+                    <span>Ordered: {review.orderDetails}</span>
+                    <button className="flex items-center gap-1 text-gray-600 hover:text-gray-900">
+                      <ThumbsUp className="w-4 h-4" />
+                      Helpful ({review.helpful})
+                    </button>
+                  </div>
+                </div>
+              ))}
+            </div>
+
+            {/* CTA section */}
+            <CtaMenu1/>
           </div>
         </div>
       </div>
-
-      {/* Reviews List */}
-      <div className="space-y-6">
-        {filteredReviews.map(review => (
-          <div key={review.id} className="border rounded-lg p-6">
-            <div className="flex justify-between items-start mb-4">
-              <div>
-                <div className="flex items-center gap-2 mb-2">
-                  {renderStars(review.rating)}
-                </div>
-                <h3 className="font-semibold">{review.userName}</h3>
-                {review.verified && (
-                  <span className="text-sm text-green-600">Verified Purchase</span>
-                )}
-              </div>
-              <div className="text-sm text-gray-500">
-                {new Date(review.date).toLocaleDateString()}
-              </div>
-            </div>
-            <p className="text-gray-700 mb-4">{review.content}</p>
-            <div className="flex items-center justify-between text-sm text-gray-500">
-              <span>Ordered: {review.orderDetails}</span>
-              <button className="flex items-center gap-1 text-gray-600 hover:text-gray-900">
-                <ThumbsUp className="w-4 h-4" />
-                Helpful ({review.helpful})
-              </button>
-            </div>
-          </div>
-        ))}
-      </div>
-
-      {/* CTA section */}
-      <CtaMenu1/>
-    </div>
+    </>
   );
 };
 

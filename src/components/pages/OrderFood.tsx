@@ -283,7 +283,7 @@ export default function OrderFood() {
             <div className="bg-opacity-90 bg-gray-100">
                 <div className="h-auto w-screen container mx-auto text-center py-10 ">
                     <h2 className="text-[50px] font-extrabold">Order Your <span className="text-[#ff0000]">Foods</span></h2>
-                    <div className="space-x-2 mt-5 mb-10">
+                    <div className="space-x-2 mt-5 mb-10 ">
                         <input
                             type="search"
                             placeholder="Search here"

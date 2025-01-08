@@ -48,31 +48,37 @@ export default function FAQPage() {
   ];
   
     return (
-      <div className="max-w-3xl mx-auto px-4 py-12">
-        <h1 className="text-4xl font-bold mb-8">Frequently Asked <span className="text-[#ff0000]">Questions</span></h1>
-        <div className="space-y-4">
-          {faqs.map((faq, index) => (
-            <div key={index} className="border rounded-lg">
-              <button
-                className="w-full px-6 py-4 text-left flex justify-between items-center hover:bg-gray-50"
-                onClick={() => setOpenIndex(openIndex === index ? null : index)}
-              >
-                <span className="font-semibold">{faq.question}</span>
-                <ChevronDown 
-                  className={`w-5 h-5 transition-transform ${
-                    openIndex === index ? 'transform rotate-180' : ''
-                  }`}
-                />
-              </button>
-              {openIndex === index && (
-                <div className="px-6 py-4 bg-gray-50 border-t">
-                  <p className="text-gray-600">{faq.answer}</p>
+      <>
+      <div className="bg-[url('/public/wrapper_bg.jpg')] bg-fixed">
+        <div className="bg-gray-100 bg-opacity-90 py-4">
+          <div className="max-w-7xl mx-auto px-4 py-12 rounded-lg bg-white ">
+            <h1 className="text-4xl font-bold mb-8">Frequently Asked <span className="text-[#ff0000]">Questions</span></h1>
+            <div className="space-y-4">
+              {faqs.map((faq, index) => (
+                <div key={index} className="border rounded-lg">
+                  <button
+                    className="w-full px-6 py-4 text-left flex justify-between items-center hover:bg-gray-50"
+                    onClick={() => setOpenIndex(openIndex === index ? null : index)}
+                  >
+                    <span className="font-semibold">{faq.question}</span>
+                    <ChevronDown 
+                      className={`w-5 h-5 transition-transform ${
+                        openIndex === index ? 'transform rotate-180' : ''
+                      }`}
+                    />
+                  </button>
+                  {openIndex === index && (
+                    <div className="px-6 py-4 bg-gray-50 border-t">
+                      <p className="text-gray-600">{faq.answer}</p>
+                    </div>
+                  )}
                 </div>
-              )}
+              ))}
             </div>
-          ))}
+          </div>
         </div>
       </div>
+      </>
     );
   };
   

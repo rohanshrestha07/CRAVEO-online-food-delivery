@@ -85,30 +85,36 @@ export default function NewsPage(){
 ];
   
     return (
-      <div className="max-w-7xl mx-auto px-4 py-12">
-        <h1 className="text-4xl font-bold mb-8">Latest <span className="text-[#ff0000]">News</span></h1>
-        <div className="space-y-8">
-          {news.map(item => (
-            <div key={item.id} className="flex flex-col md:flex-row gap-6 border rounded-lg p-6 hover:shadow-lg transition-shadow">
-              <img 
-                src={item.image} 
-                alt={item.title}
-                className="w-full md:w-64 h-48 object-cover rounded-lg"
-              />
-              <div className="flex-1">
-                <div className="flex justify-between items-start mb-3">
-                  <span className="bg-red-100 text-red-600 px-3 py-1 rounded-full text-sm">{item.category}</span>
-                  <span className="text-gray-500 text-sm">{new Date(item.date).toLocaleDateString()}</span>
-                </div>
-                <h2 className="text-2xl font-bold mb-3">{item.title}</h2>
-                <p className="text-gray-600">{item.content}</p>
-                <button className="mt-4 text-red-600 font-semibold hover:text-red-700">Read More →</button>
+      <>
+        <div className="bg-[url('/public/wrapper_bg.jpg')] bg-fixed">
+          <div className="bg-gray-100 bg-opacity-90 py-4">
+            <div className="max-w-7xl mx-auto px-4 py-12 bg-white rounded-lg">
+              <h1 className="text-4xl font-bold mb-8">Latest <span className="text-[#ff0000]">News</span></h1>
+              <div className="space-y-8">
+                {news.map(item => (
+                  <div key={item.id} className="bg-white flex flex-col md:flex-row gap-6 border rounded-lg p-6 hover:shadow-lg transition-shadow">
+                    <img 
+                      src={item.image} 
+                      alt={item.title}
+                      className="w-full md:w-64 h-48 object-cover rounded-lg"
+                    />
+                    <div className="flex-1">
+                      <div className="flex justify-between items-start mb-3">
+                        <span className="bg-red-100 text-red-600 px-3 py-1 rounded-full text-sm">{item.category}</span>
+                        <span className="text-gray-500 text-sm">{new Date(item.date).toLocaleDateString()}</span>
+                      </div>
+                      <h2 className="text-2xl font-bold mb-3">{item.title}</h2>
+                      <p className="text-gray-600">{item.content}</p>
+                      <button className="mt-4 text-red-600 font-semibold hover:text-red-700">Read More →</button>
+                    </div>
+                  </div>
+                ))}
               </div>
+              {/* CTA section */}
+              <CtaMenu1/>
             </div>
-          ))}
-        </div>
-        {/* CTA section */}
-        <CtaMenu1/>
-      </div>
+          </div>
+        </div>  
+      </>
     );
   };

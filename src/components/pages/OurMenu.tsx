@@ -85,7 +85,7 @@ import Banner1 from "../banner/Banner1";
 const MenuItem = ({ item, onFoodClick, onAddToCart }) => (
   <div
     onClick={() => onFoodClick(item.title)}
-    className="flex-shrink-0 w-64 border border-gray-300 rounded-2xl p-4 transition-all duration-300 hover:shadow-lg hover:-translate-y-1 cursor-pointer"
+    className="flex-shrink-0 w-64 bg-white border border-gray-300 rounded-2xl p-4 transition-all duration-300 hover:shadow-lg hover:-translate-y-1 cursor-pointer"
   >
     <img 
       src={item.img} 
@@ -122,7 +122,7 @@ const MenuSection = ({ title, items, onFoodClick, onAddToCart }) => {
 
   return (
     <div className="mb-12">
-      <h3 className="text-2xl font-bold mb-6">{title}</h3>
+      <h3 className="text-2xl font-bold mb-4">{title}</h3>
       <div className="relative">
         <div className="flex items-center">
           <button 
@@ -463,67 +463,71 @@ const OurMenu = () => {
 
   return (
     <>
-      <div className="pb-10 pt-4 max-w-7xl mx-auto px-4">
-        <div className="bg-[url('/public/Banners/4.jpg')] bg-cover bg-center h-[200px] w-full flex justify-center items-center rounded-xl mb-8">
-          <h1 className="text-8xl font-extrabold text-black">Our <span className="text-[#ff0000]">Menu</span></h1>
-        </div>
-        
-        <MenuSection 
-          title="Popular Foods"
-          items={menuData.popularFoods}
-          onFoodClick={handleFoodClick}
-          onAddToCart={handleAddToCart}
-        />
-        <MenuSection 
-          title="Burgers"
-          items={menuData.burgers}
-          onFoodClick={handleFoodClick}
-          onAddToCart={handleAddToCart}
+    <div className="bg-[url('/public/wrapper_bg.jpg')] bg-fixed">
+      <div className="bg-gray-100 bg-opacity-90 py-4">
+        <div className="pb-10 pt-4 max-w-7xl mx-auto px-4">
+          <div className="bg-[url('/public/Banners/4.jpg')] bg-cover bg-center h-[200px] w-full flex justify-center items-center rounded-xl mb-8">
+            <h1 className="text-6xl font-extrabold text-black">Our <span className="text-[#ff0000]">Menu</span></h1>
+          </div>
+          
+          <MenuSection 
+            title="Popular Foods"
+            items={menuData.popularFoods}
+            onFoodClick={handleFoodClick}
+            onAddToCart={handleAddToCart}
           />
-        {/* CTA section */}
-          {/* <CtaMenu1/>  */}
-          <Banner6/>
-        <MenuSection 
-          title="Pizza"
-          items={menuData.pizza}
-          onFoodClick={handleFoodClick}
-          onAddToCart={handleAddToCart}
-        />
-        {/* Banner */}
-          <Banner8/>
-        <MenuSection 
-          title="Pasta"
-          items={menuData.pasta}
-          onFoodClick={handleFoodClick}
-          onAddToCart={handleAddToCart}
+          <MenuSection 
+            title="Burgers"
+            items={menuData.burgers}
+            onFoodClick={handleFoodClick}
+            onAddToCart={handleAddToCart}
+            />
+          {/* CTA section */}
+            {/* <CtaMenu1/>  */}
+            <Banner6/>
+          <MenuSection 
+            title="Pizza"
+            items={menuData.pizza}
+            onFoodClick={handleFoodClick}
+            onAddToCart={handleAddToCart}
           />
-        {/* CTA section */}
-          <CtaMenu1/>
-        <MenuSection 
-          title="Sandwiches"
-          items={menuData.sandwich}
-          onFoodClick={handleFoodClick}
-          onAddToCart={handleAddToCart}
-          />
-        {/* Banner */}
-          <Banner1/>
-        <MenuSection 
-          title="Cold Drinks"
-          items={menuData.coldDrinks}
-          onFoodClick={handleFoodClick}
-          onAddToCart={handleAddToCart}
-        />
           {/* Banner */}
-          <Banner10/>
-        <MenuSection 
-          title="Combo Packs"
-          items={menuData.comboPacks}
-          onFoodClick={handleFoodClick}
-          onAddToCart={handleAddToCart}
-        />
-        {/* CTA section */}
-          <CtaMenu1/>
+            <Banner8/>
+          <MenuSection 
+            title="Pasta"
+            items={menuData.pasta}
+            onFoodClick={handleFoodClick}
+            onAddToCart={handleAddToCart}
+            />
+          {/* CTA section */}
+            <CtaMenu1/>
+          <MenuSection 
+            title="Sandwiches"
+            items={menuData.sandwich}
+            onFoodClick={handleFoodClick}
+            onAddToCart={handleAddToCart}
+            />
+          {/* Banner */}
+            <Banner1/>
+          <MenuSection 
+            title="Cold Drinks"
+            items={menuData.coldDrinks}
+            onFoodClick={handleFoodClick}
+            onAddToCart={handleAddToCart}
+          />
+            {/* Banner */}
+            <Banner10/>
+          <MenuSection 
+            title="Combo Packs"
+            items={menuData.comboPacks}
+            onFoodClick={handleFoodClick}
+            onAddToCart={handleAddToCart}
+            />
+          {/* CTA section */}
+            <CtaMenu1/>
+        </div>
       </div>
+    </div>
     </>
   );
 };
