@@ -11,6 +11,7 @@ import TodayMenu from "../menulist/TodayMenu";
 import Ads2 from "../ads/Ads2";
 import Ads3 from "../ads/Ads3";
 import Banner6 from "../banner/Banner6";
+import Contact from "../contact/Contact";
 
 
 export default function Home() {
@@ -88,6 +89,7 @@ export default function Home() {
             <FeedBack/>
             <FoodNews/>
             <FoodGallery/>
+            <Contact/>
         </>
     )
 }
