@@ -56,7 +56,7 @@ export default function FoodDetails() {
     <>
     <div className="bg-[url('/public/wrapper_bg.jpg')] bg-fixed">
       <div className="bg-gray-100 bg-opacity-90 py-4">
-      <div className="food-details container mx-auto bg-white px-4">
+      <div className="food-details container mx-auto bg-white rounded-lg px-4">
         <h2 className="text-center text-5xl font-extrabold py-10">
           Food <span className="text-[#ff0000]">Details</span>
           <Breadcrumbs aria-label="breadcrumb" className='flex justify-center'>
@@ -105,9 +105,9 @@ export default function FoodDetails() {
                     <FavoriteIcon />
                   </button>
                 </div>
-                <p className='font-medium'>Category: {menuItem.category}</p>
+                <p className='font-medium'><strong>Category:</strong> {menuItem.category}</p>
                 <p className='font-medium space-x-2'>
-                  Tags:
+                  <strong>Tags:</strong>
                   {menuItem.tags.map(tag => (
                     <span key={tag} className="bg-gray-200 px-3 py-1 rounded-full text-sm">
                       {tag}
@@ -139,9 +139,7 @@ export default function FoodDetails() {
                 {activeTab === 'description' ? (
                   <div className="description-content">
                     <h3 className="text-[30px] font-bold">Product Description</h3>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloribus explicabo quod aliquam excepturi fuga, sint numquam!</p>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos, adipisci!</p>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus, dignissimos!</p>
+                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ex soluta aliquam laboriosam, dolores sapiente quia provident possimus vel aut odio, nostrum consectetur fuga id quas! Ad voluptates enim dolore unde libero nostrum necessitatibus eum natus, quisquam earum quis optio explicabo tempora animi veritatis, sapiente dolores eius. At commodi unde qui.</p>
                   </div>
                 ) : (
                   <div className="reviews-content">

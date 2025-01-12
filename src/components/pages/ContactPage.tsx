@@ -28,7 +28,7 @@ const ContactPage = () => {
               <Phone className="w-12 h-12 text-red-600" />
             </div>
             <h3 className="text-xl font-semibold mt-4">Phone</h3>
-            <p className="mt-2 text-gray-600">+1-555-157-5651</p>
+            <p className="mt-2 text-gray-600">+977 1-433-1076</p>
             <p className="text-sm text-gray-500 mt-1">Customer Support</p>
           </div>
 
@@ -48,8 +48,8 @@ const ContactPage = () => {
               <MapPin className="w-12 h-12 text-red-600" />
             </div>
             <h3 className="text-xl font-semibold mt-4">Address</h3>
-            <p className="mt-2 text-gray-600">123 Food Street</p>
-            <p className="text-sm text-gray-500 mt-1">New York, NY 10001</p>
+            <p className="mt-2 text-gray-600">Street no 420</p>
+            <p className="text-sm text-gray-500 mt-1">Kathmandu, Nepal</p>
           </div>
 
           {/* Working Hours */}
@@ -76,7 +76,7 @@ const ContactPage = () => {
                   <input
                     type="text"
                     className="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-red-500 focus:border-red-500"
-                    placeholder="John Doe"
+                    placeholder="Ram lal"
                   />
                 </div>
                 <div>
@@ -86,7 +86,7 @@ const ContactPage = () => {
                   <input
                     type="email"
                     className="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-red-500 focus:border-red-500"
-                    placeholder="john@example.com"
+                    placeholder="ram@example.com"
                   />
                 </div>
               </div>

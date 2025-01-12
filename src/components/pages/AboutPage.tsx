@@ -1,6 +1,10 @@
 
 import { Check, Award, Users, Utensils } from 'lucide-react';
 import { NavLink } from 'react-router-dom';
+import Rohan from '/public/Rohan.png';
+import Thor from '/public/Thor.jpg';
+import Strange from '/public/Strange.jpg';
+import Ronaldo from '/public/Ronaldo.jpg';
 
 const AboutPage = () => {
   const stats = [
@@ -27,6 +31,29 @@ const AboutPage = () => {
       icon: Award,
     },
   ];
+
+  const members = [
+    {
+      image: Rohan,
+      name: "Rohan Shrestha",
+      position: "Founder & CEO" 
+    },
+    {
+      image: Thor,
+      name: "Thor",
+      position: "Manager" 
+    },
+    {
+      image: Strange,
+      name: "Dr.Strange",
+      position: "CTO" 
+    },
+    {
+      image: Ronaldo,
+      name: "Cristiano Ronaldo",
+      position: "CFO" 
+    },
+  ]
 
   return (
     <div className="min-h-screen bg-red-50">
@@ -120,16 +147,16 @@ const AboutPage = () => {
       <div className="max-w-7xl mx-auto px-4 py-16">
         <h2 className="text-3xl font-bold text-center mb-12">Meet Our Team</h2>
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
-          {[1, 2, 3, 4].map((member) => (
-            <div key={member} className="bg-white rounded-lg shadow-lg overflow-hidden">
+          {members.map((member, index) => (
+            <div key={index} className="bg-white rounded-lg shadow-lg overflow-hidden">
               <img 
-                src={`/api/placeholder/300/300`} 
-                alt={`Team member ${member}`} 
+                src={member.image} 
+                alt={`Team member ${index}`} 
                 className="w-full h-64 object-cover"
               />
               <div className="p-4">
-                <h3 className="font-semibold text-lg">Team Member {member}</h3>
-                <p className="text-gray-600">Position</p>
+                <h3 className="font-semibold text-lg">{member.name}</h3>
+                <p className="text-gray-600">{member.position}</p>
               </div>
             </div>
           ))}

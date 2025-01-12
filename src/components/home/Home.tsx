@@ -1,5 +1,3 @@
-// import Chilli2 from "../chilli/Chilli2";
-// import Cucumber from "../chilli/Cucumber";
 import { Link } from "react-router-dom";
 import About from "../about/About";
 import Delivery from "../delivery/Delivery";
@@ -12,6 +10,7 @@ import Ads2 from "../ads/Ads2";
 import Ads3 from "../ads/Ads3";
 import Banner6 from "../banner/Banner6";
 import Contact from "../contact/Contact";
+import CtaMenu1 from "../CTA/CtaMenu1";
 
 
 export default function Home() {
@@ -53,14 +52,9 @@ export default function Home() {
                     </div>
                     <div className=" object-cover">
                         <img className=" flex-shrink-0" src="/src/assets/burger1.png" alt="burger" />
-                        {/* <img className="absolute rotate-45 bottom-16 right-[440px] h-44 w-44" src="src/assets/coriander2.png" alt="" /> */}
-                        {/* <img className="absolute -z-10 -top-16 right-28 rotate-12 h-[500px] w-[1000px]" src="src/assets/tomato-juice-splash-1.png" alt="" /> */}
                     </div>
-                    {/* <Cucumber/> */}
                 </div>
             </div>
-            {/* <img className="absolute -left-16 top-24 h-44 w-44" src="src/assets/onion1.png" alt="" />
-            <Chilli2/> */}
             <TodayMenu/>
             <Delivery/>
             <div className="container mx-auto flex gap-4 h-[500px] rounded-2xl mb-16">
@@ -90,6 +84,9 @@ export default function Home() {
             <FoodNews/>
             <FoodGallery/>
             <Contact/>
+            <div className="container mx-auto">
+                <CtaMenu1/>
+            </div>
         </>
     )
 }

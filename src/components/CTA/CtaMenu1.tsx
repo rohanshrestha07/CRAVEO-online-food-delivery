@@ -11,9 +11,9 @@ export default function CtaMenu1() {
                         Experience our delicious food and exceptional service today.
                     </p>
                     <NavLink to="/orderFood">
-                    <button className="bg-white text-red-600 px-8 py-3 rounded-md font-semibold hover:bg-gray-100 transition-colors">
-                        Order Now
-                    </button>
+                        <button className="bg-white text-red-600 px-8 py-3 rounded-md font-semibold hover:bg-gray-100 transition-colors">
+                            Order Now
+                        </button>
                     </NavLink>
                 </div>
             </div>

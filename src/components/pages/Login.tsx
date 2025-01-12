@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faGooglePlusG, faFacebookF, faGithub, faLinkedinIn } from "@fortawesome/free-brands-svg-icons";
+import { faGoogle, faFacebookF, faGithub, faLinkedinIn } from "@fortawesome/free-brands-svg-icons";
 
 type LoginModalProps = {
     onClose: () => void;
@@ -34,11 +34,20 @@ const Login: React.FC<LoginModalProps> = ({ onClose }) => {
                     <div className={`w-1/2 h-full bg-white flex flex-col justify-center items-center px-10 transition-all duration-700 ${isSignUpVisible ? "opacity-0 pointer-events-none" : "opacity-100"}`}>
                         <h1 className="text-3xl font-bold mb-6">Sign In</h1>
                         <div className="flex space-x-3 mb-6">
-                            <a href="#" className="p-2 border rounded-full"><FontAwesomeIcon icon={faGooglePlusG} /></a>
-                            <a href="#" className="p-2 border rounded-full"><FontAwesomeIcon icon={faFacebookF} /></a>
-                            <a href="#" className="p-2 border rounded-full"><FontAwesomeIcon icon={faGithub} /></a>
-                            <a href="#" className="p-2 border rounded-full"><FontAwesomeIcon icon={faLinkedinIn} /></a>
+                            <a href="#" className="flex items-center justify-center" style={{width: "40px", height: "40px"}}>
+                                <FontAwesomeIcon style={{borderColor:"gray", border: "1px solid black", borderRadius: "50%", width: "24px", height: "24px", padding:"5px"}} icon={faGoogle} />
+                            </a>
+                            <a href="#" className="flex items-center justify-center" style={{width: "40px", height: "40px"}}>
+                                <FontAwesomeIcon style={{borderColor:"gray", border: "1px solid black", borderRadius: "50%", width: "24px", height: "24px", padding:"5px"}} icon={faFacebookF} />
+                            </a>
+                            <a href="#" className="flex items-center justify-center" style={{width: "40px", height: "40px"}}>
+                                <FontAwesomeIcon style={{borderColor:"gray", border: "1px solid black", borderRadius: "50%", width: "24px", height: "24px", padding:"5px"}} icon={faGithub} />
+                            </a>
+                            <a href="#" className="flex items-center justify-center" style={{width: "40px", height: "40px"}}>
+                                <FontAwesomeIcon style={{borderColor:"gray", border: "1px solid black", borderRadius: "50%", width: "24px", height: "24px", padding:"5px"}} icon={faLinkedinIn} />
+                            </a>
                         </div>
+
                         <span className="text-sm mb-4">or use your email to sign in</span>
                         <input type="email" placeholder="Email" className="w-full p-3 mb-4 border rounded-lg bg-gray-200" />
                         <input type="password" placeholder="Password" className="w-full p-3 mb-4 border rounded-lg bg-gray-200" />
@@ -50,10 +59,18 @@ const Login: React.FC<LoginModalProps> = ({ onClose }) => {
                     <div className={`w-1/2 h-full bg-white flex flex-col justify-center items-center px-10 transition-all duration-700 ${isSignUpVisible ? "opacity-100" : "opacity-0 pointer-events-none"}`}>
                         <h1 className="text-3xl font-bold mb-6">Create Account</h1>
                         <div className="flex space-x-3 mb-6">
-                            <a href="#" className="p-2 border rounded-full"><FontAwesomeIcon icon={faGooglePlusG} /></a>
-                            <a href="#" className="p-2 border rounded-full"><FontAwesomeIcon icon={faFacebookF} /></a>
-                            <a href="#" className="p-2 border rounded-full"><FontAwesomeIcon icon={faGithub} /></a>
-                            <a href="#" className="p-2 border rounded-full"><FontAwesomeIcon icon={faLinkedinIn} /></a>
+                            <a href="#" className="flex items-center justify-center" style={{width: "40px", height: "40px"}}>
+                                <FontAwesomeIcon style={{borderColor:"gray", border: "1px solid black", borderRadius: "50%", width: "24px", height: "24px", padding:"5px"}} icon={faGoogle} />
+                            </a>
+                            <a href="#" className="flex items-center justify-center" style={{width: "40px", height: "40px"}}>
+                                <FontAwesomeIcon style={{borderColor:"gray", border: "1px solid black", borderRadius: "50%", width: "24px", height: "24px", padding:"5px"}} icon={faFacebookF} />
+                            </a>
+                            <a href="#" className="flex items-center justify-center" style={{width: "40px", height: "40px"}}>
+                                <FontAwesomeIcon style={{borderColor:"gray", border: "1px solid black", borderRadius: "50%", width: "24px", height: "24px", padding:"5px"}} icon={faGithub} />
+                            </a>
+                            <a href="#" className="flex items-center justify-center" style={{width: "40px", height: "40px"}}>
+                                <FontAwesomeIcon style={{borderColor:"gray", border: "1px solid black", borderRadius: "50%", width: "24px", height: "24px", padding:"5px"}} icon={faLinkedinIn} />
+                            </a>
                         </div>
                         <span className="text-sm mb-4">or use your email for registration</span>
                         <input type="text" placeholder="Name" className="w-full p-3 mb-4 border rounded-lg bg-gray-200" />

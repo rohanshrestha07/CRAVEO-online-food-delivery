@@ -465,8 +465,8 @@ const OurMenu = () => {
     <>
     <div className="bg-[url('/public/wrapper_bg.jpg')] bg-fixed">
       <div className="bg-gray-100 bg-opacity-90 py-4">
-        <div className="pb-10 pt-4 max-w-7xl mx-auto px-4 bg-white">
-          <div className="bg-[url('/public/Banners/MenuBanner2.jpg')] bg-cover bg-center h-[250px] w-full flex justify-center items-center rounded-xl mb-4 pl-24">
+        <div className="pb-10 pt-4 max-w-7xl mx-auto px-4 bg-white rounded-lg">
+          <div className="bg-[url('/public/Banners/MenuBanner2.jpg')] bg-cover bg-center h-[250px] w-full flex justify-center items-center rounded-lg mb-4 pl-24">
             <h1 className="text-6xl font-extrabold text-white">Our <span className="text-[#ff0000]">Menu</span></h1>
           </div>
           
