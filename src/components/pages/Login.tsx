@@ -35,16 +35,16 @@ const Login: React.FC<LoginModalProps> = ({ onClose }) => {
                         <h1 className="text-3xl font-bold mb-6">Sign In</h1>
                         <div className="flex space-x-3 mb-6">
                             <a href="#" className="flex items-center justify-center" style={{width: "40px", height: "40px"}}>
-                                <FontAwesomeIcon style={{borderColor:"gray", border: "1px solid black", borderRadius: "50%", width: "24px", height: "24px", padding:"5px"}} icon={faGoogle} />
+                                <FontAwesomeIcon style={{ border: "1px solid gray", borderRadius: "50%", width: "24px", height: "24px", padding:"5px"}} icon={faGoogle} />
                             </a>
                             <a href="#" className="flex items-center justify-center" style={{width: "40px", height: "40px"}}>
-                                <FontAwesomeIcon style={{borderColor:"gray", border: "1px solid black", borderRadius: "50%", width: "24px", height: "24px", padding:"5px"}} icon={faFacebookF} />
+                                <FontAwesomeIcon style={{ border: "1px solid gray", borderRadius: "50%", width: "24px", height: "24px", padding:"5px"}} icon={faFacebookF} />
                             </a>
                             <a href="#" className="flex items-center justify-center" style={{width: "40px", height: "40px"}}>
-                                <FontAwesomeIcon style={{borderColor:"gray", border: "1px solid black", borderRadius: "50%", width: "24px", height: "24px", padding:"5px"}} icon={faGithub} />
+                                <FontAwesomeIcon style={{ border: "1px solid gray", borderRadius: "50%", width: "24px", height: "24px", padding:"5px"}} icon={faGithub} />
                             </a>
                             <a href="#" className="flex items-center justify-center" style={{width: "40px", height: "40px"}}>
-                                <FontAwesomeIcon style={{borderColor:"gray", border: "1px solid black", borderRadius: "50%", width: "24px", height: "24px", padding:"5px"}} icon={faLinkedinIn} />
+                                <FontAwesomeIcon style={{ border: "1px solid gray", borderRadius: "50%", width: "24px", height: "24px", padding:"5px"}} icon={faLinkedinIn} />
                             </a>
                         </div>
 
@@ -60,16 +60,16 @@ const Login: React.FC<LoginModalProps> = ({ onClose }) => {
                         <h1 className="text-3xl font-bold mb-6">Create Account</h1>
                         <div className="flex space-x-3 mb-6">
                             <a href="#" className="flex items-center justify-center" style={{width: "40px", height: "40px"}}>
-                                <FontAwesomeIcon style={{borderColor:"gray", border: "1px solid black", borderRadius: "50%", width: "24px", height: "24px", padding:"5px"}} icon={faGoogle} />
+                                <FontAwesomeIcon style={{ border: "1px solid gray", borderRadius: "50%", width: "24px", height: "24px", padding:"5px"}} icon={faGoogle} />
                             </a>
                             <a href="#" className="flex items-center justify-center" style={{width: "40px", height: "40px"}}>
-                                <FontAwesomeIcon style={{borderColor:"gray", border: "1px solid black", borderRadius: "50%", width: "24px", height: "24px", padding:"5px"}} icon={faFacebookF} />
+                                <FontAwesomeIcon style={{ border: "1px solid gray", borderRadius: "50%", width: "24px", height: "24px", padding:"5px"}} icon={faFacebookF} />
                             </a>
                             <a href="#" className="flex items-center justify-center" style={{width: "40px", height: "40px"}}>
-                                <FontAwesomeIcon style={{borderColor:"gray", border: "1px solid black", borderRadius: "50%", width: "24px", height: "24px", padding:"5px"}} icon={faGithub} />
+                                <FontAwesomeIcon style={{ border: "1px solid gray", borderRadius: "50%", width: "24px", height: "24px", padding:"5px"}} icon={faGithub} />
                             </a>
                             <a href="#" className="flex items-center justify-center" style={{width: "40px", height: "40px"}}>
-                                <FontAwesomeIcon style={{borderColor:"gray", border: "1px solid black", borderRadius: "50%", width: "24px", height: "24px", padding:"5px"}} icon={faLinkedinIn} />
+                                <FontAwesomeIcon style={{ border: "1px solid gray", borderRadius: "50%", width: "24px", height: "24px", padding:"5px"}} icon={faLinkedinIn} />
                             </a>
                         </div>
                         <span className="text-sm mb-4">or use your email for registration</span>
