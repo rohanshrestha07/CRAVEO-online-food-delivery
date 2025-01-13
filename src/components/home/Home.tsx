@@ -11,6 +11,7 @@ import Ads3 from "../ads/Ads3";
 import Banner6 from "../banner/Banner6";
 import Contact from "../contact/Contact";
 import CtaMenu1 from "../CTA/CtaMenu1";
+import FloatingTestimonials from "../floating/FloatingTestimonials";
 
 
 export default function Home() {
@@ -69,77 +70,49 @@ export default function Home() {
 
                 {/* content element */}
                 <div className="relative z-0 flex flex-col items-center justify-center bg-red-400 bg-opacity-60 h-full">
-                    <div className="container mx-auto px-4 text-center text-white">
-                        <h1 className="text-7xl font-extrabold leading-tight">We Serve The Test <span className="text-[#ff0000]">YOU LOVE</span></h1>
-                        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eius ea numquam hic enim assumenda esse nobis corrupti perferendis ducimus nesciunt in possimus, autem laboriosam? Unde!</p>
-                        <div className="my-6">
-                            <Link to={"/orderFood"}>
-                                <button className="px-4 py-2 rounded-3xl text-white bg-[#ff0000] mr-4 font-medium"
-                                style={{
-                                    boxShadow: '0px 4px 8px rgba(0, 0, 0, 0.1)'
-                                }}
-                                onMouseEnter={(e) => {
-                                    e.currentTarget.style.boxShadow = "0 0px 15px rgba(255, 0, 0, 0.5)";
-                                }}
-                                onMouseLeave={(e) => {
-                                    e.currentTarget.style.boxShadow = "none";
-                                }}
-                                >Order Now</button>
-                            </Link>
-                            <Link to={"/restaurants"}>
-                                <button className="px-3 py-2 border border-white rounded-3xl font-medium"
-                                style={{
-                                    boxShadow: '0px 4px 8px rgba(0, 0, 0, 0.1)'
-                                }}
-                                onMouseEnter={(e) => {
-                                    e.currentTarget.style.boxShadow = "0 0px 15px rgba(0, 0, 0, 0.5)";
-                                }}
-                                onMouseLeave={(e) => {
-                                    e.currentTarget.style.boxShadow = "none";
-                                }}
-                                >Book a Table</button>
-                            </Link>
+                    <div className="relative container mx-auto px-4 flex items-center space-x-4 text-center text-white">
+                        <div className="px-4">
+                            <h1 className="text-7xl italic font-extrabold">We Serve The Test <span className="text-[#ff0000]">YOU LOVE</span></h1>
+                            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eius ea numquam hic enim assumenda esse nobis corrupti perferendis ducimus nesciunt in possimus, autem laboriosam? Unde!</p>
+                            <div className="my-6">
+                                <Link to={"/orderFood"}>
+                                    <button className="px-4 py-2 rounded-3xl text-white bg-[#ff0000] mr-4 font-medium"
+                                    style={{
+                                        boxShadow: '0px 4px 8px rgba(0, 0, 0, 0.1)'
+                                    }}
+                                    onMouseEnter={(e) => {
+                                        e.currentTarget.style.boxShadow = "0 0px 15px rgba(255, 0, 0, 0.5)";
+                                    }}
+                                    onMouseLeave={(e) => {
+                                        e.currentTarget.style.boxShadow = "none";
+                                    }}
+                                    >Order Now</button>
+                                </Link>
+                                <Link to={"/restaurants"}>
+                                    <button className="px-3 py-2 border border-white rounded-3xl font-medium"
+                                    style={{
+                                        boxShadow: '0px 4px 8px rgba(0, 0, 0, 0.1)'
+                                    }}
+                                    onMouseEnter={(e) => {
+                                        e.currentTarget.style.boxShadow = "0 0px 15px rgba(0, 0, 0, 0.5)";
+                                    }}
+                                    onMouseLeave={(e) => {
+                                        e.currentTarget.style.boxShadow = "none";
+                                    }}
+                                    >Book a Table</button>
+                                </Link>
+                            </div>
+                        </div>
+                        <div className=" w-full h-screen flex items-center">
+                            <div className="relative bg-white h-[400px] w-full p-2">
+                                <img className="h-full w-full object-cover" src="public/Chef_cooking.jpg" alt="" />
+                                <FloatingTestimonials/>
+                            </div>
                         </div>
                     </div>
                 </div>
-                {/* <div className="grid lg:grid-cols-2 md:grid-cols-1">
-                    <div className="lg:py-32 md:py-16 sm:py-8 py-4 px-6 lg:text-left md:text-center sm:text-center text-center">
-                        <h1 className="text-[70px] font-extrabold mb-4 leading-tight">Welcome To <br /> Our Tasty <span className="text-[#ff0000]">Foods</span></h1>
-                        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eius ea numquam hic enim assumenda esse nobis corrupti perferendis ducimus nesciunt in possimus, autem laboriosam? Unde!</p>
-                        <div className="my-6">
-                            <Link to={"/orderFood"}>
-                                <button className="px-4 py-2 rounded-3xl text-white bg-[#ff0000] mr-4 font-medium"
-                                style={{
-                                    boxShadow: '0px 4px 8px rgba(0, 0, 0, 0.1)'
-                                }}
-                                onMouseEnter={(e) => {
-                                    e.currentTarget.style.boxShadow = "0 0px 15px rgba(255, 0, 0, 0.5)";
-                                }}
-                                onMouseLeave={(e) => {
-                                    e.currentTarget.style.boxShadow = "none";
-                                }}
-                                >Order Now</button>
-                            </Link>
-                            <Link to={"/restaurants"}>
-                                <button className="px-3 py-2 border border-black rounded-3xl font-medium"
-                                style={{
-                                    boxShadow: '0px 4px 8px rgba(0, 0, 0, 0.1)'
-                                }}
-                                onMouseEnter={(e) => {
-                                    e.currentTarget.style.boxShadow = "0 0px 15px rgba(0, 0, 0, 0.5)";
-                                }}
-                                onMouseLeave={(e) => {
-                                    e.currentTarget.style.boxShadow = "none";
-                                }}
-                                >Book a Table</button>
-                            </Link>
-                        </div>
-                    </div>
-                    <div className=" object-cover">
-                        <img className=" flex-shrink-0" src="/src/assets/burger1.png" alt="burger" />
-                    </div>
-                </div> */}
             </div>
+
             <TodayMenu/>
             <Delivery/>
             <div className="container mx-auto flex gap-4 h-[500px] rounded-2xl mb-16">
