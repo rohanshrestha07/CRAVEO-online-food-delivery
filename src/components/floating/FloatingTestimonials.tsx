@@ -101,22 +101,13 @@ const FloatingTestimonials = () => {
     if (isAnimatingRef.current) return;
     isAnimatingRef.current = true;
 
-    // Clear existing timeouts
-    if (timeoutRef.current) {
-      clearTimeout(timeoutRef.current);
-    }
-
-    // Remove all testimonials simultaneously
     setVisibleStates([false, false, false]);
 
-    // Wait for exit animations to complete
     await new Promise(resolve => setTimeout(resolve, 1000));
 
-    // Update indices and show new testimonials
     setActiveIndices(prev => prev.map(index => (index + 3) % testimonials.length));
     setPositions(generatePositions());
     
-    // Small delay before showing new testimonials
     setTimeout(() => {
       setVisibleStates([true, true, true]);
       isAnimatingRef.current = false;
@@ -126,9 +117,7 @@ const FloatingTestimonials = () => {
   useEffect(() => {
     setPositions(generatePositions());
 
-    const interval = setInterval(() => {
-      startNewCycle();
-    }, 8000);
+    const interval = setInterval(startNewCycle, 8000);
 
     return () => {
       clearInterval(interval);
@@ -138,90 +127,87 @@ const FloatingTestimonials = () => {
     };
   }, []);
 
-  const TestimonialCard = ({ testimonial, position, isVisible, index }) => (
-    <AnimatePresence mode="wait">
-      {isVisible && (
-        <motion.div
-          key={`${testimonial.id}-${index}`}
-          initial={{ 
-            y: 400,
-            x: position.x,
-            opacity: 0,
-            scale: 0.5
-          }}
-          animate={{ 
-            y: position.y,
-            x: position.x,
-            opacity: 1,
-            scale: 1
-          }}
-          exit={{ 
-            y: -100,
-            opacity: 0,
-            scale: 1.5,
-          }}
-          transition={{
-            type: "spring",
-            stiffness: 80,
-            damping: 12,
-            duration: 1,
-            delay: position.delay
-          }}
-          className="absolute -right-24 -top-24 transform -translate-x-1/2"
-        >
-          <div className="relative bg-white/90 backdrop-blur-sm p-4 rounded-xl shadow-lg w-[280px] text-center hover:scale-105 transition-transform">
-            <div className='flex items-center space-x-2'>
-              <div className='rounded-full'>
-                <img 
-                  src={testimonial.image} 
-                  alt={testimonial.name}
-                  className="w-40 h-16 object-cover rounded-full mx-auto mb-0"
+  const TestimonialCard = ({ testimonial, position, isVisible }) => (
+    <motion.div
+      key={testimonial.id}
+      initial={{ 
+        y: 400,
+        x: position.x,
+        opacity: 0,
+        scale: 0.5
+      }}
+      animate={{ 
+        y: position.y,
+        x: position.x,
+        opacity: isVisible ? 1 : 0,
+        scale: isVisible ? 1 : 0.5
+      }}
+      exit={{ 
+        y: -100,
+        opacity: 0,
+        scale: 1.5,
+      }}
+      transition={{
+        type: "spring",
+        stiffness: 80,
+        damping: 12,
+        duration: 1,
+        delay: position.delay
+      }}
+      className="absolute -right-24 -top-24 transform -translate-x-1/2"
+    >
+      <div className="relative bg-white/90 backdrop-blur-sm p-4 rounded-xl shadow-lg w-[280px] text-center hover:scale-105 transition-transform">
+        <div className='flex items-center space-x-2'>
+          <div className='rounded-full'>
+            <img 
+              src={testimonial.image} 
+              alt={testimonial.name}
+              className="w-40 h-16 object-cover rounded-full mx-auto mb-0"
+            />
+          </div>
+          <motion.div
+            initial={{ scale: 0 }}
+            animate={{ scale: 1 }}
+            transition={{ delay: position.delay + 0.3 }}
+            className="absolute -top-2 -right-2 bg-yellow-400 rounded-full p-1"
+          >
+            <Star className="w-4 h-4 text-white" />
+          </motion.div>
+          <div>
+            <p className="text-gray-700 mb-1 italic items-center flex text-sm">
+              "{testimonial.text}"
+            </p>
+            <p className="font-semibold text-gray-900">
+              {testimonial.name}
+            </p>
+            <div className="flex justify-center gap-1 mb-0">
+              {[...Array(testimonial.rating)].map((_, i) => (
+                <Star 
+                  key={`${testimonial.id}-star-${i}`}
+                  className="w-4 h-4 text-yellow-400 fill-yellow-400"
                 />
-              </div>
-                <motion.div
-                  initial={{ scale: 0 }}
-                  animate={{ scale: 1 }}
-                  transition={{ delay: position.delay + 0.3 }}
-                  className="absolute -top-2 -right-2 bg-yellow-400 rounded-full p-1"
-                >
-                  <Star className="w-4 h-4 text-white" />
-                </motion.div>
-              {/* review and star */}
-              <div>
-                <p className="text-gray-700 mb-1 italic items-center flex text-sm">
-                  "{testimonial.text}"
-                </p>
-
-                <p className="font-semibold text-gray-900">
-                  {testimonial.name}
-                </p>
-                <div className="flex justify-center gap-1 mb-0">
-                  {[...Array(testimonial.rating)].map((_, i) => (
-                    <Star 
-                      key={i} 
-                      className="w-4 h-4 text-yellow-400 fill-yellow-400"
-                    />
-                  ))}
-                </div>
-              </div>
+              ))}
             </div>
           </div>
-        </motion.div>
-      )}
-    </AnimatePresence>
+        </div>
+      </div>
+    </motion.div>
   );
 
   return (
-    <div className="absolute top-0 bg-transparent h-full w-full ">
-      {activeIndices.map((testimonialIndex, index) => (
-        <TestimonialCard
-          key={`${testimonials[testimonialIndex].id}-${index}`}
-          testimonial={testimonials[testimonialIndex]}
-          position={positions[index] || { x: 0, y: 0, delay: 0 }}
-          isVisible={visibleStates[index]}
-          index={index}
-        />
-      ))}
+    <div className="absolute top-0 bg-transparent h-full w-full">
+      <AnimatePresence>
+        {activeIndices.map((testimonialIndex, index) => (
+          visibleStates[index] && (
+            <TestimonialCard
+              key={testimonials[testimonialIndex].id}
+              testimonial={testimonials[testimonialIndex]}
+              position={positions[index] || { x: 0, y: 0, delay: 0 }}
+              isVisible={visibleStates[index]}
+            />
+          )
+        ))}
+      </AnimatePresence>
     </div>
   );
 };
