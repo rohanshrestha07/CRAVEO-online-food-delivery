@@ -11,19 +11,22 @@ export default function Footer() {
         <>
             <div className=" bg-gray-400 md:px-24 px-8 py-10">
                 <div className="container mx-auto w-full">
-                    <div className="flex flex-wrap gap-8 items-center mb-10">
-                        <h1 className="text-[40px] font-extrabold text-[#ff0000] border-r pr-16 mr-16 cursor-pointer">FOODIE</h1>
-                        <div className="">
-                            <h3 className="text-[28px] font-bold ">Subscription News</h3>
-                            <p className="text-[14px]">Subscribe to the weekly newslatter.</p>
+                    <div className="flex flex-wrap gap-8 items-center justify-between mb-10">
+                        {/* <h1 className="text-[40px] font-extrabold text-[#ff0000] border-r pr-16 mr-16 cursor-pointer">FOODIE</h1> */}
+                        <img className="h-16 w-28" src="public/yum.png" alt="" />
+                        <div className="flex flex-wrap gap-8 items-center">
+                            <div className="">
+                                <h3 className="text-[28px] font-bold ">Subscription News</h3>
+                                <p className="text-[14px]">Subscribe to the weekly newslatter.</p>
+                            </div>
+                            <input className="px-6 py-3 outline-none w-[500px] rounded-full text-[16px]" type="email" placeholder="Enter Email Address" />
+                            <button className="bg-black text-white rounded-full lg:px-6 md:px-6 px-4 py-3" >Subscribe</button>
                         </div>
-                        <input className="px-6 py-3 outline-none w-[500px] rounded-full text-[16px]" type="email" placeholder="Enter Email Address" />
-                        <button className="bg-black text-white rounded-full lg:px-6 md:px-6 px-4 py-3" >Subscribe</button>
                     </div>
                     <hr />
                     <div className="grid lg:grid-cols-4 md:grid-cols-2 sm:grid-cols-2 grid-cols-1 gap-10 mt-10">
                         <div>
-                            <p className="mb-3 text-[#3c3c3c]">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Temporibus corrupti libero velit?</p>
+                            <p className="mb-3 text-[#3c3c3c]"> Welcome to Foodie, where great food meets great company! We’re here to bring you the tastiest experiences, whether dining in or taking away.</p>
                             <h3 className="text-[18px] font-bold">Book A Table</h3>
                             <p className="mb-3 text-[#ff0000] font-bold cursor-pointer">+1-555-157-5651</p>
                             <h3 className="text-[18px] font-bold">Opening Hours</h3>

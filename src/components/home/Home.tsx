@@ -14,7 +14,7 @@ import CtaMenu1 from "../CTA/CtaMenu1";
 import FloatingTestimonials from "../floating/FloatingTestimonials";
 import { useState, useEffect } from "react";
 
-const images =[
+const images = [
     {
         image: '/public/Chef_cooking.jpg'
     },
@@ -30,7 +30,7 @@ const images =[
     {
         image: '/public/Slide4.jpg'
     },
-]
+];
 
 export default function Home() {
     const [currentIndex, setCurrentIndex] = useState(0);
@@ -62,8 +62,8 @@ export default function Home() {
                 <div className="relative z-0 flex flex-col items-center justify-center bg-red-400 bg-opacity-60 h-full">
                     <div className="relative container mx-auto px-4 flex items-center space-x-4 text-center text-white">
                         <div className="px-4">
-                            <h1 className="text-7xl italic mb-2 font-extrabold">We Serve The Test <span className="text-[#ff0000]">YOU LOVE</span></h1>
-                            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eius ea numquam hic enim assumenda esse nobis corrupti perferendis ducimus nesciunt in possimus, autem laboriosam? Unde!</p>
+                            <h1 className="text-7xl italic mb-2 font-extrabold">We Serve The Taste <span className="text-[#ff0000]">YOU LOVE</span></h1>
+                            <p>Experience the joy of delicious, freshly prepared meals delivered straight to your door. With a wide variety of cuisines and fast, reliable service, your cravings are just a click away!</p>
                             <div className="my-6">
                                 <Link to={"/orderFood"}>
                                     <button className="px-4 py-2 rounded-3xl text-white bg-[#ff0000] mr-4 font-medium"
@@ -124,23 +124,20 @@ export default function Home() {
             <div className="container mx-auto flex gap-4 h-[500px] rounded-2xl mb-16">
                 <div className="flex flex-col gap-4 w-[800px]">
                     <div className="flex flex-col pl-10 pt-20 bg-[url('/Foods/Food6.jpg')] bg-cover bg-center h-full w-full text-white rounded-2xl cursor-pointer" >
-                        
-                        
+                        {/* <p>Explore our signature dishes, crafted with the freshest ingredients to delight your taste buds.</p> */}
                     </div>
                     <div className="flex flex-col justify-center items-center pt-28 bg-[url('/Foods/Food18.jpg')] bg-cover bg-center h-full w-full text-white rounded-2xl cursor-pointer">
-                        
-                        
+                        {/* <p>Indulge in gourmet meals that bring the essence of fine dining to your home.</p> */}
                     </div>
                 </div>
                 <div className="flex flex-col justify-center items-center pt-28 bg-[url('/Foods/Food12.jpg')] bg-cover bg-center h-full w-full text-white rounded-2xl cursor-pointer">
-                    
+                    {/* <p>Your favorite comfort foods are just a few clicks away. Savor every bite!</p> */}
                 </div>
                 <div className="flex flex-col justify-center border-gray-200 border items-center pt-28 bg-[url('/Foods/HomeMade.jpg')] bg-cover bg-center h-full w-[800px] text-white rounded-2xl cursor-pointer">
-                    
+                    {/* <p>Homemade flavors, delivered with care and love, straight to your door.</p> */}
                 </div>
             </div>
             <Menu/>
-            {/* <Ads2/> */}
             <Banner6/>
             <About/>
             <Ads3/>
@@ -152,5 +149,5 @@ export default function Home() {
                 <CtaMenu1/>
             </div>
         </>
-    )
+    );
 }

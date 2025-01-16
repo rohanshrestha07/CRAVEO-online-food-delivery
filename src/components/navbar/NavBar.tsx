@@ -12,11 +12,20 @@ export default function NavBar() {
     const [isMenuOpen, setMenuOpen] = useState(false);
     const toggleMenu = () => {
         setMenuOpen(!isMenuOpen);
-    }
+        if (isMenuOpen) {
+            // If the menu is being closed, ensure the Pages dropdown is also closed
+            setMobilePagesOpen(false);
+        }
+    };
     const [isPagesOpen, setPagesOpen] = useState(false);
     const togglePages = () => {
         setPagesOpen(!isPagesOpen);
     }
+    const [isMobilePagesOpen, setMobilePagesOpen] = useState(false);
+    const toggleMobilePages = () => {
+        setMobilePagesOpen(!isMobilePagesOpen);
+    }
+
 
     return (
         <>
@@ -78,8 +87,18 @@ export default function NavBar() {
                             <li className='cursor-pointer hover:text-[#ff0000]'><NavLink to="/" className={({ isActive }) => { return isActive ? "text-red-600 border-b-2 border-b-[#ff0000]" : ""; }}>Home</NavLink></li>
                             <li className='cursor-pointer hover:text-[#ff0000]'><NavLink to="/menu" className={({ isActive }) => { return isActive ? "text-red-600 border-b-2 border-b-[#ff0000]" : ""; }}>Menu</NavLink></li>
                             <li className='cursor-pointer hover:text-[#ff0000]'><NavLink to="/orderFood" className={({ isActive }) => { return isActive ? "text-red-600 border-b-2 border-b-[#ff0000]" : ""; }}>Order Food</NavLink></li>
-                            <li className='cursor-pointer hover:text-[#ff0000]'><NavLink to="/blog" className={({ isActive }) => { return isActive ? "text-red-600 border-b-2 border-b-[#ff0000]" : ""; }}>Blog</NavLink></li>
-                            <li className='cursor-pointer hover:text-[#ff0000]'><NavLink to="/pages" className={({ isActive }) => { return isActive ? "text-red-600 border-b-2 border-b-[#ff0000]" : ""; }}>Pages</NavLink></li>
+                            <li className='cursor-pointer hover:text-[#ff0000] '><NavLink to="/restaurants" className={({ isActive }) => { return isActive ? "text-red-600 border-b-2 border-b-[#ff0000]" : ""; }}>Restaurants</NavLink></li>
+                            <li className='cursor-pointer flex hover:text-[#ff0000]' onClick={toggleMobilePages} >
+                                Pages
+                                {/* dropdown icon */}
+                                <div>
+                                    {isMobilePagesOpen ? (
+                                        <KeyboardArrowUpIcon/>
+                                    ) : (
+                                        <KeyboardArrowDownIcon/>
+                                    )}
+                                </div>
+                            </li>
                         </ul>
                     </div>
                 )}
@@ -96,6 +115,17 @@ export default function NavBar() {
                         <li className='cursor-pointer hover:text-[#ff0000]'><NavLink to="/FAQs" className={({ isActive }) => { return isActive ? "text-red-600 border-b-2 border-b-[#ff0000]" : ""; }}>FAQs</NavLink></li>
                     </ul>
                 </div>
+                {/* Mobile Pages dropdown */}
+                {isMobilePagesOpen &&(
+                    <div className="lg:hidden block bg-gray-100 w-full">
+                        <ul className="flex flex-col items-center gap-5 py-2 font-medium">
+                            <li className='cursor-pointer hover:text-[#ff0000]'><NavLink to="/blogs" className={({ isActive }) => { return isActive ? "text-red-600 border-b-2 border-b-[#ff0000]" : ""; }}>Blogs</NavLink></li>
+                            <li className='cursor-pointer hover:text-[#ff0000]'><NavLink to="/reviews" className={({ isActive }) => { return isActive ? "text-red-600 border-b-2 border-b-[#ff0000]" : ""; }}>Reviews</NavLink></li>
+                            <li className='cursor-pointer hover:text-[#ff0000]'><NavLink to="/news" className={({ isActive }) => { return isActive ? "text-red-600 border-b-2 border-b-[#ff0000]" : ""; }}>News</NavLink></li>
+                            <li className='cursor-pointer hover:text-[#ff0000]'><NavLink to="/FAQs" className={({ isActive }) => { return isActive ? "text-red-600 border-b-2 border-b-[#ff0000]" : ""; }}>FAQs</NavLink></li>
+                        </ul>
+                    </div>
+                )}
             </div>
         </>
     )
