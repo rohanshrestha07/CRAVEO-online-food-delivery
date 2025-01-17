@@ -1,4 +1,5 @@
 import CheckCircleIcon from '@mui/icons-material/CheckCircle';
+import { Link } from 'react-router-dom';
 
 export default function About() {
     return (
@@ -61,6 +62,7 @@ export default function About() {
                             </li>
                         </ul>
                         <div className="flex gap-5 font-medium lg:justify-start md:justify-center sm:justify-center justify-center">
+                            <Link to={"/orderFood"}>
                             <button
                                 className="px-3 py-1 bg-[#ffbf00] rounded-3xl"
                                 style={{
@@ -72,9 +74,11 @@ export default function About() {
                                 onMouseLeave={(e) => {
                                     e.currentTarget.style.boxShadow = "none";
                                 }}
-                            >
+                                >
                                 Order Now
                             </button>
+                            </Link>
+                            <Link to={"/about"}>
                             <button
                                 className="px-3 py-1 border border-black rounded-3xl"
                                 style={{
@@ -89,6 +93,7 @@ export default function About() {
                             >
                                 Read More
                             </button>
+                            </Link>
                         </div>
                     </div>
                 </div>

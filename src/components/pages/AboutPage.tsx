@@ -69,7 +69,7 @@ const AboutPage = () => {
         <div className="relative max-w-7xl mx-auto px-4 h-full flex flex-col justify-center">
           <h1 className="text-5xl font-bold text-white mb-6">Our Story</h1>
           <p className="text-xl text-white/90 max-w-2xl">
-            Welcome to Foodie, where passion for food meets excellence in service. 
+            Welcome to Yum!, where passion for food meets excellence in service. 
             Since 2013, we've been serving delicious meals to our community.
           </p>
         </div>

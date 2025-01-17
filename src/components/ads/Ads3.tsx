@@ -24,7 +24,7 @@ export default function Ads3() {
             <div className="flex flex-col justify-center items-center pt-28 bg-[url('/public/Food_bg3.jpg')] bg-cover bg-center h-full w-full text-white rounded-2xl">
                 <h2 className="text-5xl font-extrabold italic mb-2">Diet <span className="text-[#ff0000]">Food</span></h2>
                 <p className="text-[#a2a2a2] mb-4">We offer various delicious Diet food </p>
-                <Link to={"/orderFood"}>
+                <Link to={"/blogs"}>
                     <button className="text-sm font-semibold text-white px-4 py-2 rounded-full bg-[#ff0000] uppercase"
                     style={{
                         boxShadow: '0px 4px 8px rgba(0, 0, 0, 0.1)'

@@ -25,7 +25,14 @@ export default function Menu() {
         { img: combo1, title: 'Combo 1', description: 'Perfectly paired combo for a complete meal.', price: '$10.99', category: 'Combo' },
         { img: combo2, title: 'Combo 2', description: 'Another satisfying combo for all-day cravings.', price: '$10.99', category: 'Combo' },
         { img: combo3, title: 'Combo 3', description: 'A delightful mix to brighten your day.', price: '$10.99', category: 'Combo' },
-        // Repeat items for larger dataset as necessary
+        { img: burger1, title: 'Spicy Burger', description: 'Deliciously spicy and crafted for burger lovers.', price: '$10.99', category: 'Burger' },
+        { img: frenchfries, title: 'French Fries', description: 'Crispy, golden fries perfect as a snack or side.', price: '$10.99', category: 'FrenchFry' },
+        { img: pasta, title: 'Pasta', description: 'Authentic pasta with rich and creamy flavors.', price: '$10.99', category: 'Pasta' },
+        { img: sandwich, title: 'Sandwich', description: 'A wholesome sandwich to satisfy your cravings.', price: '$10.99', category: 'Sandwich' },
+        { img: cocacola, title: 'Cold Drinks', description: 'Chilled beverages to keep you refreshed.', price: '$10.99', category: 'Cold Drinks' },
+        { img: combo1, title: 'Combo 1', description: 'Perfectly paired combo for a complete meal.', price: '$10.99', category: 'Combo' },
+        { img: combo2, title: 'Combo 2', description: 'Another satisfying combo for all-day cravings.', price: '$10.99', category: 'Combo' },
+        { img: combo3, title: 'Combo 3', description: 'A delightful mix to brighten your day.', price: '$10.99', category: 'Combo' },
     ];
 
     const filteredMenuData = selectedCategory === "All Food" 

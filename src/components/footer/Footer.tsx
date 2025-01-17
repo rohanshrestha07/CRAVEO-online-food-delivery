@@ -12,8 +12,8 @@ export default function Footer() {
             <div className=" bg-gray-400 md:px-24 px-8 py-10">
                 <div className="container mx-auto w-full">
                     <div className="flex flex-wrap gap-8 items-center justify-between mb-10">
-                        {/* <h1 className="text-[40px] font-extrabold text-[#ff0000] border-r pr-16 mr-16 cursor-pointer">FOODIE</h1> */}
-                        <img className="h-16 w-28" src="public/yum.png" alt="" />
+                        <h1 className="text-[40px] font-extrabold text-[#ff0000] border-r pr-16 mr-16 cursor-pointer">FOODIE</h1>
+                        {/* <img className="h-16 w-28" src="public/yum.png" alt="" /> */}
                         <div className="flex flex-wrap gap-8 items-center">
                             <div className="">
                                 <h3 className="text-[28px] font-bold ">Subscription News</h3>

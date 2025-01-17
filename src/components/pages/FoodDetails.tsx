@@ -15,14 +15,14 @@ import FavoriteIcon from '@mui/icons-material/Favorite';
 
 // Menu data for all products
 const menuData = [
-  { img: burger1, title: 'Spicy Burger', category:"Burger", rating: 5, reviewCount: 125, tags:["Hot","Fast Food","Trend"], offer: 'Get 20% Discount on your First Order.', description:"Hello Food Lover We have vary Delicious and Healthy Foods. Enjoy Your Best Choice. Thank you !", price: '$10.99' },
-  { img: frenchfries, title: 'French Fry',category:"French Fries", rating: 4, reviewCount: 125, tags:["Hot","Fast Food","Trend"], offer: 'Get 20% Discount on your First Order.',description:"Hello Food Lover We have vary Delicious and Healthy Foods. Enjoy Your Best Choice. Thank you !", price: '$10.99' },
-  { img: pasta, title: 'Pasta',category:"Pasta", rating: 4, reviewCount: 125, tags:["Hot","Fast Food","Trend"], offer: 'Get 20% Discount on your First Order.',description:"Hello Food Lover We have vary Delicious and Healthy Foods. Enjoy Your Best Choice. Thank you !", price: '$10.99' },
-  { img: sandwich, title: 'Sandwich',category:"Sandwich", rating: 4, reviewCount: 125, tags:["Hot","Fast Food","Trend"], offer: 'Get 20% Discount on your First Order.',description:"Hello Food Lover We have vary Delicious and Healthy Foods. Enjoy Your Best Choice. Thank you !", price: '$10.99' },
-  { img: cocacola, title: 'Cold Drinks',category:"Cocacola", rating: 4, reviewCount: 125, tags:["Hot","Fast Food","Trend"], offer: 'Get 20% Discount on your First Order.',description:"Hello Food Lover We have vary Delicious and Healthy Foods. Enjoy Your Best Choice. Thank you !", price: '$10.99' },
-  { img: combo1, title: 'Combo 1',category:"Combo", rating: 5, reviewCount: 125, tags:["Hot","Fast Food","Trend"], offer: 'Get 20% Discount on your First Order.',description:"Hello Food Lover We have vary Delicious and Healthy Foods. Enjoy Your Best Choice. Thank you !", price: '$10.99' },
-  { img: combo2, title: 'Combo 2',category:"Combo", rating: 5, reviewCount: 125, tags:["Hot","Fast Food","Trend"], offer: 'Get 20% Discount on your First Order.',description:"Hello Food Lover We have vary Delicious and Healthy Foods. Enjoy Your Best Choice. Thank you !", price: '$10.99' },
-  { img: combo3, title: 'Combo 3',category:"Combo", rating: 5, reviewCount: 125, tags:["Hot","Fast Food","Trend"], offer: 'Get 20% Discount on your First Order.',description:"Hello Food Lover We have vary Delicious and Healthy Foods. Enjoy Your Best Choice. Thank you !", price: '$10.99' },
+  { img: burger1, title: 'Spicy Burger', category:"Burger", rating: 5, reviewCount: 125, tags:["Hot","Fast Food","Trend"], offer: 'Get 20% Discount on your First Order.', foodIntroduction:"Hello Food Lover We have vary Delicious and Healthy Foods. Enjoy Your Best Choice. Thank you !",description:"hi this is description section", price: '$10.99' },
+  { img: frenchfries, title: 'French Fry',category:"French Fries", rating: 4, reviewCount: 125, tags:["Hot","Fast Food","Trend"], offer: 'Get 20% Discount on your First Order.',foodIntroduction:"Hello Food Lover We have vary Delicious and Healthy Foods. Enjoy Your Best Choice. Thank you !",description:"hi this is description section", price: '$10.99' },
+  { img: pasta, title: 'Pasta',category:"Pasta", rating: 4, reviewCount: 125, tags:["Hot","Fast Food","Trend"], offer: 'Get 20% Discount on your First Order.',foodIntroduction:"Hello Food Lover We have vary Delicious and Healthy Foods. Enjoy Your Best Choice. Thank you !",description:"hi this is description section", price: '$10.99' },
+  { img: sandwich, title: 'Sandwich',category:"Sandwich", rating: 4, reviewCount: 125, tags:["Hot","Fast Food","Trend"], offer: 'Get 20% Discount on your First Order.',foodIntroduction:"Hello Food Lover We have vary Delicious and Healthy Foods. Enjoy Your Best Choice. Thank you !",description:"hi this is description section", price: '$10.99' },
+  { img: cocacola, title: 'Cold Drinks',category:"Cocacola", rating: 4, reviewCount: 125, tags:["Hot","Fast Food","Trend"], offer: 'Get 20% Discount on your First Order.',foodIntroduction:"Hello Food Lover We have vary Delicious and Healthy Foods. Enjoy Your Best Choice. Thank you !",description:"hi this is description section", price: '$10.99' },
+  { img: combo1, title: 'Combo 1',category:"Combo", rating: 5, reviewCount: 125, tags:["Hot","Fast Food","Trend"], offer: 'Get 20% Discount on your First Order.',foodIntroduction:"Hello Food Lover We have vary Delicious and Healthy Foods. Enjoy Your Best Choice. Thank you !",description:"hi this is description section", price: '$10.99' },
+  { img: combo2, title: 'Combo 2',category:"Combo", rating: 5, reviewCount: 125, tags:["Hot","Fast Food","Trend"], offer: 'Get 20% Discount on your First Order.',foodIntroduction:"Hello Food Lover We have vary Delicious and Healthy Foods. Enjoy Your Best Choice. Thank you !",description:"hi this is description section", price: '$10.99' },
+  { img: combo3, title: 'Combo 3',category:"Combo", rating: 5, reviewCount: 125, tags:["Hot","Fast Food","Trend"], offer: 'Get 20% Discount on your First Order.',foodIntroduction:"Hello Food Lover We have vary Delicious and Healthy Foods. Enjoy Your Best Choice. Thank you !",description:"hi this is description section", price: '$10.99' },
 ];
 
 
@@ -76,8 +76,8 @@ export default function FoodDetails() {
         {menuItem ? (
           <div className="food">
             <div className="grid grid-cols-2 gap-3 px-10 py-4 ">
-              <div className="bg-gray-400 shadow-xl flex justify-center py-10 rounded-md">
-                <img className="h-auto w-96" src={menuItem.img} alt={menuItem.title} />
+              <div className="bg-gray-300 h-[450px] shadow-xl flex justify-center rounded-md">
+                <img className="h-auto object-cover" src={menuItem.img} alt={menuItem.title} />
               </div>
               <div className="px-4 py-2 flex flex-col gap-2">
                 <h2 className="text-[35px] font-bold">{menuItem.title}</h2>
@@ -90,7 +90,7 @@ export default function FoodDetails() {
                   </div>
                 <span className="text-[#ff0000] text-[20px] font-bold">{menuItem.price}</span>
                 <p className='font-medium'>{menuItem.offer}</p>
-                <p className='font-medium mb-2'>{menuItem.description}</p>
+                <p className='font-medium mb-2'>{menuItem.foodIntroduction}</p>
                 <div className='flex space-x-4 mb-2'>
                   <div className='flex '>
                     <button className='px-4 border border-gray-400 rounded-s-full text-xl'>-</button>
@@ -139,7 +139,47 @@ export default function FoodDetails() {
                 {activeTab === 'description' ? (
                   <div className="description-content">
                     <h3 className="text-[30px] font-bold">Product Description</h3>
-                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ex soluta aliquam laboriosam, dolores sapiente quia provident possimus vel aut odio, nostrum consectetur fuga id quas! Ad voluptates enim dolore unde libero nostrum necessitatibus eum natus, quisquam earum quis optio explicabo tempora animi veritatis, sapiente dolores eius. At commodi unde qui.</p>
+                    <p>Ingredients:
+                      For the Patty:
+
+                      500g ground beef (80% lean, 20% fat)
+                      1 tsp salt
+                      1/2 tsp black pepper
+                      1/2 tsp garlic powder
+                      1/2 tsp onion powder
+                      For Assembling:
+
+                      4 burger buns (toasted)
+                      4 slices of cheddar cheese
+                      Lettuce leaves
+                      1 tomato, sliced
+                      1 red onion, sliced
+                      4 pickle slices (optional)
+                      4 tbsp mayonnaise
+                      4 tbsp ketchup
+                      2 tsp mustard
+                      Instructions:
+                      Prepare the Patty:
+
+                      In a bowl, mix ground beef with salt, black pepper, garlic powder, and onion powder. Combine gently without overmixing.
+                      Divide the mixture into 4 equal portions and shape them into patties slightly larger than the buns (they shrink when cooked).
+                      Cook the Patty:
+
+                      Heat a skillet or grill pan over medium-high heat and lightly grease it with oil.
+                      Place the patties on the hot pan and cook for about 3-4 minutes on each side for medium doneness. Add cheese slices during the last minute of cooking to melt.
+                      Toast the Buns:
+
+                      While the patties are cooking, lightly butter the inside of the burger buns and toast them on a pan or grill until golden brown.
+                      Assemble the Burger:
+
+                      Spread mayonnaise on the bottom bun.
+                      Add lettuce leaves, followed by the cooked patty with melted cheese.
+                      Top with tomato slices, onion slices, and pickles (if using).
+                      Spread ketchup and mustard on the top bun and place it over the stack.
+                      Serve:
+
+                      Secure the burger with a toothpick if needed.
+                      Serve hot with french fries, coleslaw, or your favorite sides.</p>
                   </div>
                 ) : (
                   <div className="reviews-content">
@@ -166,6 +206,7 @@ export default function FoodDetails() {
           </h2>
           <div className="grid grid-cols-4 gap-5">
             {relatedProducts.slice(0,4).map((product, index) => (
+              <Link to={`/foodDetails/${product.title}`} key={index}>
               <div
                 key={index}
                 className="border border-[#a2a2a2] rounded-2xl px-5 cursor-pointer hover:bg-gray-100 hover:-translate-y-2 transition-transform"
@@ -186,6 +227,7 @@ export default function FoodDetails() {
                   Add to Cart
                 </button>
               </div>
+              </Link>
             ))}
           </div>
         </div>
