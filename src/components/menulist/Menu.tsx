@@ -18,7 +18,7 @@ export default function Menu() {
 
     const menuData = [
         { img: burger1, title: 'Spicy Burger', description: 'Deliciously spicy and crafted for burger lovers.', price: '$10.99', category: 'Burger' },
-        { img: frenchfries, title: 'French Fries', description: 'Crispy, golden fries perfect as a snack or side.', price: '$10.99', category: 'FrenchFry' },
+        { img: frenchfries, title: 'French Fries', description: 'Crispy, golden fries perfect as a snack or side.', price: '$10.99', category: 'French Fries' },
         { img: pasta, title: 'Pasta', description: 'Authentic pasta with rich and creamy flavors.', price: '$10.99', category: 'Pasta' },
         { img: sandwich, title: 'Sandwich', description: 'A wholesome sandwich to satisfy your cravings.', price: '$10.99', category: 'Sandwich' },
         { img: cocacola, title: 'Cold Drinks', description: 'Chilled beverages to keep you refreshed.', price: '$10.99', category: 'Cold Drinks' },

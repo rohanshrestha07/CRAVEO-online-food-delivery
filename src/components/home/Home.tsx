@@ -123,17 +123,17 @@ export default function Home() {
             <Delivery/>
             <div className="container mx-auto flex gap-4 h-[500px] rounded-2xl mb-16">
                 <div className="flex flex-col gap-4 w-[800px]">
-                    <div className="flex flex-col pl-10 pt-20 bg-[url('/Foods/Food6.jpg')] bg-cover bg-center h-full w-full text-white rounded-2xl cursor-pointer" >
+                    <div className="flex flex-col pl-10 pt-20 bg-[url('/FoodsAd/Food6.jpg')] bg-cover bg-center h-full w-full text-white rounded-2xl cursor-pointer" >
                         {/* <p>Explore our signature dishes, crafted with the freshest ingredients to delight your taste buds.</p> */}
                     </div>
-                    <div className="flex flex-col justify-center items-center pt-28 bg-[url('/Foods/Food18.jpg')] bg-cover bg-center h-full w-full text-white rounded-2xl cursor-pointer">
+                    <div className="flex flex-col justify-center items-center pt-28 bg-[url('/FoodsAd/Food18.jpg')] bg-cover bg-center h-full w-full text-white rounded-2xl cursor-pointer">
                         {/* <p>Indulge in gourmet meals that bring the essence of fine dining to your home.</p> */}
                     </div>
                 </div>
-                <div className="flex flex-col justify-center items-center pt-28 bg-[url('/Foods/Food12.jpg')] bg-cover bg-center h-full w-full text-white rounded-2xl cursor-pointer">
+                <div className="flex flex-col justify-center items-center pt-28 bg-[url('/FoodsAd/Food12.jpg')] bg-cover bg-center h-full w-full text-white rounded-2xl cursor-pointer">
                     {/* <p>Your favorite comfort foods are just a few clicks away. Savor every bite!</p> */}
                 </div>
-                <div className="flex flex-col justify-center border-gray-200 border items-center pt-28 bg-[url('/Foods/HomeMade.jpg')] bg-cover bg-center h-full w-[800px] text-white rounded-2xl cursor-pointer">
+                <div className="flex flex-col justify-center border-gray-200 border items-center pt-28 bg-[url('/FoodsAd/HomeMade.jpg')] bg-cover bg-center h-full w-[800px] text-white rounded-2xl cursor-pointer">
                     {/* <p>Homemade flavors, delivered with care and love, straight to your door.</p> */}
                 </div>
             </div>

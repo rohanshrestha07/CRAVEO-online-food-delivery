@@ -1,7 +1,7 @@
 
 import { Check, Award, Users, Utensils } from 'lucide-react';
 import { NavLink } from 'react-router-dom';
-import Rohan from '/public/Rohan.png';
+import Rohan from '/public/Rohan.jpg';
 import Thor from '/public/Thor.jpg';
 import Strange from '/public/Strange.jpg';
 import Ronaldo from '/public/Ronaldo.jpg';
