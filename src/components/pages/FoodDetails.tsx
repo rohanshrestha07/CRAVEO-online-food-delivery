@@ -16,7 +16,7 @@ import FavoriteIcon from '@mui/icons-material/Favorite';
 // Menu data for all products
 const menuData = [
   {
-    img: burger1,
+    img: burger1, 
     title: 'Spicy Burger',
     category: "Burger",
     price: "$10.99",

@@ -6,81 +6,6 @@ import Banner6 from "../banner/Banner6";
 import Banner8 from "../banner/Banner8";
 import Banner10 from "../banner/Banner10";
 import Banner1 from "../banner/Banner1";
-// import burger1 from '/src/assets/burger1.png';
-// import frenchfries from '/src/assets/french-fries1.png';
-// import pasta from '/src/assets/pasta1.png';
-// import sandwich from '/src/assets/sandwich1.png';
-// import cocacola from '/src/assets/cocacola1.png';
-// import combo1 from '/src/assets/combo1.png';
-// import combo2 from '/src/assets/combo2.png';
-// import combo3 from '/src/assets/combo3.png';
-// import pizza from '/src/assets/pizza.png';
-
-// const menuData = [
-//   {
-//       img: burger1,
-//       title: 'Spicy Burger',
-//       description: 'Get 20% Discount on your First Order.',
-//       price: '$10.99',
-//       category: 'Burger',
-//   },
-//   {
-//       img: frenchfries,
-//       title: 'French Fry',
-//       description: 'Get 20% Discount on your First Order.',
-//       price: '$10.99',
-//       category: 'FrenchFry',
-//   },
-//   {
-//       img: pasta,
-//       title: 'Pasta',
-//       description: 'Get 20% Discount on your First Order.',
-//       price: '$10.99',
-//       category: 'Pasta',
-//   },
-//   {
-//       img: sandwich,
-//       title: 'Sandwich',
-//       description: 'Get 20% Discount on your First Order.',
-//       price: '$10.99',
-//       category: 'Sandwich',
-//   },
-//   {
-//       img: pizza,
-//       title: 'pizza',
-//       description: 'Get 20% Discount on your First Order.',
-//       price: '$10.99',
-//       category: 'Pizza',
-//   },
-//   {
-//       img: cocacola,
-//       title: 'Cold Drinks',
-//       description: 'Get 20% Discount on your First Order.',
-//       price: '$10.99',
-//       category: 'Cold Drinks',
-//   },
-//   {
-//       img: combo1,
-//       title: 'Combo 1',
-//       description: 'Get 20% Discount on your First Order.',
-//       price: '$10.99',
-//       category: 'Combo',
-//   },
-//   {
-//       img: combo2,
-//       title: 'Combo 2',
-//       description: 'Get 20% Discount on your First Order.',
-//       price: '$10.99',
-//       category: 'Combo',
-//   },
-//   {
-//       img: combo3,
-//       title: 'Combo 3',
-//       description: 'Get 20% Discount on your First Order.',
-//       price: '$10.99',
-//       category: 'Combo',
-//   },
-// ];
 
 const MenuItem = ({ item, onFoodClick, onAddToCart }) => (
   <div
@@ -90,7 +15,7 @@ const MenuItem = ({ item, onFoodClick, onAddToCart }) => (
     <img 
       src={item.img} 
       alt={item.title} 
-      className="w-44 h-44 object-cover mx-auto rounded-lg"
+      className="w-full h-44 object-cover mx-auto rounded-lg"
     />
     <h3 className="text-xl font-bold mt-3 mb-2">{item.title}</h3>
     <p className="text-gray-600 text-sm mb-2">{item.description}</p>
@@ -122,7 +47,7 @@ const MenuSection = ({ title, items, onFoodClick, onAddToCart }) => {
 
   return (
     <div className="mb-12">
-      <h3 className="text-2xl font-bold mb-4">{title}</h3>
+      <h3 className="text-2xl font-bold mb-4 ml-16">{title}</h3>
       <div className="relative">
         <div className="flex items-center">
           <button 
@@ -135,15 +60,15 @@ const MenuSection = ({ title, items, onFoodClick, onAddToCart }) => {
             <ChevronLeft className="w-6 h-6" />
           </button>
 
-          <div className="flex space-x-6 overflow-hidden mx-16 py-2">
+          <div className="flex space-x-6 overflow-hidden mx-auto px-4 py-4">
             {items.slice(startIndex, startIndex + 4).map((item, index) => (
               <Link to={`/foodDetails/${item.title}`} key={index}>
-              <MenuItem 
-                key={index}
-                item={item}
-                onFoodClick={onFoodClick}
-                onAddToCart={onAddToCart}
-              />
+                <MenuItem 
+                  key={index}
+                  item={item}
+                  onFoodClick={onFoodClick}
+                  onAddToCart={onAddToCart}
+                />
               </Link>
             ))}
           </div>
@@ -159,7 +84,7 @@ const MenuSection = ({ title, items, onFoodClick, onAddToCart }) => {
           </button>
         </div>
 
-        <div className="flex justify-center space-x-2 mt-6">
+        <div className="flex justify-center space-x-2 mt-4">
           {Array.from({ length: Math.ceil((items.length - 3) / 1) }).map((_, idx) => (
             <button
               key={idx}
@@ -224,35 +149,35 @@ const OurMenu = () => {
     ],
     burgers: [
       {
-        img: "/src/assets/burger1.png",
-        title: 'Classic Burger',
+        img: "/src/assets/spicy-burger.jpg",
+        title: 'Spicy Burger',
         description: 'Juicy beef patty with fresh vegetables',
         price: '$9.99',
         category: 'Burger',
       },
       {
-        img: "/src/assets/burger2.png",
-        title: 'Classic Burger',
+        img: "/src/assets/burger-img2.jpg",
+        title: 'Chicken Burger',
         description: 'Juicy beef patty with fresh vegetables',
         price: '$9.99',
         category: 'Burger',
       },
       {
-        img: "/src/assets/burger3.png",
-        title: 'Classic Burger',
+        img: "/src/assets/veggie-burger.jpg",
+        title: 'Veg Burger',
         description: 'Juicy beef patty with fresh vegetables',
         price: '$9.99',
         category: 'Burger',
       },
       {
-        img: "/src/assets/burger4.png",
-        title: 'Classic Burger',
+        img: "/src/assets/burger41.png",
+        title: 'Cheese Burger',
         description: 'Juicy beef patty with fresh vegetables',
         price: '$9.99',
         category: 'Burger',
       },
       {
-        img: "/src/assets/burger5.png",
+        img: "/src/assets/burger-img1.jpg",
         title: 'Classic Burger',
         description: 'Juicy beef patty with fresh vegetables',
         price: '$9.99',
@@ -262,84 +187,126 @@ const OurMenu = () => {
     ],
     pizza: [
       {
-        img: "/src/assets/pizza.png",
+        img: "/src/assets/margherita-pizza.jpg",
         title: 'Margherita',
         description: 'Classic Italian pizza with tomatoes and mozzarella',
         price: '$12.99',
         category: 'Pizza',
       },
       {
-        img: "/src/assets/pizza.png",
-        title: 'Margherita',
+        img: "/src/assets/pepperoni-pizza.jpeg",
+        title: 'Pepperoni',
         description: 'Classic Italian pizza with tomatoes and mozzarella',
         price: '$12.99',
         category: 'Pizza',
       },
       {
-        img: "/src/assets/pizza.png",
-        title: 'Margherita',
+        img: "/src/assets/bbq-chicken-pizza.jpg",
+        title: 'BBQ Chicken',
         description: 'Classic Italian pizza with tomatoes and mozzarella',
         price: '$12.99',
         category: 'Pizza',
       },
       {
-        img: "/src/assets/pizza.png",
-        title: 'Margherita',
+        img: "/src/assets/veggie-pizza.webp",
+        title: 'Veggie',
         description: 'Classic Italian pizza with tomatoes and mozzarella',
         price: '$12.99',
         category: 'Pizza',
       },
       {
-        img: "/src/assets/pizza.png",
-        title: 'Margherita',
+        img: "/src/assets/hawaiian-pizza.jpg",
+        title: 'Hawaiian',
         description: 'Classic Italian pizza with tomatoes and mozzarella',
         price: '$12.99',
         category: 'Pizza',
       },
       // Add more pizza items...
     ],
-    pasta: [
+    chicken: [
       {
-        img: "/src/assets/pasta1.png",
-        title: 'Spaghetti Carbonara',
-        description: 'Creamy pasta with bacon and parmesan',
+        img: "/src/assets/chicken-wings.jpg",
+        title: 'Chicken Wings',
+        description: 'Hot and spicy chicken',
         price: '$11.99',
-        category: 'Pasta',
+        category: 'Chicken',
       },
       {
-        img: "/src/assets/pasta1.png",
-        title: 'Spaghetti Carbonara',
-        description: 'Creamy pasta with bacon and parmesan',
+        img: "/src/assets/chicken-leg.jpg",
+        title: 'Chicken Leg Piece',
+        description: 'Hot and spicy chicken',
         price: '$11.99',
-        category: 'Pasta',
+        category: 'Chicken',
       },
       {
-        img: "/src/assets/pasta1.png",
-        title: 'Spaghetti Carbonara',
-        description: 'Creamy pasta with bacon and parmesan',
+        img: "/src/assets/chicken-nuggets.webp",
+        title: 'Chicken Nuggets',
+        description: 'Hot and spicy chicken',
         price: '$11.99',
-        category: 'Pasta',
+        category: 'Chicken',
       },
       {
-        img: "/src/assets/pasta1.png",
-        title: 'Spaghetti Carbonara',
-        description: 'Creamy pasta with bacon and parmesan',
+        img: "/src/assets/chicken-tender.jpg",
+        title: 'Chicken Tenders',
+        description: 'Hot and spicy chicken',
         price: '$11.99',
-        category: 'Pasta',
+        category: 'Chicken',
       },
       {
-        img: "/src/assets/pasta1.png",
-        title: 'Spaghetti Carbonara',
-        description: 'Creamy pasta with bacon and parmesan',
+        img: "/src/assets/grilled-bbq-chicken.jpg",
+        title: 'Grilled Chicken',
+        description: 'Hot and spicy chicken',
         price: '$11.99',
-        category: 'Pasta',
+        category: 'Chicken',
+      },
+      {
+        img: "/src/assets/crispy-fried-chicken.jpg",
+        title: 'Crispy Fried Chicken',
+        description: 'Hot and spicy chicken',
+        price: '$11.99',
+        category: 'Chicken',
+      },
+      {
+        img: "/src/assets/tandoori-chicken.jpg",
+        title: 'Tandoori Chicken',
+        description: 'Hot and spicy chicken',
+        price: '$11.99',
+        category: 'Chicken',
+      },
+      {
+        img: "/src/assets/chicken-chilli.jpg",
+        title: 'Chicken Chilli',
+        description: 'Hot and spicy chicken',
+        price: '$11.99',
+        category: 'Chicken',
+      },
+      {
+        img: "/src/assets/chicken-sekuwa.jpg",
+        title: 'Chicken Sekuwa',
+        description: 'Hot and spicy chicken',
+        price: '$11.99',
+        category: 'Chicken',
+      },
+      {
+        img: "/src/assets/pork-sekuwa.jpeg",
+        title: 'Pork Sekuwa',
+        description: 'Hot and spicy chicken',
+        price: '$11.99',
+        category: 'Chicken',
+      },
+      {
+        img: "/src/assets/grilled-whole-chicken.jpg",
+        title: 'Grilled Chicken',
+        description: 'Hot and spicy chicken',
+        price: '$11.99',
+        category: 'Chicken',
       },
       // Add more pasta items...
     ],
     sandwich: [
       {
-        img: "/src/assets/sandwich1.png",
-        title: 'Club Sandwich',
+        img: "/src/assets/grilled-chicken-sandwich.jpg",
+        title: 'Grilled Sandwich',
         description: 'Triple-decker with chicken and bacon',
         price: '$8.99',
         category: 'Sandwich',
@@ -352,65 +319,27 @@ const OurMenu = () => {
         category: 'Sandwich',
       },
       {
-        img: "/src/assets/sandwich1.png",
-        title: 'Club Sandwich',
+        img: "/src/assets/veggie-sandwich.jpg",
+        title: 'Veggie Sandwich',
         description: 'Triple-decker with chicken and bacon',
         price: '$8.99',
         category: 'Sandwich',
       },
       {
-        img: "/src/assets/sandwich1.png",
-        title: 'Club Sandwich',
+        img: "/src/assets/egg-sandwich.jpg",
+        title: 'Egg Sandwich',
         description: 'Triple-decker with chicken and bacon',
         price: '$8.99',
         category: 'Sandwich',
       },
       {
-        img: "/src/assets/sandwich1.png",
-        title: 'Club Sandwich',
+        img: "/src/assets/tuna-sandwich.jpg",
+        title: 'Tuna Sandwich',
         description: 'Triple-decker with chicken and bacon',
         price: '$8.99',
         category: 'Sandwich',
       },
       // Add more sandwich items...
-    ],
-    coldDrinks: [
-      {
-        img: "/src/assets/cocacola1.png",
-        title: 'Iced Coffee',
-        description: 'Premium cold brew coffee',
-        price: '$4.99',
-        category: 'Drinks',
-      },
-      {
-        img: "/src/assets/cocacola1.png",
-        title: 'Iced Coffee',
-        description: 'Premium cold brew coffee',
-        price: '$4.99',
-        category: 'Drinks',
-      },
-      {
-        img: "/src/assets/cocacola1.png",
-        title: 'Iced Coffee',
-        description: 'Premium cold brew coffee',
-        price: '$4.99',
-        category: 'Drinks',
-      },
-      {
-        img: "/src/assets/cocacola1.png",
-        title: 'Iced Coffee',
-        description: 'Premium cold brew coffee',
-        price: '$4.99',
-        category: 'Drinks',
-      },
-      {
-        img: "/src/assets/cocacola1.png",
-        title: 'Iced Coffee',
-        description: 'Premium cold brew coffee',
-        price: '$4.99',
-        category: 'Drinks',
-      },
-      // Add more drink items...
     ],
     comboPacks: [
       {
@@ -449,6 +378,44 @@ const OurMenu = () => {
         category: 'Combo',
       },
       // Add more combo items...
+    ],
+    coldDrinks: [
+      {
+        img: "/src/assets/cocacola1.png",
+        title: 'Coca Cola',
+        description: 'Premium cold brew coffee',
+        price: '$4.99',
+        category: 'Drinks',
+      },
+      {
+        img: "/src/assets/virgin-mojito.jpg",
+        title: 'Virgin Mojito',
+        description: 'Premium cold brew coffee',
+        price: '$4.99',
+        category: 'Drinks',
+      },
+      {
+        img: "/src/assets/Red-label.jpg",
+        title: 'Red Label',
+        description: 'Premium cold brew coffee',
+        price: '$4.99',
+        category: 'Drinks',
+      },
+      {
+        img: "/src/assets/pepsi.jpg",
+        title: 'Pepsi',
+        description: 'Premium cold brew coffee',
+        price: '$4.99',
+        category: 'Drinks',
+      },
+      {
+        img: "/src/assets/Red-Bull-Energy-Drink.jpeg",
+        title: 'Red Bull',
+        description: 'Premium cold brew coffee',
+        price: '$4.99',
+        category: 'Drinks',
+      },
+      // Add more drink items...
     ],
   };
 
@@ -492,10 +459,10 @@ const OurMenu = () => {
             onAddToCart={handleAddToCart}
           />
           {/* Banner */}
-            <Banner8/>
+            {/* <Banner10/> */}
           <MenuSection 
-            title="Pasta"
-            items={menuData.pasta}
+            title="Chicken"
+            items={menuData.chicken}
             onFoodClick={handleFoodClick}
             onAddToCart={handleAddToCart}
             />
@@ -508,21 +475,21 @@ const OurMenu = () => {
             onAddToCart={handleAddToCart}
             />
           {/* Banner */}
-            <Banner1/>
+            {/* <Banner1/> */}
+            <MenuSection 
+              title="Combo Packs"
+              items={menuData.comboPacks}
+              onFoodClick={handleFoodClick}
+              onAddToCart={handleAddToCart}
+              />
+            {/* Banner */}
+            <Banner8/>
           <MenuSection 
             title="Cold Drinks"
             items={menuData.coldDrinks}
             onFoodClick={handleFoodClick}
             onAddToCart={handleAddToCart}
           />
-            {/* Banner */}
-            <Banner10/>
-          <MenuSection 
-            title="Combo Packs"
-            items={menuData.comboPacks}
-            onFoodClick={handleFoodClick}
-            onAddToCart={handleAddToCart}
-            />
           {/* CTA section */}
             <CtaMenu1/>
         </div>
