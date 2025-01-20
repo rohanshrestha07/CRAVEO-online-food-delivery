@@ -59,7 +59,7 @@ export default function NavBar() {
                             <CallIcon fontSize='large' style={{ cursor: 'pointer' }} />
                             <div className='cursor-pointer'>
                                 <p className='text-[12px]'>Call us for Order</p>
-                                <p className='text-[#e9b634] hover:text-[#ff0000] font-medium'>+1-555-157-5651</p>
+                                <p className='text-[#e9b634] hover:text-[#ff0000] font-medium'>+977 1-433-1076</p>
                             </div>
                         </div>
                         <div className='mr-6 rounded-full border border-black p-2 cursor-pointer hover:text-white hover:bg-black'>
