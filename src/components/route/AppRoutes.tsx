@@ -15,6 +15,7 @@ import ReviewsPage from "../pages/ReviewsPage";
 import RestaurantsPage from "../pages/RestaurantsPage";
 import PrivacyPolicy from "../pages/PrivacyPolicy";
 import TermsOfUse from "../pages/TermsOfUse";
+import Checkout from "../cart/CheckOut";
 // import Login from "../pages/Login";
 
 export default function AppRoutes() {
@@ -36,6 +37,7 @@ export default function AppRoutes() {
                     <Route path="/FAQs" element={<FAQPage/>} />
                     <Route path="/privacyPolicy" element={<PrivacyPolicy/>} />
                     <Route path="/termsOfUse" element={<TermsOfUse/>} />
+                    <Route path="/checkout" element={<Checkout />} />
                 </Routes>
             <Footer/>
         </>

@@ -7,8 +7,13 @@ import CloseIcon from '@mui/icons-material/Close';
 import { useState } from 'react';
 import TopBanner from '../banner/TopBanner';
 import { NavLink } from 'react-router-dom';
+import { useCart } from '../cart/CartProvider';
+import { CartSidebar } from '../cart/CartSideBar';
 
 export default function NavBar() {
+    const { getCartCount } = useCart();
+    const [isCartOpen, setIsCartOpen] = useState(false);
+
     const [isMenuOpen, setMenuOpen] = useState(false);
     const toggleMenu = () => {
         setMenuOpen(!isMenuOpen);
@@ -62,8 +67,16 @@ export default function NavBar() {
                                 <p className='text-[#e9b634] hover:text-[#ff0000] font-medium'>+977 1-433-1076</p>
                             </div>
                         </div>
-                        <div className='mr-6 rounded-full border border-black p-2 cursor-pointer hover:text-white hover:bg-black'>
+                        <div 
+                            className='relative mr-6 rounded-full border border-black p-2 cursor-pointer hover:text-white hover:bg-black'
+                            onClick={() => setIsCartOpen(true)}
+                        >
                             <LocalMallIcon style={{ cursor: 'pointer' }} />
+                            {getCartCount() > 0 && (
+                                <span className="absolute -top-2 -right-2 bg-red-600 text-white rounded-full w-5 h-5 flex items-center justify-center text-xs">
+                                    {getCartCount()}
+                                </span>
+                            )}
                         </div>
                         <NavLink to="/orderFood">
                             <button className='px-6 py-2 rounded-3xl bg-[#ff0000] text-lg text-white cursor-pointer hover:bg-[#f14a4a]'>Order Online</button>
@@ -126,6 +139,12 @@ export default function NavBar() {
                         </ul>
                     </div>
                 )}
+
+                {/* Add CartSidebar component */}
+                <CartSidebar 
+                    isOpen={isCartOpen} 
+                    onClose={() => setIsCartOpen(false)} 
+                />
             </div>
         </>
     )

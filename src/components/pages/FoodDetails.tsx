@@ -12,6 +12,7 @@ import combo3 from '/src/assets/combo3.png';
 import { Breadcrumbs, Typography } from '@mui/material';
 import { Star } from 'lucide-react';
 import FavoriteIcon from '@mui/icons-material/Favorite';
+import { useCart } from '../cart/CartProvider';
 
 // Menu data for all products
 const menuData = [
@@ -161,9 +162,13 @@ const menuData = [
   },
 ];
 
-
-
 export default function FoodDetails() {
+  const { addToCart } = useCart();
+  const handleAddToCart = (e, menu) => {
+    e.preventDefault(); // Prevent navigation when clicking add to cart
+    addToCart(menu);
+  };
+
   const { title } = useParams(); // Get the title from the URL
   const menuItem = menuData.find((item) => item.title === title); // Find the specific food item
   
@@ -233,7 +238,9 @@ export default function FoodDetails() {
                     <p className='px-4 flex items-center border-t border-b border-gray-400 text-xl'>1</p>
                     <button className='px-4 border border-gray-400 rounded-e-full text-xl'>+</button>
                   </div>
-                  <button className='bg-[#ff0000] text-white justify-center py-2 px-4 rounded-3xl font-semibold flex gap-2 hover:bg-opacity-90'>
+                  <button 
+                    onClick={(e) => handleAddToCart(e, menuItem)}
+                    className='bg-[#ff0000] text-white justify-center py-2 px-4 rounded-3xl font-semibold flex gap-2 hover:bg-opacity-90'>
                     <LocalMallIcon />
                     Add to Cart
                   </button>
