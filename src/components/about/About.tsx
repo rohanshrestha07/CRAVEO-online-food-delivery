@@ -6,7 +6,7 @@ export default function About() {
         <>
             <div className="h-auto w-full container mx-auto mb-12 flex flex-col gap-8">
                 {/* Cards Section */}
-                <div className="grid md:grid-cols-1 lg:grid-cols-3 text-white">
+                <div className="grid md:grid-cols-1 lg:grid-cols-3 text-white px-4">
                     <div className="bg-[#ff0000] flex items-center cursor-pointer overflow-hidden md:justify-between sm:justify-between py-2 hover:scale-105 hover:shadow-2xl transition-transform duration-300">
                         <div className="detail ml-5">
                             <p className="text-[35px] font-semibold mb-3">Pasta</p>

@@ -48,12 +48,12 @@ const MenuSection = ({ title, items, onFoodClick, handleAddToCart }) => {
 
   return (
     <div className="mb-12">
-      <h3 className="text-2xl font-bold mb-4 ml-16">{title}</h3>
+      <h3 className="text-2xl font-bold mb-4 lg:ml-16">{title}</h3>
       <div className="relative">
         <div className="flex items-center">
           <button 
             onClick={handlePrev}
-            className={`p-2 rounded-full bg-red-600 text-white absolute left-0 z-1 transform -translate-y-1/2 top-1/2 ${
+            className={`lg:block hidden p-2 rounded-full bg-red-600 text-white absolute left-0 z-1 transform -translate-y-1/2 top-1/2 ${
               startIndex === 0 ? 'opacity-50 cursor-not-allowed' : 'hover:bg-red-700'
             }`}
             disabled={startIndex === 0}
@@ -76,7 +76,7 @@ const MenuSection = ({ title, items, onFoodClick, handleAddToCart }) => {
 
           <button 
             onClick={handleNext}
-            className={`p-2 rounded-full bg-red-600 text-white absolute right-0 z-1 transform -translate-y-1/2 top-1/2 ${
+            className={`lg:block hidden p-2 rounded-full bg-red-600 text-white absolute right-0 z-1 transform -translate-y-1/2 top-1/2 ${
               startIndex + 4 >= items.length ? 'opacity-50 cursor-not-allowed' : 'hover:bg-red-700'
             }`}
             disabled={startIndex + 4 >= items.length}
@@ -478,8 +478,8 @@ const OurMenu = () => {
     <div className="bg-[url('/public/wrapper_bg.jpg')] bg-fixed">
       <div className="bg-gray-100 bg-opacity-90 py-4">
         <div className="pb-10 pt-4 max-w-7xl mx-auto px-4 bg-white rounded-lg">
-          <div className="bg-[url('/public/Banners/MenuBanner2.jpg')] bg-cover bg-center h-[250px] w-full flex justify-center items-center rounded-lg mb-4 pl-24">
-            <h1 className="text-6xl font-extrabold text-white">Our <span className="text-[#ff0000]">Menu</span></h1>
+          <div className="bg-[url('/public/Banners/MenuBanner2.jpg')] bg-cover bg-center lg:h-[250px] h-28 w-full flex justify-center items-center rounded-lg mb-4 pl-24">
+            <h1 className="lg:text-6xl lg:font-extrabold text-4xl font-bold text-white">Our <span className="text-[#ff0000]">Menu</span></h1>
           </div>
           
           <MenuSection 
@@ -496,7 +496,9 @@ const OurMenu = () => {
             />
           {/* CTA section */}
             {/* <CtaMenu1/>  */}
-            <Banner6/>
+            <div className="lg:block hidden">
+              <Banner6/>
+            </div>
           <MenuSection 
             title="Pizza"
             items={menuData.pizza}
@@ -528,7 +530,9 @@ const OurMenu = () => {
             {/* Banner */}
             {/* <Banner1/> */}
             {/* Banner */}
-            <Banner8/>
+            <div className="lg:block hidden">
+              <Banner8/>
+            </div>
             <MenuSection 
               title="Combo Packs"
               items={menuData.comboPacks}

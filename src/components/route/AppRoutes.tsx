@@ -15,7 +15,7 @@ import ReviewsPage from "../pages/ReviewsPage";
 import RestaurantsPage from "../pages/RestaurantsPage";
 import PrivacyPolicy from "../pages/PrivacyPolicy";
 import TermsOfUse from "../pages/TermsOfUse";
-import Checkout from "../cart/CheckOut";
+import Checkout from "../cart/Checkout";
 // import Login from "../pages/Login";
 
 export default function AppRoutes() {

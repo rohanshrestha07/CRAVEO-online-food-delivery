@@ -8,7 +8,7 @@ import { useState } from 'react';
 import TopBanner from '../banner/TopBanner';
 import { NavLink } from 'react-router-dom';
 import { useCart } from '../cart/CartProvider';
-import { CartSidebar } from '../cart/CartSideBar';
+import { CartSidebar } from '../cart/CartSidebar';
 
 export default function NavBar() {
     const { getCartCount } = useCart();
@@ -91,6 +91,7 @@ export default function NavBar() {
                             <MenuIcon fontSize="large" className="text-black" />
                         )}
                     </div>
+                    
                 </div>
 
                 {/* Mobile Menu */}
@@ -113,6 +114,17 @@ export default function NavBar() {
                                 </div>
                             </li>
                         </ul>
+                        {/* Mobile Pages dropdown */}
+                        {isMobilePagesOpen &&(
+                            <div className="lg:hidden block bg-gray-100 w-full">
+                                <ul className="flex flex-col items-center gap-5 py-2 font-medium">
+                                    <li className='cursor-pointer hover:text-[#ff0000]'><NavLink to="/blogs" className={({ isActive }) => { return isActive ? "text-red-600 border-b-2 border-b-[#ff0000]" : ""; }}>Blogs</NavLink></li>
+                                    <li className='cursor-pointer hover:text-[#ff0000]'><NavLink to="/reviews" className={({ isActive }) => { return isActive ? "text-red-600 border-b-2 border-b-[#ff0000]" : ""; }}>Reviews</NavLink></li>
+                                    <li className='cursor-pointer hover:text-[#ff0000]'><NavLink to="/news" className={({ isActive }) => { return isActive ? "text-red-600 border-b-2 border-b-[#ff0000]" : ""; }}>News</NavLink></li>
+                                    <li className='cursor-pointer hover:text-[#ff0000]'><NavLink to="/FAQs" className={({ isActive }) => { return isActive ? "text-red-600 border-b-2 border-b-[#ff0000]" : ""; }}>FAQs</NavLink></li>
+                                </ul>
+                            </div>
+                        )}
                     </div>
                 )}
                 {/* Pages dropdown */}
@@ -128,17 +140,6 @@ export default function NavBar() {
                         <li className='cursor-pointer hover:text-[#ff0000]'><NavLink to="/FAQs" className={({ isActive }) => { return isActive ? "text-red-600 border-b-2 border-b-[#ff0000]" : ""; }}>FAQs</NavLink></li>
                     </ul>
                 </div>
-                {/* Mobile Pages dropdown */}
-                {isMobilePagesOpen &&(
-                    <div className="lg:hidden block bg-gray-100 w-full">
-                        <ul className="flex flex-col items-center gap-5 py-2 font-medium">
-                            <li className='cursor-pointer hover:text-[#ff0000]'><NavLink to="/blogs" className={({ isActive }) => { return isActive ? "text-red-600 border-b-2 border-b-[#ff0000]" : ""; }}>Blogs</NavLink></li>
-                            <li className='cursor-pointer hover:text-[#ff0000]'><NavLink to="/reviews" className={({ isActive }) => { return isActive ? "text-red-600 border-b-2 border-b-[#ff0000]" : ""; }}>Reviews</NavLink></li>
-                            <li className='cursor-pointer hover:text-[#ff0000]'><NavLink to="/news" className={({ isActive }) => { return isActive ? "text-red-600 border-b-2 border-b-[#ff0000]" : ""; }}>News</NavLink></li>
-                            <li className='cursor-pointer hover:text-[#ff0000]'><NavLink to="/FAQs" className={({ isActive }) => { return isActive ? "text-red-600 border-b-2 border-b-[#ff0000]" : ""; }}>FAQs</NavLink></li>
-                        </ul>
-                    </div>
-                )}
 
                 {/* Add CartSidebar component */}
                 <CartSidebar 

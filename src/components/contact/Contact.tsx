@@ -6,6 +6,7 @@ export default function Contact() {
         <div className='container mx-auto py-8 '>
             <h2 className='text-center text-5xl font-extrabold mb-8'>Need Help ? <span className='text-[#ff0000]'>Contact Us</span></h2>
             <div className='mt-0 grid grid-cols-1 lg:grid-cols-2 gap-4 px-4'>
+                {/* contact form */}
                 <div className="bg-gray-200 rounded-lg shadow-lg p-8">
                     <h2 className="text-2xl font-bold mb-6">Send us a Message</h2>
                     <form className="space-y-6">
@@ -61,6 +62,7 @@ export default function Contact() {
                     </div>
                     </form>
                 </div>
+                {/* contact image */}
                 <div className="hidden lg:block relative h-[525px] rounded-lg overflow-hidden shadow-lg">
                     <img 
                     src="/public/OrderNow.jpg" 

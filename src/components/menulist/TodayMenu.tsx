@@ -80,7 +80,7 @@ export default function TodayMenu() {
     return (
         <>
         <div className="bg-[url('/public/wrapper_bg.jpg')] bg-cover bg-center ">
-            <div className="bg-[#ff0000] bg-opacity-95 relative flex justify-center gap-2 py-8 pl-20 mb-4">
+            <div className="bg-[#ff0000] bg-opacity-95 relative flex lg:flex-row justify-center flex-col gap-2 py-8 pl-20 mb-4">
                 <div className="flex flex-col justify-center text-center min-w-60">
                     <p className="text-[#c8c8c8]">Our menu</p>
                     <h2 className="text-2xl font-semibold mb-10 text-white">Today's Special</h2>

@@ -19,7 +19,7 @@ export default function Footer() {
                                 <h3 className="text-[28px] font-bold ">Subscription News</h3>
                                 <p className="text-[14px]">Subscribe to the weekly newslatter.</p>
                             </div>
-                            <input className="px-6 py-3 outline-none w-[500px] rounded-full text-[16px]" type="email" placeholder="Enter Email Address" />
+                            <input className="px-6 py-3 outline-none lg:w-[500px] w-full rounded-full text-[16px]" type="email" placeholder="Enter Email Address" />
                             <button className="bg-black text-white rounded-full lg:px-6 md:px-6 px-4 py-3" >Subscribe</button>
                         </div>
                     </div>
