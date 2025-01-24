@@ -54,7 +54,7 @@ export default function Home() {
                     loop
                     muted
                 >
-                    <source src="/public/FoodieFinalTrailer.mp4" type="video/mp4" />
+                    <source src="/public/CraveoFinalTrailer.mp4" type="video/mp4" />
                     Your browser does not support the video tag.
                 </video>
 

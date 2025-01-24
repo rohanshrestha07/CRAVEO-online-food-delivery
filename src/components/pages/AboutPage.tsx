@@ -69,7 +69,7 @@ const AboutPage = () => {
         <div className="relative max-w-7xl mx-auto px-4 h-full flex flex-col justify-center">
           <h1 className="text-5xl font-bold text-white mb-6">Our Story</h1>
           <p className="text-xl text-white/90 max-w-2xl">
-            Welcome to Yum!, where passion for food meets excellence in service. 
+            Welcome to CRAVEO, where passion for food meets excellence in service. 
             Since 2013, we've been serving delicious meals to our community.
           </p>
         </div>
@@ -93,7 +93,7 @@ const AboutPage = () => {
           <div>
             <h2 className="text-3xl font-bold mb-6">Our Restaurant Journey</h2>
             <p className="text-gray-600 mb-4">
-              Founded in 2013, Foodie started as a small family restaurant with a big dream: 
+              Founded in 2013, CRAVEO started as a small family restaurant with a big dream: 
               to serve the most delicious and authentic food while creating memorable dining experiences.
             </p>
             <p className="text-gray-600 mb-6">

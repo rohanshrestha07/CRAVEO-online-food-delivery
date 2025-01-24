@@ -11,7 +11,7 @@ export default function BottomBanner() {
                     <div className='h-auto w-full'>
                         <div className='flex flex-wrap lg:justify-between justify-center text-[14px] '>
                             <div className='flex items-center font-medium'>
-                                <p>&copy; Copyright {currentYear} FOODIE. All Rights Reserved.</p>
+                                <p>&copy; Copyright {currentYear} CRAVEO. All Rights Reserved.</p>
                             </div>
                             <div className='font-medium'>
                                 <Link to={"/privacyPolicy"}>

@@ -62,7 +62,7 @@ const PrivacyPolicy = () => {
                 <section>
                   <h2 className="text-xl font-semibold mb-4 text-gray-800">Contact Us</h2>
                   <p className="text-gray-600">
-                    For questions about this privacy policy, please contact us at privacy@foodie.com
+                    For questions about this privacy policy, please contact us at privacy@craveo.com
                   </p>
                 </section>
 

@@ -38,7 +38,7 @@ const ContactPage = () => {
               <Mail className="w-12 h-12 text-red-600" />
             </div>
             <h3 className="text-xl font-semibold mt-4">Email</h3>
-            <p className="mt-2 text-gray-600">support@foodie.com</p>
+            <p className="mt-2 text-gray-600">support@craveo.com</p>
             <p className="text-sm text-gray-500 mt-1">24/7 Online Support</p>
           </div>
 
@@ -138,15 +138,6 @@ const ContactPage = () => {
         </div>
 
         {/* Map Section */}
-        {/* <div className="mt-16 bg-white rounded-lg shadow-lg p-4">
-          <div className="aspect-w-16 aspect-h-9 rounded-lg overflow-hidden">
-            <img 
-              src="/api/placeholder/1200/400" 
-              alt="Location map" 
-              className="w-full h-full object-cover"
-            />
-          </div>
-        </div> */}
         <div>
           <iframe
             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3532.1586790206043!2d85.34202191101448!3d27.712386576080362!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39eb1970a9ff7041%3A0xfcaa45db29104458!2sTexas%20International%20College!5e0!3m2!1sen!2snp!4v1727062217264!5m2!1sen!2snp"

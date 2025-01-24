@@ -66,7 +66,7 @@ const TermsOfUse = () => {
           <section>
             <h2 className="text-xl font-semibold mb-4 text-gray-800">8. Contact</h2>
             <p className="text-gray-600">
-              For questions about these terms, please contact legal@foodie.com
+              For questions about these terms, please contact legal@craveo.com
             </p>
           </section>
 

@@ -12,8 +12,8 @@ export default function Footer() {
             <div className=" bg-gray-400 md:px-24 px-8 py-10">
                 <div className="container mx-auto w-full">
                     <div className="flex flex-wrap gap-8 items-center justify-between mb-10">
-                        <h1 className="text-[40px] font-extrabold text-[#ff0000] border-r pr-16 mr-16 cursor-pointer">FOODIE</h1>
-                        {/* <img className="h-16 w-28" src="public/yum.png" alt="" /> */}
+                        {/* <h1 className="text-[40px] font-extrabold text-[#ff0000] border-r pr-16 mr-16 cursor-pointer">FOODIE</h1> */}
+                        <img className='h-12 border-r pr-16' src="public/craveo.png" alt="craveo logo" />
                         <div className="flex flex-wrap gap-8 items-center">
                             <div className="">
                                 <h3 className="text-[28px] font-bold ">Subscription News</h3>
@@ -26,7 +26,7 @@ export default function Footer() {
                     <hr />
                     <div className="grid lg:grid-cols-4 md:grid-cols-2 sm:grid-cols-2 grid-cols-1 gap-10 mt-10">
                         <div>
-                            <p className="mb-3 text-[#3c3c3c]"> Welcome to Foodie, where great food meets great company! We’re here to bring you the tastiest experiences, whether dining in or taking away.</p>
+                            <p className="mb-3 text-[#3c3c3c]"> Welcome to CRAVEO, where great food meets great company! We’re here to bring you the tastiest experiences, whether dining in or taking away.</p>
                             <h3 className="text-[18px] font-bold">Book A Table</h3>
                             <p className="mb-3 text-[#ff0000] font-bold cursor-pointer">+1-555-157-5651</p>
                             <h3 className="text-[18px] font-bold">Opening Hours</h3>
@@ -63,7 +63,7 @@ export default function Footer() {
                                     +1-555-157-5651</li>
                                 <li className="cursor-pointer gap-3 flex hover:text-[#ff0000]">
                                     <EmailOutlinedIcon style={{borderRadius:"50%",color:"white",padding:"3px",background:"#ff0000"}}/> 
-                                    foodienepal@gmail.com</li>
+                                    craveonepal@gmail.com</li>
                             </ul>
                         </div>
                     </div>
