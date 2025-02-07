@@ -28,7 +28,7 @@ export default function Footer() {
                         <div>
                             <p className="mb-3 text-[#3c3c3c]"> Welcome to CRAVEO, where great food meets great company! We’re here to bring you the tastiest experiences, whether dining in or taking away.</p>
                             <h3 className="text-[18px] font-bold">Book A Table</h3>
-                            <p className="mb-3 text-[#ff0000] font-bold cursor-pointer">+1-555-157-5651</p>
+                            <p className="mb-3 text-[#ff0000] font-bold cursor-pointer">+977 1-433-1076</p>
                             <h3 className="text-[18px] font-bold">Opening Hours</h3>
                             <p className="text-[#ff0000] font-bold">08:00 AM - 12:00 PM</p>
                         </div>

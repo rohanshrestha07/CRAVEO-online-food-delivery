@@ -20,7 +20,7 @@ const menuData = [
     img: burger1, 
     title: 'Spicy Burger',
     category: "Burger",
-    price: "$10.99",
+    price: "100",
     rating: 5,
     reviewCount: 125,
     tags: ["Hot", "Fast Food", "Trend"],
@@ -38,7 +38,7 @@ const menuData = [
     img: frenchfries,
     title: 'French Fries',
     category: "French Fries",
-    price: "$10.99",
+    price: "100",
     rating: 4,
     reviewCount: 98,
     tags: ["Crispy", "Snack", "Golden"],
@@ -56,7 +56,7 @@ const menuData = [
     img: pasta,
     title: 'Pasta',
     category: "Pasta",
-    price: "$10.99",
+    price: "100",
     rating: 4.5,
     reviewCount: 140,
     tags: ["Creamy", "Italian", "Comfort Food"],
@@ -74,7 +74,7 @@ const menuData = [
     img: sandwich,
     title: 'Sandwich',
     category: "Sandwich",
-    price: "$10.99",
+    price: "100",
     rating: 4,
     reviewCount: 85,
     tags: ["Healthy", "Quick Bite", "Customizable"],
@@ -92,7 +92,7 @@ const menuData = [
     img: cocacola,
     title: 'Cold Drinks',
     category: "Beverages",
-    price: "$10.99",
+    price: "100",
     rating: 4.5,
     reviewCount: 200,
     tags: ["Chilled", "Refreshing", "Classic"],
@@ -110,7 +110,7 @@ const menuData = [
     img: combo1,
     title: 'Combo 1',
     category: "Combo",
-    price: "$10.99",
+    price: "100",
     rating: 5,
     reviewCount: 150,
     tags: ["Value Pack", "Family Meal", "Affordable"],
@@ -128,7 +128,7 @@ const menuData = [
     img: combo2,
     title: 'Combo 2',
     category: "Combo",
-    price: "$10.99",
+    price: "100",
     rating: 4.5,
     reviewCount: 130,
     tags: ["Value Pack", "Quick Meal", "Popular"],
@@ -146,7 +146,7 @@ const menuData = [
     img: combo3,
     title: 'Combo 3',
     category: "Combo",
-    price: "$10.99",
+    price: "100",
     rating: 4.8,
     reviewCount: 145,
     tags: ["Premium", "Gourmet", "Luxury"],
@@ -216,9 +216,9 @@ export default function FoodDetails() {
         {/* Dynamic Food Details Section */}
         {menuItem ? (
           <div className="food">
-            <div className="grid grid-cols-2 gap-3 px-10 py-4 ">
-              <div className="bg-gray-300 h-[450px] shadow-xl flex justify-center rounded-md">
-                <img className="h-auto object-cover" src={menuItem.img} alt={menuItem.title} />
+            <div className="grid lg:grid-cols-2 grid-cols-1 gap-3 px-10 py-4 ">
+              <div className="bg-gray-300 lg:h-[450px] shadow-xl flex justify-center rounded-md">
+                <img className="h-auto object-contain" src={menuItem.img} alt={menuItem.title} />
               </div>
               <div className="px-4 py-2 flex flex-col gap-2">
                 <h2 className="text-[35px] font-bold">{menuItem.title}</h2>
@@ -229,10 +229,10 @@ export default function FoodDetails() {
                       {menuItem.rating} ({menuItem.reviewCount} reviews)
                     </span>
                   </div>
-                <span className="text-[#ff0000] text-[20px] font-bold">{menuItem.price}</span>
+                <span className="text-[#ff0000] text-[20px] font-bold">Rs.{menuItem.price}</span>
                 <p className='font-medium text-[#ff0000]'>{menuItem.offer}</p>
                 <p className='mb-2'>{menuItem.description}</p>
-                <div className='flex space-x-4 mb-2'>
+                <div className='flex flex-wrap gap-4 mb-2'>
                   <div className='flex '>
                     <button className='px-4 border border-gray-400 rounded-s-full text-xl'>-</button>
                     <p className='px-4 flex items-center border-t border-b border-gray-400 text-xl'>1</p>
@@ -347,12 +347,12 @@ export default function FoodDetails() {
           <h2 className="text-[40px] text-center font-bold mb-5">
             Related <span className="text-[#ff0000]">Products</span>
           </h2>
-          <div className="grid grid-cols-4 gap-5">
+          <div className="grid lg:grid-cols-4 md:grid-cols-2 grid-cols-1 gap-5 px-16">
             {relatedProducts.slice(0,4).map((product, index) => (
               <Link to={`/foodDetails/${product.title}`} key={index}>
               <div
                 key={index}
-                className="border border-[#a2a2a2] rounded-2xl px-5 cursor-pointer hover:bg-gray-100 hover:-translate-y-2 transition-transform"
+                className="border border-[#a2a2a2] rounded-2xl px-5 cursor-pointer text-center hover:bg-gray-100 hover:-translate-y-2 transition-transform"
                 style={{ boxShadow: 'none' }}
                 onMouseEnter={(e) => {
                   e.currentTarget.style.boxShadow = "0px 4px 8px rgba(0, 0, 0, 0.4)";
@@ -364,8 +364,8 @@ export default function FoodDetails() {
                 <img src={product.img} alt={product.title} className="w-44 h-44 object-cover mx-auto " />
                 <p className="text-[24px] font-bold mb-3">{product.title}</p>
                 <p className="text-[#515151] mb-3">{product.description}</p>
-                <p className="text-[20px] font-bold text-[#ff0000] mb-3">{product.price}</p>
-                <button className='w-full mb-5 border border-[#515151] px-12 py-2 rounded-3xl font-semibold flex gap-2 hover:bg-[#000] hover:text-white transition-all'>
+                <p className="text-[20px] font-bold text-[#ff0000] mb-3">Rs.{product.price}</p>
+                <button className='w-full mb-5 border border-[#515151] px-12 py-2 rounded-3xl font-semibold flex items-center justify-center gap-2 hover:bg-[#000] hover:text-white transition-all'>
                   <LocalMallIcon />
                   Add to Cart
                 </button>
