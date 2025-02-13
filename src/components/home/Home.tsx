@@ -147,7 +147,7 @@ export default function Home() {
             <FoodNews/>
             <FoodGallery/>
             <Contact/>
-            <div className="container mx-auto">
+            <div className="container mx-auto px-2">
                 <CtaMenu1/>
             </div>
         </>
