@@ -2,12 +2,10 @@ import { useState } from "react";
 import burger1 from '/src/assets/burger1.png';
 import frenchfries from '/src/assets/french-fries1.png';
 import pasta from '/src/assets/pasta1.png';
-import sandwich from '/src/assets/sandwich1.png';
 import cocacola from '/src/assets/cocacola1.png';
 import combo1 from '/src/assets/combo1.png';
 import combo2 from '/src/assets/combo2.png';
 import combo3 from '/src/assets/combo3.png';
-import pizza from '/src/assets/pizza.png';
 import LocalMallIcon from '@mui/icons-material/LocalMall';
 import { Link } from 'react-router-dom';
 import CtaMenu1 from "../CTA/CtaMenu1";
@@ -377,7 +375,7 @@ export default function OrderFood() {
                         />
                         <button className="bg-[#ff0000] px-4 py-2 rounded-full text-white">Search</button>
                     </div>
-                    <div className="grid lg:grid-cols-7 md:grid-cols-4 sm:grid-cols-2 h-auto mx-4 gap-4 ">
+                    <div className="grid lg:grid-cols-7 md:grid-cols-4 grid-cols-2 h-auto mx-4 gap-4 ">
                         <button
                             className={`rounded-xl flex flex-col items-center justify-center p-2 ${selectedCategory === "All Food" ? "bg-[#ff0000] text-white" : "bg-white border border-gray-500"}`}
                             onClick={() => setSelectedCategory("All Food")}
