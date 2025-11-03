@@ -50,13 +50,14 @@ export default function Home() {
                 {/* video element */}
                 <video
                     src="/CraveoFinalTrailer.mp4"
-                    className="w-full h-full"
-                    controls
-                    muted
+                    className="absolute top-0 left-0 w-full h-full object-cover"
                     autoPlay
                     loop
-                    playsInline
-                />
+                    muted
+                >
+                    {/* <source src="/CraveoFinalTrailer.mp4" type="video/mp4" />
+                    Your browser does not support the video tag. */}
+                </video>
 
                 {/* content element */}
                 <div className="relative z-0 flex items-center justify-center bg-red-400 bg-opacity-60 min-h-screen">
