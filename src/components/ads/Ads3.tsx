@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 export default function Ads3() {
     return (
         <>
-        <div className="container mx-auto px-4 grid lg:grid-cols-2 gap-4 lg:h-80 h-96 rounded-2xl mb-12">
+        <div className="max-w-7xl mx-auto px-4 grid lg:grid-cols-2 gap-4 lg:h-80 h-96 rounded-2xl mb-12">
             <div className="flex flex-col pl-10 lg:pt-20 md:pt-10 pt-8 bg-[url('/Food_bg2.jpeg')] bg-cover bg-center h-full w-full text-white rounded-xl">
                 <h2 className="text-5xl font-extrabold italic mb-2">Special <span className="text-[#ff0000]">Offer</span></h2>
                 <p className="text-[#a2a2a2] mb-4 capitalize">Uptp 50% Off on order of $30</p>

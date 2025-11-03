@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 export default function Delivery() {
     return (
         <>
-        <div className="bg-white mb-4 py-8">
+        <div className="bg-white mb-4 py-8 max-w-7xl mx-auto">
             <div className="grid lg:grid-cols-3 md:grid-cols-1 container mx-auto items-center px-4">
                 <div className=" py-8 leading-tight lg:text-left md:text-center sm:text-center text-center">
                     <h2 className="text-[45px] font-extrabold mb-4">Choose Your <span className="text-[#ff0000]">Favourite Food</span></h2>

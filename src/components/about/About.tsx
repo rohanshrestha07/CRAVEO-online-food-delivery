@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 export default function About() {
     return (
         <>
-            <div className="h-auto w-full container mx-auto mb-12 flex flex-col gap-8">
+            <div className="h-auto w-full max-w-7xl mx-auto mb-12 flex flex-col gap-8">
                 {/* Cards Section */}
                 <div className="grid md:grid-cols-1 lg:grid-cols-3 text-white px-4">
                     <div className="bg-[#ff0000] flex items-center cursor-pointer overflow-hidden md:justify-between sm:justify-between py-2 hover:scale-105 hover:shadow-2xl transition-transform duration-300">

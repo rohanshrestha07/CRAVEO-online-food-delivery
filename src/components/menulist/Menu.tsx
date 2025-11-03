@@ -365,7 +365,7 @@ export default function Menu() {
     };
 
     return (
-        <div className="h-auto w-screen container mx-auto text-center mb-12">
+        <div className="h-auto w-screen max-w-7xl mx-auto text-center mb-12">
             <h2 className="text-[50px] font-extrabold">Our Popular Tasty <span className="text-[#ff0000]">Foods</span></h2>
             <p className="mb-8 px-2">Explore a variety of dishes made to delight your taste buds.</p>
             <div className="flex justify-center flex-wrap gap-5">

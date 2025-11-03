@@ -3,7 +3,7 @@ import StarIcon from '@mui/icons-material/Star';
 export default function FeedBack() {
     return (
         <>
-            <div className="container mx-auto bg-gray-400 px-12 py-10 my-10">
+            <div className="max-w-7xl mx-auto bg-gray-400 px-12 py-10 my-10">
                 <div className="text-center mb-8 flex-col flex">
                     <h2 className="text-[45px] font-extrabold">
                         Our Customer <span className="text-[#ff0000]">Feedbacks</span>

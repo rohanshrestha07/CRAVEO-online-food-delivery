@@ -14,7 +14,7 @@ export default function TopBanner() {
     return (
         <>
             {/* Top Banner */}
-            <div className="h-auto border-b border-[#a2a2a2] lg:py-0 md:py-0 sm:py-0 py-2 px-12">
+            <div className="h-auto border-b border-[#a2a2a2] lg:py-0 md:py-0 sm:py-0 py-2 px-12 md:px-32">
                 <div className="container mx-auto w-full">
                     <div className="flex flex-wrap items-center py-1 lg:justify-between justify-center text-[14px]">
                         <div className="flex gap-1 items-center">

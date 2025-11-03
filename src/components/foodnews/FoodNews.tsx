@@ -1,7 +1,7 @@
 export default function FoodNews() {
     return (
         <>
-            <div className="container mx-auto px-16 py-10">
+            <div className="max-w-7xl mx-auto px-16 py-10">
                 <div className="text-center mb-10">
                     <h2 className="text-[45px] font-extrabold">
                         Our Latest Foods <span className="text-[#ff0000]">News</span>
