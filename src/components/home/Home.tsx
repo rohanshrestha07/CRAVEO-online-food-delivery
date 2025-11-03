@@ -49,13 +49,14 @@ export default function Home() {
             <div className="relative min-h-screen w-full overflow-hidden">
                 {/* video element */}
                 <video
+                    src="/CraveoFinalTrailer.mp4"
                     className="absolute top-0 left-0 w-full h-full object-cover"
                     autoPlay
                     loop
                     muted
                 >
-                    <source src="/CraveoFinalTrailer.mp4" type="video/mp4" />
-                    Your browser does not support the video tag.
+                    {/* <source src="/CraveoFinalTrailer.mp4" type="video/mp4" />
+                    Your browser does not support the video tag. */}
                 </video>
 
                 {/* content element */}

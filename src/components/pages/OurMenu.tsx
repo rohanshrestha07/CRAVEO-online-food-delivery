@@ -460,7 +460,7 @@ const OurMenu = () => {
         category: 'Drinks',
       },
       {
-        img: "/assets/Red-label.jpg",
+        img: "/assets/Red-Label.jpg",
         title: 'Red Label',
         description: 'A strong and classic tea for your refreshment.',
         price: '1000',
