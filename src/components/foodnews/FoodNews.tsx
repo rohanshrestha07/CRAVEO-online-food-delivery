@@ -25,7 +25,7 @@ export default function FoodNews() {
                         }}
                     >
                         <div className="object-cover mb-3">
-                            <img src="src/assets/burger-img1.jpg" alt="Gourmet Burger" />
+                            <img src="/assets/burger-img1.jpg" alt="Gourmet Burger" />
                         </div>
                         <h2 className="text-[25px] font-bold mb-3">
                             The Art of Crafting a Perfect Burger
@@ -52,7 +52,7 @@ export default function FoodNews() {
                         }}
                     >
                         <div className="object-cover mb-3">
-                            <img src="src/assets/burger-img2.jpg" alt="Burger Lovers" />
+                            <img src="/assets/burger-img2.jpg" alt="Burger Lovers" />
                         </div>
                         <h2 className="text-[25px] font-bold mb-3">
                             Why Burgers Are Everyone’s Favorite
@@ -79,7 +79,7 @@ export default function FoodNews() {
                         }}
                     >
                         <div className="object-cover mb-3">
-                            <img src="src/assets/pizza-img1.jpg" alt="Delicious Pizza" />
+                            <img src="/assets/pizza-img1.jpg" alt="Delicious Pizza" />
                         </div>
                         <h2 className="text-[25px] font-bold mb-3">
                             From Oven to Table: Pizza Perfection

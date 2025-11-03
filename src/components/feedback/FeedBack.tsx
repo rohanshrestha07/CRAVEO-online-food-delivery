@@ -31,7 +31,7 @@ export default function FeedBack() {
                             </div>
                             <img
                                 className="h-44 w-44 absolute -right-16 -bottom-4"
-                                src="src/assets/burger1.png"
+                                src="/assets/burger1.png"
                                 alt="Customer Feedback"
                             />
                         </div>
@@ -54,7 +54,7 @@ export default function FeedBack() {
                             </div>
                             <img
                                 className="h-44 w-44 absolute -right-16 -bottom-6"
-                                src="src/assets/combo3.png"
+                                src="/assets/combo3.png"
                                 alt="Customer Feedback"
                             />
                         </div>

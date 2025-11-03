@@ -13,7 +13,7 @@ export default function About() {
                             <p className="mb-3">Get 20% Discount On First Order</p>
                             <p className="text-[20px] font-semibold">$10.99</p>
                         </div>
-                        <img className="h-64 w-64 object-cover" src="src/assets/pasta1.png" alt="Pasta" />
+                        <img className="h-64 w-64 object-cover" src="/assets/pasta1.png" alt="Pasta" />
                     </div>
                     <div className="bg-[#242323] flex items-center cursor-pointer overflow-hidden md:justify-between sm:justify-between py-2 hover:scale-105 hover:shadow-2xl transition-transform duration-300">
                         <div className="detail ml-5">
@@ -21,7 +21,7 @@ export default function About() {
                             <p className="mb-3">Get 20% Discount On First Order</p>
                             <p className="text-[20px] font-semibold">$10.99</p>
                         </div>
-                        <img className="h-56 w-64 object-cover" src="src/assets/burger5.png" alt="Burger" />
+                        <img className="h-56 w-64 object-cover" src="/assets/burger5.png" alt="Burger" />
                     </div>
                     <div className="bg-[#d7bf39] flex items-center cursor-pointer overflow-hidden md:justify-between sm:justify-between py-2 hover:scale-105 hover:shadow-2xl transition-transform duration-300">
                         <div className="detail ml-5">
@@ -29,13 +29,13 @@ export default function About() {
                             <p className="mb-3">Get 20% Discount On First Order</p>
                             <p className="text-[20px] font-semibold">$10.99</p>
                         </div>
-                        <img className="h-64 w-64 object-cover" src="src/assets/burger4.png" alt="Combo" />
+                        <img className="h-64 w-64 object-cover" src="/assets/burger4.png" alt="Combo" />
                     </div>
                 </div>
                 {/* About Section */}
                 <div className="grid lg:grid-cols-2 md:grid-cols-1">
                     <div className="lg:px-16 md:px-12 sm:px-8 px-6">
-                        <img className="flex-shrink-0" src="src/assets/combo1.png" alt="Combo 1" />
+                        <img className="flex-shrink-0" src="/assets/combo1.png" alt="Combo 1" />
                     </div>
                     <div className="py-10 md:px-12 sm:px-8 px-4 lg:text-left md:text-center sm:text-center text-center">
                         <h2 className="text-5xl mb-4 font-bold">

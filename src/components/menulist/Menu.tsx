@@ -1,13 +1,13 @@
 import { useState } from "react";
-import burger1 from '/src/assets/burger1.png';
-import pizza from '/src/assets/pizza.png'
-import frenchfries from '/src/assets/french-fries1.png';
-import pasta from '/src/assets/pasta1.png';
-import sandwich from '/src/assets/sandwich1.png';
-import cocacola from '/src/assets/cocacola1.png';
-import combo1 from '/src/assets/combo1.png';
-import combo2 from '/src/assets/combo2.png';
-import combo3 from '/src/assets/combo3.png';
+import burger1 from '/assets/burger1.png';
+import pizza from '/assets/pizza.png'
+import frenchfries from '/assets/french-fries1.png';
+import pasta from '/assets/pasta1.png';
+import sandwich from '/assets/sandwich1.png';
+import cocacola from '/assets/cocacola1.png';
+import combo1 from '/assets/combo1.png';
+import combo2 from '/assets/combo2.png';
+import combo3 from '/assets/combo3.png';
 import LocalMallIcon from '@mui/icons-material/LocalMall';
 import { Link, useNavigate } from 'react-router-dom';
 import { useCart } from "../cart/CartProvider";

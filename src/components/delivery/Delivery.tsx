@@ -22,7 +22,7 @@ export default function Delivery() {
                     </Link>
                 </div>
                 <div className="px-10 flex md:justify-center sm:justify-center justify-center">
-                    <img className="h-80 w-80 flex-shrink-0" src="src/assets/food-delivery1.png" alt="Food Delivery" />
+                    <img className="h-80 w-80 flex-shrink-0" src="/assets/food-delivery1.png" alt="Food Delivery" />
                 </div>
                 <div className="py-8 leading-tight lg:text-right md:text-center sm:text-center text-center">
                     <h2 className="text-[45px] font-extrabold mb-4">Order Online and Get <span className="text-[#ff0000]"> Fast Delivery</span></h2>
