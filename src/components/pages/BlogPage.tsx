@@ -9,7 +9,7 @@ const blogs = [
     title: 'The Art of Food Photography: Tips for Instagram-Worthy Dishes',
     author: 'Sarah Chen',
     date: '2024-01-03',
-    image: '/public/Blogs/Photography.jpg',
+    image: '/Blogs/Photography.jpg',
     excerpt: 'Master the art of food photography with professional lighting techniques, composition tips, and styling secrets that will make your dishes stand out on social media.',
     category: 'Photography'
   },
@@ -18,7 +18,7 @@ const blogs = [
     title: 'Farm to Table: Understanding Sustainable Food Practices',
     author: 'Michael Greene',
     date: '2024-01-02',
-    image: '/public/Blogs/Sustainability.jpg',
+    image: '/Blogs/Sustainability.jpg',
     excerpt: 'Explore how sustainable farming practices are shaping the future of food, from local sourcing to reducing carbon footprint in food production.',
     category: 'Sustainability'
   },
@@ -27,7 +27,7 @@ const blogs = [
     title: 'Global Street Food: A Culinary Adventure',
     author: 'Lisa Rodriguez',
     date: '2024-01-01',
-    image: '/public/Blogs/Travel.jpg',
+    image: '/Blogs/Travel.jpg',
     excerpt: "Journey through the world's most exciting street food scenes, from Bangkok's night markets to Mexico City's taquerias.",
     category: 'Travel'
   },
@@ -36,7 +36,7 @@ const blogs = [
     title: 'The Science Behind Fermentation',
     author: 'Dr. James Kim',
     date: '2023-12-31',
-    image: '/public/Blogs/Science.jpg',
+    image: '/Blogs/Science.jpg',
     excerpt: 'Discover the fascinating world of fermented foods, their health benefits, and how to start fermenting at home.',
     category: 'Science'
   },
@@ -45,7 +45,7 @@ const blogs = [
     title: 'Essential Kitchen Tools for Every Home Chef',
     author: 'Emma Thompson',
     date: '2023-12-30',
-    image: '/public/Blogs/Equipment.jpg',
+    image: '/Blogs/Equipment.jpg',
     excerpt: 'From knives to thermometers, learn about the must-have tools that will elevate your cooking game to professional levels.',
     category: 'Equipment'
   },
@@ -54,7 +54,7 @@ const blogs = [
     title: 'Seasonal Cooking: Winter Comfort Foods',
     author: 'Thomas Wilson',
     date: '2023-12-29',
-    image: '/public/Blogs/Seasonal.jpg',
+    image: '/Blogs/Seasonal.jpg',
     excerpt: 'Embrace the cold weather with hearty, warming recipes that make the most of winter produce and spices.',
     category: 'Seasonal'
   },
@@ -63,7 +63,7 @@ const blogs = [
     title: 'The Rise of Plant-Based Cuisine',
     author: 'Maya Patel',
     date: '2023-12-28',
-    image: '/public/Blogs/Nutrition.jpg',
+    image: '/Blogs/Nutrition.jpg',
     excerpt: 'Explore innovative plant-based cooking techniques and recipes that are changing the way we think about vegetarian and vegan food.',
     category: 'Nutrition'
   },
@@ -72,7 +72,7 @@ const blogs = [
     title: "Wine Pairing 101: A Beginner's Guide",
     author: 'Pierre Dubois',
     date: '2023-12-27',
-    image: '/public/Blogs/Beverages.jpg',
+    image: '/Blogs/Beverages.jpg',
     excerpt: 'Learn the basic principles of wine pairing and how to enhance your dining experience with the perfect wine selection.',
     category: 'Beverages'
   },
@@ -81,7 +81,7 @@ const blogs = [
     title: 'Traditional Cooking Methods Around the World',
     author: 'Anna Kowalski',
     date: '2023-12-26',
-    image: '/public/Blogs/Culture.jpg',
+    image: '/Blogs/Culture.jpg',
     excerpt: "Discover ancient cooking techniques from different cultures and how they're being preserved in modern kitchens.",
     category: 'Culture'
   },
@@ -90,7 +90,7 @@ const blogs = [
     title: 'Food Waste Revolution: Creative Ways to Use Leftovers',
     author: 'David Martinez',
     date: '2023-12-25',
-    image: '/public/Blogs/10.jpeg',
+    image: '/Blogs/10.jpeg',
     excerpt: 'Transform your kitchen habits with innovative ways to reduce food waste and create delicious meals from leftovers.',
     category: 'Sustainability'
   },
@@ -99,7 +99,7 @@ const blogs = [
     title: 'Top 10 Healthy Foods',
     author: 'John Doe',
     date: '2024-01-03',
-    image: '/public/Blogs/Health.png',
+    image: '/Blogs/Health.png',
     excerpt: 'Discover the healthiest foods that can transform your diet...',
     category: 'Health'
   },
@@ -108,7 +108,7 @@ const blogs = [
     title: 'Cooking Tips for Beginners',
     author: 'Jane Smith',
     date: '2024-01-02',
-    image: '/public/Blogs/Cooking.png',
+    image: '/Blogs/Cooking.png',
     excerpt: 'Essential cooking tips every beginner should know...',
     category: 'Cooking'
   },
@@ -118,7 +118,7 @@ const blogs = [
 
   return (
     <>
-    <div className="bg-[url('/public/wrapper_bg.jpg')] bg-fixed">
+    <div className="bg-[url('/wrapper_bg.jpg')] bg-fixed">
       <div className="bg-gray-100 bg-opacity-90 py-4">
         <div className="max-w-7xl mx-auto px-4 py-12 bg-white rounded-lg">
           <h1 className="text-4xl font-bold mb-8">Our <span className="text-[#ff0000]">Blogs</span></h1>

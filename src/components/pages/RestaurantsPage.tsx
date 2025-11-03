@@ -1,16 +1,16 @@
-import React, { useState } from 'react';
-import { Search, Star, Clock, MapPin, Phone, Filter, ChevronDown, Calendar } from 'lucide-react';
+import { useState, FormEvent } from 'react';
+import { Search, Star, Clock, MapPin, Phone, Calendar } from 'lucide-react';
 
 const RestaurantsPage = () => {
   const [searchTerm, setSearchTerm] = useState('');
   const [selectedCuisine, setSelectedCuisine] = useState('');
-  const [selectedRating, setSelectedRating] = useState(null);
+  const [selectedRating, setSelectedRating] = useState<number | null>(null);
 
   const restaurants = [
     {
       id: 1,
       name: "Italian Delight",
-      image: "/public/Restaurants/1.jpeg",
+      image: "/Restaurants/1.jpeg",
       cuisine: "Italian",
       rating: 4.8,
       reviewCount: 1250,
@@ -26,7 +26,7 @@ const RestaurantsPage = () => {
     {
       id: 2,
       name: "Sushi Master",
-      image: "/public/Restaurants/2.jpeg",
+      image: "/Restaurants/2.jpeg",
       cuisine: "Japanese",
       rating: 4.9,
       reviewCount: 890,
@@ -42,7 +42,7 @@ const RestaurantsPage = () => {
     {
       id: 3,
       name: "Spice Route",
-      image: "/public/Restaurants/3.jpg",
+      image: "/Restaurants/3.jpg",
       cuisine: "Indian",
       rating: 4.7,
       reviewCount: 750,
@@ -58,7 +58,7 @@ const RestaurantsPage = () => {
     {
       id: 4,
       name: "Burger Bros",
-      image: "/public/Restaurants/4.jpg",
+      image: "/Restaurants/4.jpg",
       cuisine: "American",
       rating: 4.6,
       reviewCount: 1100,
@@ -74,7 +74,7 @@ const RestaurantsPage = () => {
     {
       id: 5,
       name: "Wok Master",
-      image: "/public/Restaurants/5.jpg",
+      image: "/Restaurants/5.jpg",
       cuisine: "Chinese",
       rating: 4.5,
       reviewCount: 680,
@@ -91,7 +91,7 @@ const RestaurantsPage = () => {
 
   const cuisineTypes = ["All", "Italian", "Japanese", "Indian", "American", "Chinese"];
 
-  const renderStars = (rating) => {
+  const renderStars = (rating: number) => {
     return [...Array(5)].map((_, index) => (
       <Star
         key={index}
@@ -103,7 +103,13 @@ const RestaurantsPage = () => {
   };
 
   // booking
-  const [bookingData, setBookingData] = useState({
+  const [bookingData, setBookingData] = useState<{
+    date: string;
+    time: string;
+    guests: string;
+    restaurantId: number | null;
+    restaurantName: string;
+  }>({
     date: '',
     time: '',
     guests: '2',
@@ -114,7 +120,7 @@ const RestaurantsPage = () => {
 
   const availableTimes = ["17:00", "17:30", "18:00", "18:30", "19:00", "19:30", "20:00", "20:30", "21:00"];
 
-  const handleBooking = (e) => {
+  const handleBooking = (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     // Here you would typically send the booking data to your backend
     console.log('Booking submitted:', bookingData);
@@ -196,7 +202,7 @@ const RestaurantsPage = () => {
   });
 
   return (
-    <div className="bg-[url('/public/wrapper_bg.jpg')] bg-fixed">
+    <div className="bg-[url('/wrapper_bg.jpg')] bg-fixed">
       <div className="bg-gray-100 bg-opacity-90 py-4">
         <div className="max-w-7xl mx-auto px-4 py-12 bg-white ">
           <h1 className="text-4xl font-bold mb-8">Our Partner <span className='text-[#ff0000]'>Restaurants</span></h1>

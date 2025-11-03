@@ -8,7 +8,7 @@ const ContactPage = () => {
       <div className="relative h-64 bg-red-600 overflow-hidden">
         <div className="absolute inset-0">
           <img 
-            src="/public/Food_bg2.jpeg" 
+            src="/Food_bg2.jpeg" 
             alt="Food background" 
             className="w-full h-full object-cover opacity-30"
           />
@@ -124,7 +124,7 @@ const ContactPage = () => {
           {/* Image Section */}
           <div className="hidden lg:block relative rounded-lg overflow-hidden shadow-lg">
             <img 
-              src="/public/Restaurant_interior.webp" 
+              src="/Restaurant_interior.webp" 
               alt="Restaurant interior" 
               className="w-full h-full object-cover"
             />

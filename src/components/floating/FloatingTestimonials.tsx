@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useRef } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Star } from 'lucide-react';
 
@@ -9,48 +9,49 @@ const FloatingTestimonials = () => {
       name: "Dheeraj",
       rating: 5,
       text: "Best food delivery service ever! Always on time and the food is fresh.",
-      image: "/public/Dheeraj2.jpg"
+      image: "/Dheeraj2.jpg"
     },
     {
       id: 2,
       name: "Thor",
       rating: 5,
       text: "Great variety of restaurants and excellent customer service!",
-      image: "/public/Thor.jpg"
+      image: "/Thor.jpg"
     },
     {
       id: 3,
       name: "Ronaldo",
       rating: 4,
       text: "Love the easy booking system and quick delivery times.",
-      image: "/public/Ronaldo.jpg"
+      image: "/Ronaldo.jpg"
     },
     {
       id: 4,
       name: "Alex",
       rating: 5,
       text: "The table booking feature is a game-changer. So convenient!",
-      image: "/public/Dheeraj1.jpg"
+      image: "/Dheeraj1.jpg"
     },
     {
       id: 5,
       name: "Love Birds",
       rating: 5,
       text: "Amazing selection of restaurants and super fast delivery!",
-      image: "/public/Gitagobinda.jpg"
+      image: "/Gitagobinda.jpg"
     },
     {
       id: 6,
       name: "Hacker",
       rating: 4,
       text: "The app is so easy to use. Great experience every time!",
-      image: "/public/Hacker.png"
+      image: "/Hacker.png"
     }
   ];
 
   const [activeIndices, setActiveIndices] = useState([0, 1, 2]);
   const [visibleStates, setVisibleStates] = useState([true, true, true]);
-  const [positions, setPositions] = useState([]);
+  type Position = { x: number; y: number; delay: number };
+  const [positions, setPositions] = useState<Position[]>([]);
   const timeoutRef = useRef(null);
   const isAnimatingRef = useRef(false);
 
@@ -127,7 +128,21 @@ const FloatingTestimonials = () => {
     };
   }, []);
 
-  const TestimonialCard = ({ testimonial, position, isVisible }) => (
+  type Testimonial = {
+    id: number;
+    name: string;
+    rating: number;
+    text: string;
+    image: string;
+  };
+
+  type TestimonialCardProps = {
+    testimonial: Testimonial;
+    position: { x: number; y: number; delay: number };
+    isVisible: boolean;
+  };
+
+  const TestimonialCard = ({ testimonial, position, isVisible }: TestimonialCardProps) => (
     <motion.div
       key={testimonial.id}
       initial={{ 

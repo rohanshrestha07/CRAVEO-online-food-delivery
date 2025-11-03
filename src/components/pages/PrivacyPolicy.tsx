@@ -3,7 +3,7 @@ import { Card, CardContent } from '@mui/material';
 
 const PrivacyPolicy = () => {
   return (
-      <div className="bg-[url('/public/wrapper_bg.jpg')] bg-fixed">
+      <div className="bg-[url('/wrapper_bg.jpg')] bg-fixed">
         <div className="min-h-screen bg-gray-100 py-8 px-4 bg-opacity-90">
           <div className="max-w-6xl mx-auto">
             <Card className="bg-white shadow-lg">

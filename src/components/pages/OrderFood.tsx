@@ -344,7 +344,16 @@ export default function OrderFood() {
         },
     ];
     const { addToCart } = useCart();
-    const handleAddToCart = (e, menu) => {
+    const handleAddToCart = (
+        e: React.MouseEvent<HTMLButtonElement, MouseEvent>,
+        menu: {
+            img: string;
+            title: string;
+            description: string;
+            price: string;
+            category: string;
+        }
+    ) => {
         e.preventDefault(); // Prevent navigation when clicking add to cart
         addToCart(menu);
     };
@@ -361,7 +370,7 @@ export default function OrderFood() {
     });
 
     return (
-        <div className="bg-[url('/public/wrapper_bg.jpg')] bg-fixed ">
+        <div className="bg-[url('/wrapper_bg.jpg')] bg-fixed ">
             <div className="bg-opacity-90 bg-gray-100">
                 <div className="h-auto w-screen container mx-auto text-center py-10 ">
                     <h2 className="text-[50px] font-extrabold">Order Your <span className="text-[#ff0000]">Foods</span></h2>

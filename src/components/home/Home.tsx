@@ -6,7 +6,7 @@ import FoodNews from "../foodnews/FoodNews";
 import FoodGallery from "../gallery/FoodGallery";
 import Menu from "../menulist/Menu";
 import TodayMenu from "../menulist/TodayMenu";
-import Ads2 from "../ads/Ads2";
+// import Ads2 from "../ads/Ads2";
 import Ads3 from "../ads/Ads3";
 import Banner6 from "../banner/Banner6";
 import Contact from "../contact/Contact";
@@ -16,19 +16,19 @@ import { useState, useEffect } from "react";
 
 const images = [
     {
-        image: '/public/Chef_cooking.jpg'
+        image: '/Chef_cooking.jpg'
     },
     {
-        image: '/public/Slide1.jpg'
+        image: '/Slide1.jpg'
     },
     {
-        image: '/public/Slide2.jpg'
+        image: '/Slide2.jpg'
     },
     {
-        image: '/public/Slide3.webp'
+        image: '/Slide3.webp'
     },
     {
-        image: '/public/Slide4.jpg'
+        image: '/Slide4.jpg'
     },
 ];
 
@@ -54,7 +54,7 @@ export default function Home() {
                     loop
                     muted
                 >
-                    <source src="/public/CraveoFinalTrailer.mp4" type="video/mp4" />
+                    <source src="/CraveoFinalTrailer.mp4" type="video/mp4" />
                     Your browser does not support the video tag.
                 </video>
 

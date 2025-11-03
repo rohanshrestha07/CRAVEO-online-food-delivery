@@ -2,7 +2,7 @@ import { ChevronDown } from "lucide-react";
 import { useState } from "react";
 
 export default function FAQPage() {
-    const [openIndex, setOpenIndex] = useState(null);
+    const [openIndex, setOpenIndex] = useState<number | null>(null);
   
     const faqs = [
       {
@@ -49,7 +49,7 @@ export default function FAQPage() {
   
     return (
       <>
-      <div className="bg-[url('/public/wrapper_bg.jpg')] bg-fixed">
+      <div className="bg-[url('/wrapper_bg.jpg')] bg-fixed">
         <div className="bg-gray-100 bg-opacity-90 py-4">
           <div className="max-w-7xl mx-auto px-4 py-12 rounded-lg bg-white ">
             <h1 className="text-4xl font-bold mb-8">Frequently Asked <span className="text-[#ff0000]">Questions</span></h1>

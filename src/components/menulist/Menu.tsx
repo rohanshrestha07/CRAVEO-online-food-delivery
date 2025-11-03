@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import burger1 from '/src/assets/burger1.png';
 import pizza from '/src/assets/pizza.png'
 import frenchfries from '/src/assets/french-fries1.png';
@@ -359,7 +359,7 @@ export default function Menu() {
         }
     };
 
-    const handleAddToCart = (e, menu) => {
+    const handleAddToCart = (e: React.MouseEvent<HTMLButtonElement>, menu: any) => {
         e.preventDefault(); // Prevent navigation when clicking add to cart
         addToCart(menu);
     };

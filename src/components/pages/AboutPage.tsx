@@ -1,10 +1,10 @@
 
 import { Check, Award, Users, Utensils } from 'lucide-react';
 import { NavLink } from 'react-router-dom';
-import Rohan from '/public/Rohan.jpg';
-import Thor from '/public/Thor.jpg';
-import Strange from '/public/Strange.jpg';
-import Ronaldo from '/public/Ronaldo.jpg';
+import Rohan from '/Rohan.jpg';
+import Thor from '/Thor.jpg';
+import Strange from '/Strange.jpg';
+import Ronaldo from '/Ronaldo.jpg';
 
 const AboutPage = () => {
   const stats = [
@@ -61,7 +61,7 @@ const AboutPage = () => {
       <div className="relative h-[500px] bg-red-600 overflow-hidden">
         <div className="absolute inset-0">
           <img 
-            src="/public/Restaurant_interior.webp" 
+            src="/Restaurant_interior.webp" 
             alt="Restaurant interior" 
             className="w-full h-full object-cover opacity-40"
           />
@@ -112,12 +112,12 @@ const AboutPage = () => {
           </div>
           <div className="relative">
             <img 
-              src="/public/Our_kitchen.webp" 
+              src="/Our_kitchen.webp" 
               alt="Our kitchen" 
               className="rounded-lg shadow-xl"
             />
             <img 
-              src="/public/Chef_cooking.jpg" 
+              src="/Chef_cooking.jpg" 
               alt="Chef cooking" 
               className="absolute -bottom-8 -left-8 rounded-lg shadow-xl border-4 border-white hidden md:block"
             />

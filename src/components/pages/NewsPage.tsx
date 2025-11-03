@@ -6,7 +6,7 @@ export default function NewsPage(){
       id: 1,
       title: 'New Restaurant Opening',
       date: '2024-01-03',
-      image: '/public/News/1.jpeg',
+      image: '/News/1.jpeg',
       content: 'We are excited to announce the opening of our new branch in downtown, featuring an expanded kitchen and improved delivery capacity to serve you better.',
       category: 'Announcement'
     },
@@ -14,7 +14,7 @@ export default function NewsPage(){
       id: 2,
       title: 'Special Holiday Menu',
       date: '2024-01-02',
-      image: '/public/News/2.png',
+      image: '/News/2.png',
       content: 'Discover our limited-time holiday specials featuring seasonal ingredients and festive flavors. Available for both delivery and pickup.',
       category: 'Menu Update'
     },
@@ -22,7 +22,7 @@ export default function NewsPage(){
       id: 3,
       title: 'Enhanced Safety Protocols',
       date: '2024-01-01',
-      image: '/public/News/3.png',
+      image: '/News/3.png',
       content: "We've implemented new safety measures for food preparation and delivery, including contactless delivery options and regular health checks for our staff.",
       category: 'Safety'
     },
@@ -30,7 +30,7 @@ export default function NewsPage(){
       id: 4,
       title: 'Mobile App Launch',
       date: '2023-12-30',
-      image: '/public/News/4.jpg',
+      image: '/News/4.jpg',
       content: 'Download our new mobile app for faster ordering, real-time tracking, and exclusive app-only discounts on your favorite meals.',
       category: 'Technology'
     },
@@ -38,7 +38,7 @@ export default function NewsPage(){
       id: 5,
       title: 'Partnership with Local Farms',
       date: '2023-12-29',
-      image: '/public/News/5.jpg',
+      image: '/News/5.jpg',
       content: "We're proud to announce our partnership with local farms to bring you fresher ingredients and support our local community.",
       category: 'Partnership'
     },
@@ -46,7 +46,7 @@ export default function NewsPage(){
       id: 6,
       title: 'New Loyalty Program',
       date: '2023-12-28',
-      image: '/public/News/6.jpeg',
+      image: '/News/6.jpeg',
       content: 'Introducing our revamped loyalty program with better rewards, faster points accumulation, and exclusive member benefits.',
       category: 'Rewards'
     },
@@ -54,7 +54,7 @@ export default function NewsPage(){
       id: 7,
       title: 'Sustainable Packaging Initiative',
       date: '2023-12-27',
-      image: '/public/News/7.webp',
+      image: '/News/7.webp',
       content: "We're transitioning to 100% eco-friendly packaging for all deliveries as part of our commitment to environmental sustainability.",
       category: 'Environment'
     },
@@ -62,7 +62,7 @@ export default function NewsPage(){
       id: 8,
       title: 'Extended Delivery Hours',
       date: '2023-12-26',
-      image: '/public/News/8.jpg',
+      image: '/News/8.jpg',
       content: 'Now delivering until 2 AM! Enjoy your favorite meals later with our extended delivery service hours.',
       category: 'Service Update'
     },
@@ -70,7 +70,7 @@ export default function NewsPage(){
       id: 9,
       title: 'New Dietary Options Available',
       date: '2023-12-25',
-      image: '/public/News/9.jpeg',
+      image: '/News/9.jpeg',
       content: 'Expanding our menu with new vegan, gluten-free, and keto-friendly options to cater to all dietary preferences.',
       category: 'Menu Update'
     },
@@ -78,7 +78,7 @@ export default function NewsPage(){
       id: 10,
       title: 'Community Giving Initiative',
       date: '2023-12-24',
-      image: '/public/News/10.png',
+      image: '/News/10.png',
       content: "For every order above $30, we're donating a meal to local food banks. Join us in supporting our community.",
       category: 'Community'
     }
@@ -86,7 +86,7 @@ export default function NewsPage(){
   
     return (
       <>
-        <div className="bg-[url('/public/wrapper_bg.jpg')] bg-fixed">
+        <div className="bg-[url('/wrapper_bg.jpg')] bg-fixed">
           <div className="bg-gray-100 bg-opacity-90 py-4">
             <div className="max-w-7xl mx-auto px-4 py-12 bg-white rounded-lg">
               <h1 className="text-4xl font-bold mb-8">Latest <span className="text-[#ff0000]">News</span></h1>

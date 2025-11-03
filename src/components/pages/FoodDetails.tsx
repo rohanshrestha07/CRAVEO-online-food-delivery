@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import { Link, useParams } from 'react-router-dom';
 import LocalMallIcon from '@mui/icons-material/LocalMall';
 import burger1 from '/src/assets/burger1.png';
@@ -164,7 +164,7 @@ const menuData = [
 
 export default function FoodDetails() {
   const { addToCart } = useCart();
-  const handleAddToCart = (e, menu) => {
+  const handleAddToCart = (e: React.MouseEvent<HTMLButtonElement>, menu: typeof menuData[0]) => {
     e.preventDefault(); // Prevent navigation when clicking add to cart
     addToCart(menu);
   };
@@ -173,7 +173,7 @@ export default function FoodDetails() {
   const menuItem = menuData.find((item) => item.title === title); // Find the specific food item
   
   // render stars
-  const renderStars = (rating) => {
+  const renderStars = (rating: number) => {
     return [...Array(5)].map((_, index) => (
       <Star
         key={index}
@@ -189,13 +189,13 @@ export default function FoodDetails() {
 
   const [activeTab, setActiveTab] = useState('description'); // State to manage active tab
 
-  const handleTabChange = (tab) => {
+  const handleTabChange = (tab: string) => {
     setActiveTab(tab);
   };
 
   return (
     <>
-    <div className="bg-[url('/public/wrapper_bg.jpg')] bg-fixed">
+    <div className="bg-[url('/wrapper_bg.jpg')] bg-fixed">
       <div className="bg-gray-100 bg-opacity-90 py-4">
       <div className="food-details container mx-auto bg-white rounded-lg px-4">
         <h2 className="text-center text-5xl font-extrabold py-10">

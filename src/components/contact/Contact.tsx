@@ -1,4 +1,4 @@
-import React from 'react'
+
 
 export default function Contact() {
     return (
@@ -65,7 +65,7 @@ export default function Contact() {
                 {/* contact image */}
                 <div className="hidden lg:block relative h-[525px] rounded-lg overflow-hidden shadow-lg">
                     <img 
-                    src="/public/OrderNow.jpg" 
+                    src="/OrderNow.jpg" 
                     alt="Restaurant interior" 
                     className="w-full h-full object-cover"
                     />

@@ -82,11 +82,19 @@ const PopularFoods = () => {
     }
   };
 
-  const handleFoodClick = (title) => {
+  const handleFoodClick = (title: string) => {
     console.log(`Clicked on ${title}`); // Replace with your desired click handling
   };
 
-  const handleAddToCart = (e, item) => {
+  type MenuItem = {
+    img: string;
+    title: string;
+    description: string;
+    price: string;
+    category: string;
+  };
+
+  const handleAddToCart = (e: React.MouseEvent, item: MenuItem) => {
     e.stopPropagation(); // Prevent triggering the parent click
     console.log(`Added ${item.title} to cart`); // Replace with your cart logic
   };

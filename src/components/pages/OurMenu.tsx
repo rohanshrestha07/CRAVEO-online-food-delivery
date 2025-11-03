@@ -1,14 +1,27 @@
 import { useState } from "react";
+import type { MouseEvent } from "react";
 import { ChevronRight, ChevronLeft, ShoppingBag } from 'lucide-react';
 import { Link } from "react-router-dom";
 import CtaMenu1 from "../CTA/CtaMenu1";
 import Banner6 from "../banner/Banner6";
 import Banner8 from "../banner/Banner8";
-import Banner10 from "../banner/Banner10";
-import Banner1 from "../banner/Banner1";
+// import Banner10 from "../banner/Banner10";
+// import Banner1 from "../banner/Banner1";
 import { useCart } from "../cart/CartProvider";
 
-const MenuItem = ({ item, onFoodClick, handleAddToCart }) => (
+type MenuItemProps = {
+  item: {
+    img: string;
+    title: string;
+    description: string;
+    price: string;
+    category: string;
+  };
+  onFoodClick: (title: string) => void;
+  handleAddToCart: (e: MouseEvent<HTMLButtonElement>, item: any) => void;
+};
+
+const MenuItem = ({ item, onFoodClick, handleAddToCart }: MenuItemProps) => (
   <div
     onClick={() => onFoodClick(item.title)}
     className="flex-shrink-0 w-64 bg-white border border-gray-300 rounded-2xl p-4 transition-all duration-300 hover:shadow-lg hover:-translate-y-1 cursor-pointer"
@@ -31,7 +44,20 @@ const MenuItem = ({ item, onFoodClick, handleAddToCart }) => (
   </div>
 );
 
-const MenuSection = ({ title, items, onFoodClick, handleAddToCart }) => {
+type MenuSectionProps = {
+  title: string;
+  items: Array<{
+    img: string;
+    title: string;
+    description: string;
+    price: string;
+    category: string;
+  }>;
+  onFoodClick: (title: string) => void;
+  handleAddToCart: (e: MouseEvent<HTMLButtonElement>, item: any) => void;
+};
+
+const MenuSection = ({ title, items, onFoodClick, handleAddToCart }: MenuSectionProps) => {
   const [startIndex, setStartIndex] = useState(0);
 
   const handleNext = () => {
@@ -458,7 +484,7 @@ const OurMenu = () => {
   };
   
 
-  const handleFoodClick = (title) => {
+  const handleFoodClick = (title: string) => {
     console.log(`Clicked on ${title}`);
   };
 
@@ -466,19 +492,18 @@ const OurMenu = () => {
   //   e.stopPropagation();
   //   console.log(`Added ${item.title} to cart`);
   // };
-
   const { addToCart } = useCart();
-  const handleAddToCart = (e, menu) => {
+  const handleAddToCart = (e: MouseEvent<HTMLButtonElement>, menu: any) => {
     e.preventDefault(); // Prevent navigation when clicking add to cart
     addToCart(menu);
   };
 
   return (
     <>
-    <div className="bg-[url('/public/wrapper_bg.jpg')] bg-fixed">
+    <div className="bg-[url('/wrapper_bg.jpg')] bg-fixed">
       <div className="bg-gray-100 bg-opacity-90 py-4">
         <div className="pb-10 pt-4 max-w-7xl mx-auto px-4 bg-white rounded-lg">
-          <div className="bg-[url('/public/Banners/MenuBanner2.jpg')] bg-cover bg-center lg:h-[250px] h-28 w-full flex justify-center items-center rounded-lg mb-4 pl-24">
+          <div className="bg-[url('/Banners/MenuBanner2.jpg')] bg-cover bg-center lg:h-[250px] h-28 w-full flex justify-center items-center rounded-lg mb-4 pl-24">
             <h1 className="lg:text-6xl lg:font-extrabold text-4xl font-bold text-white">Our <span className="text-[#ff0000]">Menu</span></h1>
           </div>
           

@@ -1,7 +1,7 @@
 
 const TermsOfUse = () => {
   return (
-    <div className="bg-[url('/public/wrapper_bg.jpg')] bg-fixed">
+    <div className="bg-[url('/wrapper_bg.jpg')] bg-fixed">
       <div className="min-h-screen bg-gray-100 py-8 px-4 bg-opacity-90">
         <div className="max-w-6xl mx-auto bg-white rounded-lg shadow-lg p-8">
           <h1 className="text-3xl font-bold mb-8 text-gray-900">Terms of Use</h1>

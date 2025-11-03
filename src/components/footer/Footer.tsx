@@ -13,7 +13,7 @@ export default function Footer() {
                 <div className="container mx-auto w-full">
                     <div className="flex flex-wrap gap-8 items-center justify-between mb-10">
                         {/* <h1 className="text-[40px] font-extrabold text-[#ff0000] border-r pr-16 mr-16 cursor-pointer">FOODIE</h1> */}
-                        <img className='h-12 border-r pr-16' src="public/craveo.png" alt="craveo logo" />
+                        <img className='h-12 border-r pr-16' src="/craveo.png" alt="craveo logo" />
                         <div className="flex flex-wrap gap-8 items-center">
                             <div className="">
                                 <h3 className="text-[28px] font-bold ">Subscription News</h3>

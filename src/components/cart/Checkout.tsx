@@ -141,7 +141,7 @@ const Checkout: React.FC = () => {
                                                     <input
                                                         type={field.type}
                                                         name={field.name}
-                                                        value={deliveryInfo[field.name]}
+                                                        value={deliveryInfo[field.name as keyof DeliveryInfo]}
                                                         onChange={handleDeliveryInfoChange}
                                                         className="w-full p-2 border rounded"
                                                         required

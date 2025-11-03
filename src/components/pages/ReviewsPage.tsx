@@ -1,9 +1,9 @@
-import React, { useState } from 'react';
-import { Star, ThumbsUp, Filter } from 'lucide-react';
+import { useState } from 'react';
+import { Star, ThumbsUp } from 'lucide-react';
 import CtaMenu1 from '../CTA/CtaMenu1';
 
 const ReviewsPage = () => {
-  const [selectedRating, setSelectedRating] = useState(null);
+  const [selectedRating, setSelectedRating] = useState<number | null>(null);
 
   const reviews = [
     {
@@ -70,7 +70,7 @@ const ReviewsPage = () => {
     }
   };
 
-  const renderStars = (rating) => {
+  const renderStars = (rating: number) => {
     return [...Array(5)].map((_, index) => (
       <Star
         key={index}
@@ -87,7 +87,7 @@ const ReviewsPage = () => {
 
   return (
     <>
-      <div className="bg-[url('/public/wrapper_bg.jpg')] bg-fixed">
+      <div className="bg-[url('/wrapper_bg.jpg')] bg-fixed">
         <div className="bg-gray-100 bg-opacity-90 py-4">
           <div className="max-w-7xl mx-auto px-4 py-12 bg-white rounded-lg">
             <h1 className="text-4xl font-bold mb-8">Customer <span className='text-[#ff0000]'>Reviews</span></h1>

@@ -73,13 +73,13 @@ export default function TodayMenu() {
         }
     };
 
-    const handleFoodClick = (title) => {
+    const handleFoodClick = (title: string) => {
         console.log(`Clicked on ${title}`); // Replace with your desired click handling
     };
 
     return (
         <>
-        <div className="bg-[url('/public/wrapper_bg.jpg')] bg-cover bg-center ">
+        <div className="bg-[url('/wrapper_bg.jpg')] bg-cover bg-center ">
             <div className="bg-[#ff0000] bg-opacity-95 relative flex lg:flex-row justify-center flex-col gap-2 py-8 pl-20 mb-4">
                 <div className="flex flex-col justify-center text-center min-w-60">
                     <p className="text-[#c8c8c8]">Our menu</p>
@@ -141,7 +141,7 @@ export default function TodayMenu() {
                             </div> */}
 
                 {/* for bg image */}
-                {/* bg-[url('/public/wrapper_bg.jpg')] bg-cover bg-center */}
+                {/* bg-[url('/wrapper_bg.jpg')] bg-cover bg-center */}
             </div>
         </div>
     </>

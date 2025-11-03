@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react'
+import { useEffect, useState } from 'react'
 
 export default function RealTime() {
     const [dateTime, setDateTime] = useState({
@@ -10,7 +10,7 @@ export default function RealTime() {
     useEffect(() => {
         const updateDateTime = () => {
         const now = new Date();
-          const options = { weekday: 'long' }; // To get the day of the week
+          const options = { weekday: "long" as const }; // To get the day of the week
         const day = new Intl.DateTimeFormat('en-US', options).format(now);
     
         setDateTime({
