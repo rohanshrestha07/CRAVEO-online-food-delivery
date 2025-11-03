@@ -4,4 +4,7 @@
   // https://vitejs.dev/config/
   export default defineConfig({
     plugins: [react()],
+    build: {
+    chunkSizeWarningLimit: 2000, // increases limit to 2 MB
+  },
   })

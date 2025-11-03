@@ -50,7 +50,7 @@ export default function Home() {
                 {/* video element */}
                 <video
                     src="/CraveoFinalTrailer.mp4"
-                    className="absolute top-0 left-0 w-full h-full object-cover -z-10"
+                    className="absolute top-0 left-0 w-full h-full object-cover"
                     autoPlay
                     loop
                     muted
@@ -58,7 +58,7 @@ export default function Home() {
                 />
 
                 {/* content element */}
-                <div className="relative z-10 flex items-center justify-center bg-red-400 bg-opacity-60 min-h-screen">
+                <div className="relative z-0 flex items-center justify-center bg-red-400 bg-opacity-60 min-h-screen">
                     <div className="max-w-7xl mx-auto px-4 flex flex-col items-center justify-center lg:flex-row lg:items-center lg:space-x-4 text-center lg:text-left text-white">
                         <div className="w-full lg:w-2/2 px-4">
                             <h1 className="text-7xl italic mb-2 font-extrabold">We Serve The Taste <span className="text-[#ff0000]">YOU LOVE</span></h1>
