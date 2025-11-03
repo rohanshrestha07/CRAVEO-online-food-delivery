@@ -4,9 +4,9 @@ export default function Delivery() {
     return (
         <>
         <div className="bg-white mb-4 py-8 max-w-7xl mx-auto">
-            <div className="grid lg:grid-cols-3 md:grid-cols-1 container mx-auto items-center px-4">
-                <div className=" py-8 leading-tight lg:text-left md:text-center sm:text-center text-center">
-                    <h2 className="text-[45px] font-extrabold mb-4">Choose Your <span className="text-[#ff0000]">Favourite Food</span></h2>
+            <div className="grid lg:grid-cols-3 md:grid-cols-1 items-center px-4">
+                <div className=" py-8 px-4 md:px-8 leading-tight lg:text-left md:text-center sm:text-center text-center">
+                    <h2 className="text-4xl font-bold mb-4">Choose Your <span className="text-[#ff0000]">Favourite Food</span></h2>
                     <p className="mb-6">Discover a wide range of delicious meals carefully crafted to satisfy your cravings. From comfort food to gourmet dishes, we have it all!</p>
                     <Link to={"/orderFood"}>
                         <button className="text-sm font-semibold text-white px-4 py-3 rounded-full bg-[#ff0000] uppercase"
@@ -21,11 +21,11 @@ export default function Delivery() {
                         }}>Order Now →</button>
                     </Link>
                 </div>
-                <div className="px-10 flex md:justify-center sm:justify-center justify-center">
+                <div className="md:px-10 px-4 flex md:justify-center sm:justify-center justify-center">
                     <img className="h-80 w-80 flex-shrink-0" src="/assets/food-delivery1.png" alt="Food Delivery" />
                 </div>
-                <div className="py-8 leading-tight lg:text-right md:text-center sm:text-center text-center">
-                    <h2 className="text-[45px] font-extrabold mb-4">Order Online and Get <span className="text-[#ff0000]"> Fast Delivery</span></h2>
+                <div className="py-8 px-4 md:px-8 leading-tight lg:text-right md:text-center sm:text-center text-center">
+                    <h2 className="text-4xl font-bold mb-4">Order Online and Get <span className="text-[#ff0000]"> Fast Delivery</span></h2>
                     <p className="mb-6">Enjoy our lightning-fast delivery service, ensuring your food reaches you fresh and hot every time. Satisfaction guaranteed!</p>
                     <Link to={"/blogs"}>
                         <button className="text-sm font-semibold text-white px-4 py-3 rounded-full bg-[#ff0000] uppercase"
